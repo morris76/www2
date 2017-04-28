@@ -1,0 +1,930 @@
+
+/*
+        Grid System
+        ===========
+
+        margin = 20/7 = 2.8571%
+        column = 40/7 = 5.7142%
+*/
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .wrap {
+    font-size: 0;
+  }
+  .wrap > * {
+    position: relative;
+    min-height: 1px;
+    vertical-align: top;
+    font-size:1rem;
+  }
+
+
+/*
+        Clearfix
+        ========
+*/
+
+.row {
+	*zoom: 1;
+}
+.row:before, .row:after {
+	display: table;
+	content: " ";
+}
+.row:after {
+	clear: both;
+}
+
+
+
+.wrap {
+	margin: 0 auto;
+	width: 96%;
+}
+
+/*For testing only*/
+@media only screen and (min-width: 768px) {
+
+.wrap {
+	max-width: 1140px;
+}
+[class*="col-"] {
+	position: relative;
+	float: left;
+	margin-left: 2.8571%;
+	min-height: 1px;
+}
+[class*="col-"]:first-child {
+	margin-left: 0;
+}
+.row .m-row [class*="col-"]:first-child {
+	margin-left: 2.8571%;
+}
+.m-row:first-child [class*="col-"]:first-child {
+	margin-left: 0;
+}
+.col-1 {
+	width: 5.7142%;
+	*width: 5.6491%;
+}
+.col-2 {
+	width: 14.2857%;
+	*width: 14.2206%;
+}
+.col-3 {
+	width: 22.8571%;
+	*width: 22.792%;
+}
+.col-4 {
+	width: 31.4285%;
+	*width: 31.3634%;
+}
+.col-5 {
+	width: 40%;
+	*width: 39.9349%;
+}
+.col-6 {
+	width: 48.5714%;
+	*width: 48.5063%;
+}
+.col-7 {
+	width: 57.1428%;
+	*width: 57.0777%;
+}
+.col-8 {
+	width: 65.7142%;
+	*width: 65.6491%;
+}
+.col-9 {
+	width: 74.2857%;
+	*width: 74.2206%;
+}
+.col-10 {
+	width: 82.8571%;
+	*width: 82.792%;
+}
+.col-11 {
+	width: 91.4285%;
+	*width: 91.3634%;
+}
+.col-12 {
+	width: 100%;
+	*width: 99.9349%;
+}
+
+/*
+        .col-13 can only be used with .left-[1,2,3] or .right-[1,2,3]
+        .col-14 can only be used with .left-[2,3] or .right-[2,3]
+        .col-15 can only be used with .left-3 or .right-3
+*/
+
+.col-13 {
+	width: 108.5714%;
+	*width: 108.5063%;
+}
+.col-14 {
+	width: 117.1428%;
+	*width: 117.0777%;
+}
+.col-15 {
+	width: 125.7142%;
+	*width: 125.6491%;
+}
+.col-1 > .left-1 {
+	margin-left: -150%;
+}
+.col-1 > .right-1 {
+	margin-right: -150%;
+}
+.col-2 > .left-1 {
+	margin-left: -60%;
+}
+.col-2 > .right-1 {
+	margin-right: -60%;
+}
+.col-3 > .left-1 {
+	margin-left: -37.5%;
+}
+.col-3 > .right-1 {
+	margin-right: -37.5%;
+}
+.col-4 > .left-1 {
+	margin-left: -27.2727%;
+}
+.col-4 > .right-1 {
+	margin-right: -27.2727%;
+}
+.col-5 > .left-1 {
+	margin-left: -21.4285%;
+}
+.col-5 > .right-1 {
+	margin-right: -21.4285%;
+}
+.col-6 > .left-1 {
+	margin-left: -17.6470%;
+}
+.col-6 > .right-1 {
+	margin-right: -17.6470%;
+}
+.col-7 > .left-1 {
+	margin-left: -15%;
+}
+.col-7 > .right-1 {
+	margin-right: -15%;
+}
+.col-8 > .left-1 {
+	margin-left: -13.0434%;
+}
+.col-8 > .right-1 {
+	margin-right: -13.0434%;
+}
+.col-9 > .left-1 {
+	margin-left: -11.5384%;
+}
+.col-9 > .right-1 {
+	margin-right: -11.5384%;
+}
+.col-10 > .left-1 {
+	margin-left: -10.3448%;
+}
+.col-10 > .right-1 {
+	margin-right: -10.3448%;
+}
+.col-11 > .left-1 {
+	margin-left: -9.375%;
+}
+.col-11 > .right-1 {
+	margin-right: -9.375%;
+}
+.col-1 > .left-2 {
+	margin-left: -300%;
+}
+.col-1 > .right-2 {
+	margin-right: -300%;
+}
+.col-2 > .left-2 {
+	margin-left: -120%;
+}
+.col-2 > .right-2 {
+	margin-right: -120%;
+}
+.col-3 > .left-2 {
+	margin-left: -75%;
+}
+.col-3 > .right-2 {
+	margin-right: -75%;
+}
+.col-4 > .left-2 {
+	margin-left: -54.5454%;
+}
+.col-4 > .right-2 {
+	margin-right: -54.5454%;
+}
+.col-5 > .left-2 {
+	margin-left: -42.8571%;
+}
+.col-5 > .right-2 {
+	margin-right: -42.8571%;
+}
+.col-6 > .left-2 {
+	margin-left: -35.2941%;
+}
+.col-6 > .right-2 {
+	margin-right: -35.2941%;
+}
+.col-7 > .left-2 {
+	margin-left: -30%;
+}
+.col-7 > .right-2 {
+	margin-right: -30%;
+}
+.col-8 > .left-2 {
+	margin-left: -26.0869%;
+}
+.col-8 > .right-2 {
+	margin-right: -26.0869%;
+}
+.col-9 > .left-2 {
+	margin-left: -23.0769%;
+}
+.col-9 > .right-2 {
+	margin-right: -23.0769%;
+}
+.col-10 > .left-2 {
+	margin-left: -20.6896%;
+}
+.col-10 > .right-2 {
+	margin-right: -20.6896%;
+}
+.col-1 > .left-3 {
+	margin-left: -450%;
+}
+.col-1 > .right-3 {
+	margin-right: -450%;
+}
+.col-2 > .left-3 {
+	margin-left: -180%;
+}
+.col-2 > .right-3 {
+	margin-right: -180%;
+}
+.col-3 > .left-3 {
+	margin-left: -112.5%;
+}
+.col-3 > .right-3 {
+	margin-right: -112.5%;
+}
+.col-4 > .left-3 {
+	margin-left: -81.8181%;
+}
+.col-4 > .right-3 {
+	margin-right: -81.8181%;
+}
+.col-5 > .left-3 {
+	margin-left: -64.2857%;
+}
+.col-5 > .right-3 {
+	margin-right: -64.2857%;
+}
+.col-6 > .left-3 {
+	margin-left: -52.9411%;
+}
+.col-6 > .right-3 {
+	margin-right: -52.9411%;
+}
+.col-7 > .left-3 {
+	margin-left: -45%;
+}
+.col-7 > .right-3 {
+	margin-right: -45%;
+}
+.col-8 > .left-3 {
+	margin-left: -39.1304%;
+}
+.col-8 > .right-3 {
+	margin-right: -39.1304%;
+}
+.col-9 > .left-3 {
+	margin-left: -34.6153%;
+}
+.col-9 > .right-3 {
+	margin-right: -34.6153%;
+}
+.left-0 {
+	margin-left: 0;
+}
+
+/*
+        do not condense to
+        [class*="left-"]
+*/
+
+.left-0, .left-1, .left-2, .left-3 {
+	margin-right: 2.8571%;
+}
+
+/*
+        do not condense to
+        [class*="right-"]
+*/
+
+.right-0, .right-1, .right-2, .right-3 {
+	float:right;
+	margin-left: 2.8571% !important;
+}
+.offset-1 {
+	margin-left: 11.4286%;
+	*margin-left: 11.3635%;
+}
+.offset-2 {
+	margin-left: 20%;
+	*margin-left: 19.9349%;
+}
+.offset-3 {
+	margin-left: 28.5714%;
+	*margin-left: 28.5063%;
+}
+.offset-4 {
+	margin-left: 37.1429%;
+	*margin-left: 37.0778%;
+}
+.offset-5 {
+	margin-left: 45.7143%;
+	*margin-left: 45.6492%;
+}
+.offset-6 {
+	margin-left: 54.2857%;
+	*margin-left: 54.2206%;
+}
+.offset-7 {
+	margin-left: 62.8571%;
+	*margin-left: 62.7920%;
+}
+.offset-8 {
+	margin-left: 71.4286%;
+	*margin-left: 71.3635%;
+}
+.offset-9 {
+	margin-left: 80%;
+	*margin-left: 79.9349%;
+}
+.offset-10 {
+	margin-left: 88.5714%;
+	*margin-left: 88.5063%;
+}
+.offset-1:first-child {
+	margin-left: 8.5714%;
+	*margin-left: 8.5063%;
+}
+.offset-2:first-child {
+	margin-left: 17.1429%;
+	*margin-left: 17.0778%;
+}
+.offset-3:first-child {
+	margin-left: 25.7143%;
+	*margin-left: 25.6492%;
+}
+.offset-4:first-child {
+	margin-left: 34.2857%;
+	*margin-left: 34.2206%;
+}
+.offset-5:first-child {
+	margin-left: 42.8571%;
+	*margin-left: 42.7920%;
+}
+.offset-6:first-child {
+	margin-left: 51.4286%;
+	*margin-left: 51.3635%;
+}
+.offset-7:first-child {
+	margin-left: 60%;
+	*margin-left: 59.9349%;
+}
+.offset-8:first-child {
+	margin-left: 68.5714%;
+	*margin-left: 68.5063%;
+}
+.offset-9:first-child {
+	margin-left: 77.1429%;
+	*margin-left: 77.0778%;
+}
+.offset-10:first-child {
+	margin-left: 85.7143%;
+	*margin-left: 85.6492%;
+}
+.offset-11:first-child {
+	margin-left: 94.2857%;
+	*margin-left: 94.2206%;
+}
+.hide-col {
+	display: none;
+}
+.hide-col:first-child + [class*="col-"] {
+	margin-left: 0;
+}
+.hide-col:first-child + .hide-col + [class*="col-"] {
+	margin-left: 0;
+}
+[class*="col-"].center {
+	display: block;
+	float: none;
+	margin-right: auto;
+	margin-left: auto !important;
+}
+
+.col-third-big-gutter {
+    margin-left: 5%;
+    width: 30%;
+}
+
+.col-two-third-big-gutter {
+    margin-left: 5%;
+    width: 65%;
+}
+
+.col-half-big-gutter {
+    margin-left: 5%;
+    width: 47%;
+}
+
+
+/*For testing only*/
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    
+[class*="t-col-"] {
+	position: relative;
+	float: left;
+	margin-left: 2.8571%;
+	min-height: 1px;
+}
+.t-row {
+	*zoom: 1;
+}
+.t-row:before, .t-row:after {
+	display: table;
+	content: " ";
+}
+.t-row:after {
+	clear: both;
+}
+
+.t-row .row {
+	*zoom: normal;
+}
+.t-row .row:before, .t-row .row:after {
+	content: none;
+}
+[class*="t-col-"]:first-child {
+	margin-left: 0;
+}
+.t-row .row [class*="t-col-"]:first-child {
+	margin-left: 2.8571%;
+}
+.row:first-child [class*="t-col-"]:first-child {
+	margin-left: 0;
+}
+.t-col-1 {
+	width: 5.7142%;
+}
+.t-col-2 {
+	width: 14.2857%;
+}
+.t-col-3 {
+	width: 22.8571%;
+}
+.t-col-4 {
+	width: 31.4285%;
+}
+.t-col-5 {
+	width: 40%;
+}
+.t-col-6 {
+	width: 48.5714%;
+}
+.t-col-7 {
+	width: 57.1428%;
+}
+.t-col-8 {
+	width: 65.7142%;
+}
+.t-col-9 {
+	width: 74.2857%;
+}
+.t-col-10 {
+	width: 82.8571%;
+}
+.t-col-11 {
+	width: 91.4285%;
+}
+.t-col-12 {
+	width: 100%;
+}
+.t-offset-1 {
+	margin-left: 11.4286%;
+}
+.t-offset-2 {
+	margin-left: 20%;
+}
+.t-offset-3 {
+	margin-left: 28.5714%;
+}
+.t-offset-4 {
+	margin-left: 37.1429%;
+}
+.t-offset-5 {
+	margin-left: 45.7143%;
+}
+.t-offset-6 {
+	margin-left: 54.2857%;
+}
+.t-offset-7 {
+	margin-left: 62.8571%;
+}
+.t-offset-8 {
+	margin-left: 71.4286%;
+}
+.t-offset-9 {
+	margin-left: 80%;
+}
+.t-offset-10 {
+	margin-left: 88.5714%;
+}
+.t-offset-1:first-child {
+	margin-left: 8.5714%;
+}
+.t-offset-2:first-child {
+	margin-left: 17.1429%;
+}
+.t-offset-3:first-child {
+	margin-left: 25.7143%;
+}
+.t-offset-4:first-child {
+	margin-left: 34.2857%;
+}
+.t-offset-5:first-child {
+	margin-left: 42.8571%;
+}
+.t-offset-6:first-child {
+	margin-left: 51.4286%;
+}
+.t-offset-7:first-child {
+	margin-left: 60%;
+}
+.t-offset-8:first-child {
+	margin-left: 68.5714%;
+}
+.t-offset-9:first-child {
+	margin-left: 77.1429%;
+}
+.t-offset-10:first-child {
+	margin-left: 85.7143%;
+}
+.t-offset-11:first-child {
+	margin-left: 94.2857%;
+}
+[class*="t-left"] {
+	margin-right: 2.8571%;
+	margin-left: 0;
+}
+[class*="t-right"] {
+	float: right;
+	margin-left: 2.8571% !important;
+}
+.hide-t-col {
+	display: none;
+}
+.hide-t-col:first-child + [class*="t-col-"] {
+	margin-left: 0;
+}
+.hide-t-col:first-child + .hide-t-col + [class*="t-col-"] {
+	margin-left: 0;
+}
+[class*="t-col-"].t-center {
+	display: block;
+	float: none;
+	margin-right: auto;
+	margin-left: auto !important;
+}
+}
+
+@media only screen and (max-width: 767px) {
+    
+/*
+        Typography for mobile 
+    
+        If you want the same font size
+        on mobile & desktop you can
+        delete everything from here... 
+*/
+    
+body {
+    font-size: 90.5%;
+    line-height: 1.5715;
+}
+
+.no-break, .indent, p, pre, dl, menu, ol, ul, address, blockquote, figure, table, table caption {
+	margin-bottom: 1.5715em;
+} 
+h1,.h1 {
+    font-size: 2.2715em;
+    line-height: 1.2223em;
+    //margin-bottom: 0.6112em;
+}
+h2,.h2 {
+    font-size: 2.1429em;
+    line-height: 1.3em;
+    margin-bottom: 0.7334em;
+}
+h3,.h3 {
+    font-size: 1.5em;
+    margin-bottom: 1.0477em;
+    line-height: 1.5477em;
+}
+h4,.h4 {
+    font-size: 1.2143em;
+    margin-bottom: 1.2942em;
+    line-height: 1.2942em;
+}
+h5,.h5 {
+    font-size: 0.8572em;
+    margin-bottom: 1.8334em;
+    line-height: 1.8334em;
+}
+h6,.h6 {
+    font-size: 0.7143em;
+    line-height: 1.1em;
+    margin-bottom: 1.1em;
+}
+.fineprint {
+    font-size: 0.5715em;
+    line-height: 1.375em;
+    margin-bottom: 1.375em;
+}
+span.initialx3 strong {
+    line-height:0.88em;
+}
+p span.iconfont {
+	font-size: 1.2858em;
+}
+p.halfgap {
+	margin: 0 0 -0.7858em 0;
+}
+blockquote {
+	margin:0 0 1.5715em 0;
+}
+blockquote .source {
+	margin-top: -0.7858em;
+	margin-bottom: 2.3572em;
+}
+figcaption {
+	margin-top: -0.6667em;
+	font-size: 0.8572em;
+	line-height: 1.3334em;
+	margin-bottom: 0.8334em;
+}
+figcaption:before {
+	font-size: 1.1667em;
+}
+img {
+	margin-top: 0.3572em;
+	margin-bottom: 0.7142em;
+}
+hr {
+	margin: 0 0 1.4285em 0;
+}
+    
+
+/*
+        ...to here.
+*/
+
+.no-break > p + [class*="col-"], 
+.no-break > p + .row,
+.indent > p + [class*="col-"], 
+.indent > p + .row {
+	margin-top: 1.2858em;      /* 1. */ 
+}
+.m-no-break,
+.m-indent {
+	margin-bottom: 1.2858em;   /* 2. */
+}
+.m-no-break > p {
+	display:inline;
+}
+.m-break,
+.m-no-indent,
+.m-no-break > p,
+.m-indent > p {
+	margin-bottom: 0;
+}
+.m-no-break > p + [class*="m-col-"], 
+.m-no-break > p + .row,
+.m-indent > p + [class*="m-col-"], 
+.m-indent > p + .row {
+	margin-top: 1.2858em;      /* 3. */
+}
+.m-indent > p + p {
+	text-indent: 2.5em;
+}
+.m-break > p,
+.m-no-indent > p {
+	display: block;
+	margin-bottom: 1.2858em;   /* 4. */
+	text-indent: 0!important;
+}
+
+/*
+        Change the four 1.2858em margins
+        to 1.5295em margins if you are 
+        using the same font size on
+        mobile & desktop.   
+*/
+
+.m-break > p + [class*="col-"], 
+.m-break > p + .row,
+.m-no-indent > p + [class*="col-"], 
+.m-no-indent > p + .row {
+	margin-top: 0;
+}
+[class*="col-"] {
+	width: 100%;
+    position:relative;
+}
+[class*="m-col-"] {
+	position: relative;
+	float: left;
+	margin-left: 2.8571%;
+	min-height: 1px;
+}
+.m-row {
+	*zoom: 1;
+}
+.m-row:before, .m-row:after {
+	display: table;
+	content: " ";
+}
+.m-row:after {
+	clear: both;
+}
+
+/*
+        "*zoom: normal" & "content: none" will un-do the clearfix from .row
+*/
+
+.m-row .row {
+	*zoom: normal;
+}
+.m-row .row:before, .m-row .row:after {
+	content: none;
+}
+[class*="m-col-"]:first-child {
+	margin-left: 0;
+}
+.m-row .row [class*="m-col-"]:first-child {
+	margin-left: 2.8571%;
+}
+.row:first-child [class*="m-col-"]:first-child {
+	margin-left: 0;
+}
+.m-col-1 {
+	width: 5.7142%;
+}
+.m-col-2 {
+	width: 14.2857%;
+}
+.m-col-3 {
+	width: 22.8571%;
+}
+.m-col-4 {
+	width: 31.4285%;
+}
+.m-col-5 {
+	width: 40%;
+}
+.m-col-6 {
+	width: 48.5714%;
+}
+.m-col-7 {
+	width: 57.1428%;
+}
+.m-col-8 {
+	width: 65.7142%;
+}
+.m-col-9 {
+	width: 74.2857%;
+}
+.m-col-10 {
+	width: 82.8571%;
+}
+.m-col-11 {
+	width: 91.4285%;
+}
+.m-col-12 {
+	width: 100%;
+}
+.m-offset-1 {
+	margin-left: 11.4286%;
+}
+.m-offset-2 {
+	margin-left: 20%;
+}
+.m-offset-3 {
+	margin-left: 28.5714%;
+}
+.m-offset-4 {
+	margin-left: 37.1429%;
+}
+.m-offset-5 {
+	margin-left: 45.7143%;
+}
+.m-offset-6 {
+	margin-left: 54.2857%;
+}
+.m-offset-7 {
+	margin-left: 62.8571%;
+}
+.m-offset-8 {
+	margin-left: 71.4286%;
+}
+.m-offset-9 {
+	margin-left: 80%;
+}
+.m-offset-10 {
+	margin-left: 88.5714%;
+}
+.m-offset-1:first-child {
+	margin-left: 8.5714%;
+}
+.m-offset-2:first-child {
+	margin-left: 17.1429%;
+}
+.m-offset-3:first-child {
+	margin-left: 25.7143%;
+}
+.m-offset-4:first-child {
+	margin-left: 34.2857%;
+}
+.m-offset-5:first-child {
+	margin-left: 42.8571%;
+}
+.m-offset-6:first-child {
+	margin-left: 51.4286%;
+}
+.m-offset-7:first-child {
+	margin-left: 60%;
+}
+.m-offset-8:first-child {
+	margin-left: 68.5714%;
+}
+.m-offset-9:first-child {
+	margin-left: 77.1429%;
+}
+.m-offset-10:first-child {
+	margin-left: 85.7143%;
+}
+.m-offset-11:first-child {
+	margin-left: 94.2857%;
+}
+[class*="m-left"] {
+	margin-right: 2.8571%;
+	margin-left: 0;
+}
+[class*="m-right"] {
+	float: right;
+	margin-left: 2.8571% !important;
+}
+.hide-m-col {
+	display: none;
+}
+.hide-m-col:first-child + [class*="m-col-"] {
+	margin-left: 0;
+}
+.hide-m-col:first-child + .hide-m-col + [class*="m-col-"] {
+	margin-left: 0;
+}
+[class*="m-col-"].m-center {
+	display: block;
+	float: none;
+	margin-right: auto;
+	margin-left: auto !important;
+}
+aside[class*="left-"],
+aside[class*="right-"] {
+    border:0;
+}
+}
+

@@ -1,0 +1,184 @@
+/* 
+ * Scroller v3.1.2 - 2014-12-08 
+ * A jQuery plugin for replacing default browser scrollbars. Part of the Formstone Library. 
+ * http://formstone.it/scroller/ 
+ * 
+ * Copyright 2014 Ben Plum; MIT Licensed 
+ */
+ 
+$breakpoint-smallnav:		"(max-width: 1140px)";
+$breakpoint-menu:		"(max-width: 990px)";
+$breakpoint-columns:		"(max-width: 767px)";
+$breakpoint-tablet:		"(max-width: 668px)";
+$breakpoint-mobile:		"(max-width: 579px)";
+
+ul.scroller-active {
+	border:0;
+  background-attachment: scroll, scroll;
+  background-clip: border-box, border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: radial-gradient(ellipse at left center , rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 75%), radial-gradient(ellipse at right center , rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 75%);
+  background-origin: padding-box, padding-box;
+  background-position: 0 center, 100% center;
+  background-repeat: no-repeat;
+  background-size: 14px 100%, 14px 100%;
+}
+ul.scroller-active::before {
+    bottom: 44px;
+    content: "";    
+    background: #eaeaea;
+    height: 3px;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    
+		@media #{$breakpoint-menu} {
+		bottom:38px;}
+    
+}
+.scroller {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+.scroller,
+.scroller * {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+}
+.scroller,
+.scroller-content,
+.scroller-bar,
+.scroller-track,
+.scroller-handle {
+  box-sizing: border-box;
+}
+.scroller-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scroller-content::-webkit-scrollbar,
+.scroller-content::-webkit-scrollbar-button,
+.scroller-content::-webkit-scrollbar-track,
+.scroller-content::-webkit-scrollbar-track-piece,
+.scroller-content::-webkit-scrollbar-thumb,
+.scroller-content::-webkit-scrollbar-corner,
+.scroller-content::-webkit-resizer {
+  background: transparent;
+  opacity: 0;
+}
+.scroller-bar {
+  width: 16px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background: #eaeaea;
+  //border: 1px solid #eeeeee;
+  //border-width: 0 0 0 1px;
+  border-width: 0;
+  //display: none;
+}
+.scroller-bar::before, .scroller-bar::after  {
+    color: #D2D2D2;
+    font-family: fontawesome;
+    position: absolute;
+    //text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+    top:0px;
+    line-height: 20px;
+}
+.scroller-bar:before {
+    content: "";
+    left: 6px;
+}
+.scroller-bar:after {
+    content: "";
+    right: 6px;
+}
+    
+.scroller-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  //background:#eaeaea;
+  overflow: hidden;
+  //box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+.scroller-handle {
+  width: 10px;
+  height: 14px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 2;
+	background: #bbbbbb;
+	//border:1px solid #ADADAD;
+	border-radius: 4px;
+  cursor: pointer;
+  //box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.scroller-handle:after {
+    color: rgba(255, 255, 255, 0.5);
+    //content: "|||";
+    display: block;
+    font-size: 11px;
+    left: 0;
+    right: 0;
+    bottom:0;
+    top: 3px;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    line-height: 1em;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.45);
+}
+.scroller-horizontal .scroller-content {
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 0 16px 0;
+  //box-shadow:none;   
+  //background-attachment: local, local, scroll, scroll;
+    //background-clip: border-box, border-box, border-box, border-box;
+    //background-color: white;
+    //background-image: linear-gradient(90deg, white 30%, rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(255, 255, 255, 0), white 70%), radial-gradient(farthest-side at 0 50% , rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50% , rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    //background-origin: padding-box, padding-box, padding-box, padding-box;
+    //background-position: 0 0%, 100% 0px, 0 0%, 100% 0;
+    //background-repeat: no-repeat;
+    //background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    //overflow: auto;
+}
+.scroller-horizontal .scroller-bar {
+	background:#fff;
+  width: 100%;
+  height: 20px;
+  top: auto;
+  bottom: 0;
+  //border-width: 1px 0 0 0;
+  //box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.13) inset;
+  padding:6px 20px;
+}
+.scroller-horizontal .scroller-handle {
+  width: 20px;
+  height: 8px;
+  top: 0px;
+  right: auto;
+  bottom: 0px;
+}
+.scroller-setup .scroller-content,
+.scroller-active .scroller-content {
+  padding: 5px;
+}
+.scroller-setup .scroller-bar,
+.scroller-active .scroller-bar {
+  display: block;
+}
