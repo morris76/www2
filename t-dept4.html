@@ -38,6 +38,45 @@
 	<style>
 	.body-content-small-photo {background-image:url("http://www.ct.edu/files/images/header-it-5.jpg");background-size:cover;}
 	.department #banner {background:rgba(0, 0, 0, 0) linear-gradient(135deg, #0077c1 0%, #41ad4b 100%) repeat scroll 0 0}
+	
+	#sort-table,#sort-table2 {margin-top:0;border-top: 0;transition:all 0.5s ease 0s;}
+#sort-table > thead, #sort-table > thead > tr, #sort-table > thead > tr > th, #sort-table2 > thead, #sort-table2 > thead > tr, #sort-table2 > thead > tr > th  {height:0;padding:0;margin:0;display: none;}
+#sort-table2 > thead, #sort-table2 > thead > tr, #sort-table2 > thead > tr > th {height:0;padding:0;margin:0;}
+.dataTables_scrollHead {background:#e7e7e7;}
+#paginate,#paginate2 {text-align:center;margin:1em 0;}
+.info-box {text-align:right;padding-right:1em;}
+#clear-filters.hidden {display:none;}
+.dataTables_empty {display:none;}
+@media (min-width: 768px){
+	.col-step {width: 35.716%;}
+}
+@media (max-width: 767px){
+	.filter-entries {position:relative;top:1em;margin-bottom:4em;}
+	ul.nav-filter li:first-child a {padding-left: 20px;border:0;background:none;}
+	ul.nav-filter li a {color:#4F79A0;padding:15px 20px;display:inline-block;display:block;margin:0.5em 0;}
+	.filter-box {text-align:center;display:block;}
+	.filter-box div:first-child {display:block;padding:0;}
+	.info-box {text-align:center;display:block;padding-right:0;}
+	ul.nav-filter li input {margin: 20px 15px;}
+}
+/*table categories*/
+.group-item-expander {cursor: pointer;background:#e7e7e7;font-weight: 700;}
+.sub-menu ul#side-menu {padding:0;}
+.sub-menu ul#side-menu li:last-child {border:0;}
+#sub-menu {margin: 0 0 0 -6px;}
+
+#keyword-college, #keyword-university {background:#EFD4CD;border-radius: 3px;cursor: pointer;padding: 5px 12px;margin:2em 0 0;text-align:center;transition:all 0.5s ease 0s;}
+#keyword-college .text-small, #keyword-university .text-small {position: relative;top: -2px;}
+.major {color: #4f79a0;cursor: pointer;line-height: 20px;padding:6px;transition: all 0.2s ease 0s;display: inline-block;}
+.major.active {background-color: #efd4cd;border-radius: 3px;color: #26292c;cursor: pointer;}
+.major::after {background: rgba(113, 152, 187, 0.4);content: "";display: block; height: 2px;position: relative;}
+.major.active::after {background: rgba(38, 41, 44, 0.2);}
+.dataTables_scrollHead {display:none;} 
+.sub-menu > h2 {padding-top:0.5em;text-transform: uppercase;}
+.sub-menu > h3 {font-family:adelle;font-style:italic; line-height: 1.4em;}
+   
+.light {display: inline-block;line-height: 20px;}
+.not-visible {opacity:0;}
 	</style>
 	
 
@@ -87,41 +126,124 @@
 
 <section id="body-wrapper" class="">
 
-<section class="body-content body-content-small">
+<section class="body-content body-content-small body-content-small-photo">
 
 	<div class="row">
 		<div class="col-12 body-copy">
-			<h1 class="centertext">Business Information Systems</h1>
+			<h1 class="centertext">Transfer Tickets</h1>
+			<p>Degree programs for Connecticut Community College students that transfer to Connecticut State Universities and Charter Oak without either losing any credits or being required to take extra credits in order to complete a bachelor's degree in that same discipline.</p>
 		</div>
 	</div>
 
 </section>
 
 <section class="body-content body-content-box">
-
-	<ul class='tabs'>
-		<li class="active"><a class="active" href="#careers">Careers</a></li>
-		<li class=""><a class="" href="/makeithere/map" data-target="#locations">Locations</a></li>
-		<li class=""><a class="" href="#events">Events</a></li>
-		<li class=""><a class="" href="#jobs">Jobs</a></li>
+	
+	<ul class="tabs">
+		<li class="active"><a class="active" href="#about">About</a></li>
+		<li><a href='/transfer/tickets-major' data-target="#major">By Major</a></li>
+		<li><a href='/transfer/tickets-campus' data-target="#campus">By Campus</a></li>
+		<li><a href='/transfer/tickets-category' data-target="#category">By Category</a></li>
+		<li><a href='#contact'>Contact</a></li>
 	</ul>
-
-	<div class="col-12 center">
-<p>The department is responsible for all application development for the CT Community Colleges, including student registration, financial aid, fee assessment and billing, finance, employee and student payroll, and distance learning.  This includes several interfaces to government and third-party agencies, such as the National Student Clearinghouse and the State's CORE-CT system.</p>
+		
 		<div class="row">
-			<div class="col-6 grey-box">
-		<h4>Institutional Research</h4>
-		<p>Powered by <a href="http://www.evisions.com/Products/Overview.aspx">Evisions</a> Argos, the BIS group develops and maintains a data warehouse resporting system that provides the Board of Regents Institutional Research group the raw data to analyze trends in the academic data.<br>
-		<a href='http://www.evisions.com/Products/Overview.aspx' class="button" target="_blank">Visit Evisions</a></p> 
+			<div class="col-12 sub-menu margin-medium">
+				<div class="col-4">
+				<h2 class="bold subhead-line center-text color-red no-margin">Step 1</h2>
+				<h3 class="thin center-text">Select a Major</h3>
 			</div>
-			<div class="col-6 grey-box">
-		<h4>Enterprise Resource Planning system - Banner</h4>
-		<p>Powered by <a href="http://www.ellucian.com/Solutions/Ellucian-Administration/">Ellucian's Banner enterprise system</a>, the Business Information Systems department maintains and provides development support for the Student Information System, including admissions, financial aid, scheduling, registration, billing and refunds, grading and reporting.<br>
-		<a href='http://www.ellucian.com/Solutions/Ellucian-Administration/' class="button" target="_blank">Visit Ellucian</a></p> 
+			<div class="col-8">
+				<ul id="sub-menu" class="no-bullet" style=''>
+					<li class="major" id="Accounting">Accounting</li>
+					<li class="major" id="Art">Art</li>
+					<li class="major" id="Biology">Biology</li>
+					<li class="major" id="Business Administration">Business Administration</li>
+					<li class="major" id="Chemistry">Chemistry</li>
+					<li class="major" id="Communication">Communication</li>
+					<li class="major" id="Computer Science">Computer Science</li>
+					<li class="major" id="Criminology">Criminology</li>
+					<li class="major" id="Early Childhood">Early Childhood Teacher Credential</li>
+					<li class="major" id="English">English</li>
+					<li class="major" id="Exercise Science">Exercise Science</li>
+					<li class="major" id="Finance">Finance</li>
+					<li class="major" id="French">French</li>
+					<li class="major" id="German">German</li>
+					<li class="major" id="History">History</li>
+					<li class="major" id="Italian">Italian</li>
+					<li class="major" id="Marketing">Marketing</li>
+					<li class="major" id="Management">Management</li>
+					<li class="major" id="Mathematics">Mathematics</li>
+					<li class="major" id="Physics">Physics</li>
+					<li class="major" id="Political Science">Political Science</li>
+					<li class="major" id="Psychology">Psychology</li>
+					<li class="major" id="Spanish">Spanish</li>
+					<li class="major" id="Social Work">Social Work</li>
+					<li class="major" id="Sociology">Sociology</li>
+					<li class="major" id="Theatre">Theatre</li>
+					<!--
+					<li class="major" id="Elementary Education">Elementary Education</li>
+					<li class="major" id="Foreign Languages">Foreign Languages</li>
+					<li class="major" id="Music">Music</li>
+					<li class="major" id="Physical Education">Physical Education</li>
+					<li class="major" id="Special Education">Special Education</li>
+					<li class="major" id="Visual Arts">Visual Arts</li>
+					-->
+				</ul>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-12 sub-menu margin-medium">
+				<div class="col-4">
+				<h2 class="bold subhead-line center-text color-red no-margin">Step 2</h2>
+				<h3 class="thin center-text">Start with an associate from a Connecticut Community College</h3>
+			</div>
+			<div class="col-8">
+      	<div id="keyword-college">Select a major above to view degree requirements</div>
+				<div class="details">
+					<table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="sort-table" width="100%">
+						<thead>
+							<tr>
+							<th></th>
+							<th>Campus</th>
+							<th></th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody> 
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	<div class="row">
+			<div class="col-12 sub-menu">
+				<div class="col-4">
+				<h2 class="bold subhead-line center-text color-red no-margin">Step 3</h2>
+				<h3 class="thin center-text">Finish with a Bachelor's from a CT State University or Charter Oak</h3>
+			</div>
+			<div class="col-8">
+     	 <div id="keyword-university">Select a major above to view degree requirements</div>
+				<div class="details">
+					<table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="sort-table2" width="100%">
+						<thead>
+							<tr>
+							<th></th>
+							<th>Campus</th>
+							<th></th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody> 
+					</table>
+				</div>
+		</div>
+			</div>
+			
+		</div>
+		
+
 </section>
 
 </section>
@@ -220,15 +342,149 @@
 
 <noscript>For the best experience, please enable javascript.</noscript>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/global_dept.js"></script>
-<script type="text/javascript" src="scripts/stupidtable.min.js"></script>
 <script type="text/javascript" src="scripts/scrollReveal.min.js"></script>
 
+<script type="text/javascript" charset="utf-8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/files/scripts/respond.min.js"></script>
 <![endif]-->
 
+
+<!--datatables-->
+
+
+<!--datatables-->
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+   
+
+
+
+ /****************** Date Tables ***************/
+    var responsiveHelper = undefined;
+    var breakpointDefinition = {
+        tablet: 1024,
+        phone : 680
+    };
+    var tableElement = $('#sort-table');
+    var tableElement2 = $('#sort-table2');
+
+    tableElement.dataTable({
+
+     "aoColumnDefs": [{
+         "bVisible": false, "bSearchable": true, "mData": 0, "aTargets": [0]
+      }, {
+         'aTargets': [1],
+         "mData": 1,
+         'mRender': function (data, type, full) {
+               return data + ': <a href="/files/tap/' + full[4]+ '.pdf" target="_blank">Associate Degree Req. (pdf)</a>';
+         }
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 2, "aTargets": [2]
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 3, "aTargets": [3]
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 4, "aTargets": [4]
+      }], 
+
+      "bDeferRender": true,
+      "sDom": 't',
+
+      "aaSorting": [[0,'asc'],[1,'asc']],
+      "oSearch": {"sSearch": "community college"},
+			//"sScrollY": "260px",
+      "sAjaxSource" : 'http://www.ct.edu/files/scripts/tap.txt',
+      "bLengthChange": false, "bPaginate": false
+
+
+    //}).rowGrouping({bExpandableGrouping: true,asExpandedGroups: [""]});
+    //}).rowGrouping({bExpandableGrouping: true});
+    });
+						
+								
+    tableElement2.dataTable({
+
+     "aoColumnDefs": [{
+         "bVisible": false, "bSearchable": true, "mData": 0, "aTargets": [0]
+      }, {
+         'aTargets': [1],
+         "mData": 1,
+         'mRender': function (data, type, full) {
+               return data + ': <em class="light"><a href="/files/tap/' + full[4]+ '.pdf" target="_blank">'+ full[2] +' (pdf)</a>';
+         }
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 2, "aTargets": [2]
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 3, "aTargets": [3]
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 4, "aTargets": [4]
+      }],  
+
+      "bDeferRender": true,
+      "sDom": 't',
+      "aaSorting": [[0,'asc'],[1,'asc']],
+      "oSearch": {"sSearch": "State"},
+			//"sScrollY": "260px",
+      "sAjaxSource" : '/files/scripts/tap.txt',
+      "bLengthChange": false, "bPaginate": false
+
+    //}).rowGrouping({bExpandableGrouping: true,asExpandedGroups: [""]});
+    //}).rowGrouping({bExpandableGrouping: true});
+    });
+
+
+			filter1 = $(this).attr('id');
+			console.log(filter1);
+	    		$('#sort-table').dataTable().fnFilter("0", 0, true, true, true, false);
+	      	$('#sort-table2').dataTable().fnFilter("0", 0, true, true, true, false);
+				
+		$(".major").click(function(){
+			filter1 = $(this).attr('id');
+			console.log(filter1);
+		  $('#keyword-college, #keyword-university, #sort-table, #sort-table2').addClass("not-visible");
+			if (filter1 == '') {
+				
+        setTimeout(function() { 
+        	$('#keyword-college, #keyword-university, #sort-table, #sort-table2').removeClass("not-visible");
+        	$('#keyword-college').html("Select a major to view degree requirements"); 
+	      	$("#keyword-university").html("Select a major to view degree requirements");
+	    		$('#sort-table').dataTable().fnFilter("0", 0, true, true, true, false);
+	      	$('#sort-table2').dataTable().fnFilter("0", 0, true, true, true, false);
+        }, 500);
+				//console.log("working");
+				}
+			else {
+				
+        setTimeout(function() { 
+        	$('#keyword-college, #keyword-university, #sort-table, #sort-table2').removeClass("not-visible");
+        	$('#keyword-college').html("Follow the <strong>" + filter1 + "</strong> degree requirements at any campus below"); 
+	      	$("#keyword-university").html("Follow the <strong>" + filter1 + "</strong> degree requirements at any campus below");
+	      	$('#sort-table').dataTable().fnFilter(filter1, 0, true, true, true, false);
+	      	$('#sort-table2').dataTable().fnFilter(filter1, 0, true, true, true, false);
+        }, 500);
+		    
+				};
+				
+      $(".dataTables_wrapper").addClass("visible");
+			$(".major.active").removeClass("active");
+      $(this).addClass("active");
+			});
+
+});
+
+var delay = (function(){
+   var timer = 0;
+   return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+      };
+   })();
+
+</script>
 <script type="text/javascript">
 
 var config = {
@@ -253,16 +509,6 @@ $(document).ready(function(){
 		$('.grey-box').css('height','auto');
 		$('.grey-box').setAllToMaxHeight();
 		});
-	});
-
-	//fade arrow on scroll
-	$(window).scroll( function(){
-		var topWindow = $(window).scrollTop();
-		var topWindow = topWindow * 2;
-		var windowHeight = $(window).height();
-		var position = topWindow / windowHeight;
-		position = 1 - position;
-		$('.arrow-wrap').css('opacity', position);
 	});
 
 });
