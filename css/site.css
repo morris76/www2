@@ -3543,6 +3543,7 @@ ul.tabs {
   padding: 0;
   margin: 2em 0 5em 0;
   border-bottom: 1px solid #EAEAEA;
+  border-top: 1px solid #EAEAEA;
   overflow: visible;
   position: relative;
   white-space: nowrap;
@@ -3573,7 +3574,7 @@ ul.tabs li {
   display: inline-block;
 }
 ul.tabs li a {
-  padding: 15px;
+  padding: 20px 25px;
   display: inline-block;
   margin: 0;
   font-weight: 700;
@@ -3611,7 +3612,7 @@ ul.tabs li .active:after {
   background: #C4634B;
   height: 3px;
   position: relative;
-  top: 15px;
+  top: 21px;
   margin: 0 -15px;
 }
 @media (max-width: 990px) {

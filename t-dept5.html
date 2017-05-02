@@ -12,7 +12,7 @@
 	<meta name="author" content="Connecticut Board of Regents for Higher Education">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<link rel="stylesheet" href="css/site_2.css">
+	<link rel="stylesheet" href="css/site.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 	<script src="//use.typekit.net/tba7jib.js"></script>
@@ -128,31 +128,119 @@
    </div>
 </header>
 
-<section id="body-wrapper" class="bg-pattern">
+<section id="body-wrapper" class="">
 
-<section id="header-image-small">
+<style>
+	.hero-bg-image {
+		background:url('http://www.ct.edu/files/images/header-new285.jpg');
+		background-size:cover;
+		padding:5em 1em;}
+	.hero-bg-image .row{
+		max-width:72em;
+		margin:0 auto;
+		background:rgba(0,0,0,0.7);
+		border-radius:12px;
+		padding:1em 3em;}
+	.hero-bg-image h1 {
+		color:#fff;}
+	.hero-bg-image h3 {
+		color:rgba(255,255,255,0.7);}
+		
+	.hero-no-image {
+		padding:3em 1em;
+		background:linear-gradient(180deg, #f6f6f6 0%, #fff 100%);}
+	.hero-no-image .row{
+		max-width:72em;
+		margin:0 auto;}
+	.hero-no-image h3 {
+		color:rgba(0,0,0,0.7);}
+		
+	.padding-1 {padding:1em;}
+	.padding-2 {padding:2em;}
+	.padding-3 {padding:3em;}
+	.padding-4 {padding:4em;}
+	.padding-5 {padding:5em;}
+	
+	.m-padding-1 {padding:1em;}
+	.m-padding-2 {padding:2em;}
+	.m-padding-3 {padding:3em;}
+	.m-padding-4 {padding:4em;}
+	.m-padding-5 {padding:5em;}
+	
+	
+	@media (max-width: 1991px){
+		.nav-sub {position:relative;display:inline-block;}
+		.navControl {   
+			background: #fff;
+			border-radius: 4px;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.22);
+			padding: 1em;
+			display: inline-block;
+			height:70px;
+			cursor:pointer;}
+  
+		ul.tabs {display:block;background:red;}
+		ul.tabs li{display:block;}
+		}
+		
+		ul.tabs {
+	    background: #f9f9f9 none repeat scroll 0 0;
+	    margin: 0;
+	    opacity: 0;
+	    position: relative;
+	    /*transform: translateY(-10%);*/
+	    transform: scale(0);
+	    transition-duration: 0.5s;
+	    transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+	    visibility: hidden;
+	    z-index: -1;
+	    box-shadow:0 0 8px rgba(0, 0, 0, 0.22);}
+    ul.tabs.active {
+	    opacity: 1;
+	    position: relative;
+	    /*transform: translateY(0%);*/
+	    transform: scale(1);
+	    visibility: visible;
+	    z-index:999;}
+	    
+</style>
 
-	<div class="row" id="header-image-content">
-		<div class="col-12 body-copy">
-			<h1 class="centertext">Transfer Tickets</h1>
-			<h3>Degree programs for Connecticut Community College students that transfer to Connecticut State Universities and Charter Oak without either losing any credits or being required to take extra credits in order to complete a bachelor's degree in that same discipline.</h3>
+<section class="hero-no-image">
+	<div class="row">
+		<div class="col-12 center-text">
+			<h1 class="sans-serif">Transfer Tickets</h1>
+			<h3 class="thin italic">Degree programs for Connecticut Community College students that transfer to Connecticut State Universities and Charter Oak without either losing any credits or being required to take extra credits in order to complete a bachelor's degree in that same discipline.</h3>
 		</div>
 	</div>
-
 </section>
 
+<!--
+<section class="hero-bg-image">
+	<div class="row">
+		<div class="col-12 center-text">
+			<h1 class="bold">Transfer Tickets</h1>
+			<h3 class="thin italic">Degree programs for Connecticut Community College students that transfer to Connecticut State Universities and Charter Oak without either losing any credits or being required to take extra credits in order to complete a bachelor's degree in that same discipline.</h3>
+		</div>
+	</div>
+</section>
+-->
+
+
 <section class="body-content body-content-box">
-	
+<div class="nav-sub margin-medium">	
+        <div class="navControl">
+            Navigation
+        </div>
 	<ul class="tabs">
 		<li class="active"><a class="active" href="#about">About</a></li>
-		<li><a href='/transfer/tickets-major' data-target="#major">By Major</a></li>
-		<li><a href='/transfer/tickets-campus' data-target="#campus">By Campus</a></li>
-		<li><a href='/transfer/tickets-category' data-target="#category">By Category</a></li>
-		<li><a href='#contact'>Contact</a></li>
+		<li><a href='#' data-target="#major">By Major</a></li>
+		<li><a href='#' data-target="#campus">By Campus</a></li>
+		<li><a href='#' data-target="#category">By Category</a></li>
+		<li><a href='#'>Contact</a></li>
 	</ul>
-		
+</div>		
 		<div class="row">
-			<div class="col-12 sub-menu margin-medium">
+			<div class="col-12 box-shadow-big padding-2 margin-medium">
 				<div class="col-4">
 				<h2 class="bold subhead-line center-text color-red no-margin">Step 1</h2>
 				<h3 class="thin center-text">Select a Major</h3>
@@ -198,7 +286,7 @@
 		</div>
 			
 		<div class="row">
-			<div class="col-12 sub-menu margin-medium">
+			<div class="col-12 box-shadow-big padding-2 margin-medium">
 				<div class="col-4">
 				<h2 class="bold subhead-line center-text color-red no-margin">Step 2</h2>
 				<h3 class="thin center-text">Start with an associate from a Connecticut Community College</h3>
@@ -222,7 +310,7 @@
 		</div>
 	</div>
 	<div class="row">
-			<div class="col-12 sub-menu">
+			<div class="col-12 box-shadow-big padding-2 margin-medium">
 				<div class="col-4">
 				<h2 class="bold subhead-line center-text color-red no-margin">Step 3</h2>
 				<h3 class="thin center-text">Finish with a Bachelor's from a CT State University or Charter Oak</h3>
@@ -358,7 +446,6 @@
 
 <!--datatables-->
 
-
 <!--datatables-->
 <script type="text/javascript">
 
@@ -366,7 +453,12 @@
 $(document).ready(function() {
    
 
-
+$(".navControl").click(function(event){
+	$("ul.tabs").toggleClass("active");
+});
+$("ul.tabs li a").click(function(event){
+	$("ul.tabs").removeClass("active");
+});
 
  /****************** Date Tables ***************/
     var responsiveHelper = undefined;
