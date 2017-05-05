@@ -131,16 +131,6 @@
 <section id="body-wrapper" class="">
 
 <style>
-	.hero-bg-image::before {
-    background: rgba(0, 0, 0, 0.4) linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 55%, rgba(0, 0, 0, 0.35) 85%, rgba(0, 0, 0, 0.8) 100%) repeat scroll 0 0;
-    bottom: 0;
-    content: "";
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;}
 	.hero-bg-image {
 		background:url('http://www.ct.edu/files/images/header-new285.jpg');
 		background-size:cover;
@@ -152,13 +142,35 @@
 		background:rgba(0,0,0,0.7);
 		border-radius:12px;
 		padding:1em 3em;}
-	.hero-bg-image h1 {
-		color:#fff;}
-	.hero-bg-image h3 {
+		
+	.hero-headline-image::before {
+    //background: rgba(0, 0, 0, 0.4) linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 55%, rgba(0, 0, 0, 0.35) 85%, rgba(0, 0, 0, 0.8) 100%) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;}
+	.hero-headline-image {
+		background:url('http://www.ct.edu/files/images/header-new285.jpg');
+		background-size:cover;
+    margin: 0 auto;
+    max-width: 86em;
+    padding: 18em 13em 4em;
+		position:relative;}
+	.hero-headline-image .row{
+		max-width:72em;
+		margin:0 auto;
+		padding:1em 3em;}
+	.hero-bg-image h1, .hero-headline-image h1 {
+		color:#fff;text-shadow: 1px 1px 1px #000;}
+	.hero-bg-image h3, .hero-headline-image h3 {
 		color:rgba(255,255,255,0.7);}
 		
 	.hero-no-image {
-		padding:3em 1em;
+		padding:3em 1em 0;
 		background:linear-gradient(180deg, #f6f6f6 0%, #fff 100%);}
 	.hero-no-image .row{
 		max-width:72em;
@@ -213,7 +225,7 @@
 	    visibility: visible;
 	    z-index:999;
 	    height:auto;}
-	    ul.tabs li a {display:block;letter-spacing:1px;}
+		ul.tabs li a {display:block;letter-spacing:1px;}
 	    
 		.hamburger {    
 			display: table-cell;
