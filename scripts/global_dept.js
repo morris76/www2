@@ -359,8 +359,6 @@ $('#tab-container').easytabs({
 $('#tab-container-sub').easytabs();
 
 
-$(window).on('resize',tabscroller);
-$(document).ready(tabscroller);
 
 
 //$(document).ready(HasScrollBar);
@@ -390,33 +388,6 @@ function HasScrollBar () {
 }
 
 
-
-function tabscroller() {
-	
-    if ( $("ul.tabs").length ) {
-			$("ul.tabs").scroller({
-			horizontal: true,
-			customClass: "advanced"
-			//trackMargin: 4
-			//handleSize: 500
-			});
-			
-			$("ul.tabs").scroller("reset");
-	
-	
-			if ($('.scroller-content')[0].scrollWidth >  $('.scroller-content').innerWidth()) {
-				//$(".scroller-handle").css('background','#c7c7c7');
-				$(".scroller-horizontal .scroller-bar").css('height','20px','bottom','0');
-				$("ul.tabs").css('min-height','96px');
-				$("ul.tabs li a").addClass("active-scroll");
-			}
-			else {
-				$("ul.tabs").scroller("destroy");
-				$("ul.tabs").css('min-height','0');
-				$("ul.tabs li a").removeClass("active-scroll");
-			}
-	  }
-}
 
 
 

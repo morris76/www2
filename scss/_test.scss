@@ -727,10 +727,10 @@ $header-image-small-height:	500px;
 			background:#87A7C6;
 			background:rgba(255, 255, 255, 0.365);
 			content: "";
-			height: 1.5em;
+			height: 44px;
 			margin-left: 13px;
 			position: absolute;
-			top: -9px;
+			top: -5px;
 			width: 1px;
 
 			@media #{$breakpoint-menu} {
