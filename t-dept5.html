@@ -41,7 +41,6 @@
 #header-image-content > div {background: rgba(0, 0, 0, 0.56);border-radius: 12px;padding: 1em 3em;}
 
 	.body-content-small-photo {background-image:url("http://www.ct.edu/files/images/header-new387.jpg");background-size:cover;}
-	.department #banner{background:rgba(0, 0, 0, 0) linear-gradient(135deg, #0077c1 0%, #41ad4b 100%) repeat scroll 0 0 !important;}
 	
 	#sort-table,#sort-table2 {margin-top:0;border-top: 0;transition:all 0.5s ease 0s;}
 #sort-table > thead, #sort-table > thead > tr, #sort-table > thead > tr > th, #sort-table2 > thead, #sort-table2 > thead > tr, #sort-table2 > thead > tr > th  {height:0;padding:0;margin:0;display: none;}
@@ -131,21 +130,24 @@
 <section id="body-wrapper" class="">
 
 <style>
+	.department #banner{
+		/*background:rgba(0, 0, 0, 0) linear-gradient(135deg, #0077c1 0%, #41ad4b 100%) repeat scroll 0 0 !important;*/
+		background:#0077c1;}
 	.hero-bg-image {
-		background:url('http://www.ct.edu/files/images/header-new306.jpg');
+		background:url('http://www.ct.edu/files/images/header-new386.jpg');
 		background-size:cover;
-		padding:5em 1em;
+		padding:12em 1em 5em;
 		position:relative;}
 	.hero-bg-image .row{
-		max-width:72em;
+		max-width:67em;
 		margin:0 auto;
-		background:rgba(0,0,0,0.7);
-		border-radius:12px;
-		padding:1em 3em;}
+		/*background:rgba(0,0,0,0.7);
+		border-radius:12px;*/
+		padding:1em;}
 		
-	.hero-hero-image::before {
-    //background: rgba(0, 0, 0, 0.4) linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 55%, rgba(0, 0, 0, 0.35) 85%, rgba(0, 0, 0, 0.8) 100%) repeat scroll 0 0;
-    background:linear-gradient(transparent 30%, hsla(0, 0%, 0%, 0.3) 50%, rgba(0, 0, 0, 0.6) 70%);
+	.hero-hero-image::before, .hero-bg-image::before {
+    background: rgba(0, 0, 0, 0.4) linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 55%, rgba(0, 0, 0, 0.35) 85%, rgba(0, 0, 0, 0.8) 100%) repeat scroll 0 0;
+    background:linear-gradient(rgba(0,0,0,0.3) 30%, hsla(0, 0%, 0%, 0.3) 50%, rgba(0, 0, 0, 0.6) 70%);
     bottom: 0;
     content: "";
     height: auto;
@@ -155,26 +157,27 @@
     top: 0;
     width: 100%;}
 	.hero-hero-image {
-		background:url('http://www.ct.edu/files/images/header-new306.jpg');
+		background:url('http://www.ct.edu/files/images/header-new386.jpg');
 		background-size:cover;
     margin: 0 auto;
-    max-width: 86em;
-    padding: 16em 10em 2em;
+    max-width: 90em;
+    padding: 16em 0 4em;
 		position:relative;}
 	.hero-hero-image .row{
-		max-width:72em;
+		max-width:62em;
 		margin:0 auto;
-		padding:1em 3em;}
+		padding:1em 1em;}
 	.hero-bg-image h1, .hero-hero-image h1 {
 		color:#fff;text-shadow: 1px 1px 1px #000;}
 	.hero-bg-image h3, .hero-hero-image h3 {
 		color:rgba(255,255,255,0.7);}
 		
 	.hero-no-image {
-		padding:3em 1em 0;
-		background:linear-gradient(180deg, #f6f6f6 0%, #fff 100%);}
+		padding:3em 1em;
+		background:transparent /*linear-gradient(180deg, #f6f6f6 0%, #fff 100%)*/;
+		}
 	.hero-no-image .row{
-		max-width:72em;
+		max-width:62em;
 		margin:0 auto;}
 	.hero-no-image h3 {
 		color:rgba(0,0,0,0.7);}
@@ -191,6 +194,7 @@
 	.m-padding-4 {padding:4em;}
 	.m-padding-5 {padding:5em;}
 	
+	.navControl { display:none;}
 	
 	@media (max-width: 900px){
 		.nav-sub {position:relative;display:block;}
@@ -259,8 +263,10 @@
 		  -ms-transform: translateY(-10px) rotate(-45deg);
 		  -o-transform: translateY(-10px) rotate(-45deg);
 		  transform: translateY(-10px) rotate(-45deg);}
+		  
+		.hero-hero-image {padding:3em 0;}
+		.hero-bg-image:before, .hero-hero-image:before {background:rgba(0, 0, 0, 0.3) linear-gradient(transparent 30%, hsla(0, 0%, 0%, 0.3) 50%, rgba(0, 0, 0, 0.7) 70%) repeat scroll 0 0}
 		}
-		.navControl { display:none;}
 	    
 </style>
 <!--
@@ -285,7 +291,7 @@
 
 
 
-<section class="body-content body-content-box">
+<section class="body-content body-content-box box-shadow-big">
 <div class="nav-sub margin-medium">	
 	<div class="navControl">
 		<div id="hamburger" class="hamburger">
@@ -305,7 +311,7 @@
 	</ul>
 </div>		
 		<div class="row">
-			<div class="col-12 box-shadow-big padding-2 margin-medium">
+			<div class="col-12  padding-2 margin-medium">
 				<div class="col-4">
 				<h2 class="bold subhead-line center-text color-red no-margin">Step 1</h2>
 				<h3 class="thin center-text">Select a Major</h3>
@@ -351,7 +357,7 @@
 		</div>
 			
 		<div class="row">
-			<div class="col-12 box-shadow-big padding-2 margin-medium">
+			<div class="col-12 padding-2 margin-medium">
 				<div class="col-4">
 				<h2 class="bold subhead-line center-text color-red no-margin">Step 2</h2>
 				<h3 class="thin center-text">Start with an associate from a Connecticut Community College</h3>
@@ -375,7 +381,7 @@
 		</div>
 	</div>
 	<div class="row">
-			<div class="col-12 box-shadow-big padding-2 margin-medium">
+			<div class="col-12 padding-2 margin-medium">
 				<div class="col-4">
 				<h2 class="bold subhead-line center-text color-red no-margin">Step 3</h2>
 				<h3 class="thin center-text">Finish with a Bachelor's from a CT State University or Charter Oak</h3>

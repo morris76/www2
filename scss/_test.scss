@@ -641,8 +641,11 @@ $header-image-small-height:	500px;
 	.body-content-box {
 		position:relative;
 		padding:3em;
+		background: #fff none repeat scroll 0 0;
+    margin: -2em auto;
 			@media #{$breakpoint-columns} {
 				padding:2em 0 0;
+				margin:0;
 				}	
 		}
 	#banner .no-menu {
@@ -661,11 +664,11 @@ $header-image-small-height:	500px;
 		 
 	#banner h1 {
 		display:inline-block;
-		margin:35px 0;
+		margin:25px 0;
 		line-height:36px;
 		font-size:36px;
 		@media #{$breakpoint-menu} {
-			margin:20px 0;
+			margin:13px 0;
 			}
 		@media #{$breakpoint-columns} {
 			margin:0;
@@ -723,7 +726,7 @@ $header-image-small-height:	500px;
 		top: 0;
 		font-family: adelle;
 		border:1px solid rgba(255,255,255,0.7);
-		padding:12px;
+		padding:10px;
 		
 		&:after{
 			background:#87A7C6;
@@ -750,9 +753,9 @@ $header-image-small-height:	500px;
 		
 		@media #{$breakpoint-menu} {
 			display: table-cell;
-			font-size: 26px;
+			font-size: 22px;
 			height: auto;
-			padding: 0 25px 0 0;
+			padding: 5px;
 			vertical-align: middle;
 			top:0;line-height:30px;
 			}
@@ -781,7 +784,7 @@ $header-image-small-height:	500px;
 			display: table-cell;
 			font-size: 26px;
 			height: auto;
-			padding: 0 ;
+			padding: 0  0 0 10px;
 			vertical-align: middle;
 			top:0;line-height: 30px;
 			}
@@ -819,6 +822,7 @@ $header-image-small-height:	500px;
 			text-align: left;
 			height:70px;
 			position:relative;
+			background:transparent;
 			}
 		&.no-menu {
 			text-align:center;
@@ -866,12 +870,12 @@ $header-image-small-height:	500px;
 
 	#nav-wrap, #nav-utility {
 		display: inline-block;
-		margin: 0 0 15px 0;
+		margin: 0 0 20px 0;
 		padding: 0 30px;
 		position: relative;
 		right: auto;
 		top: 0;
-		background:rgba(0,0,0,0.25);
+		//background:rgba(0,0,0,0.25);
 		@media #{$breakpoint-menu} {
 			padding-top:10px;
 			background:none;
@@ -888,30 +892,29 @@ $header-image-small-height:	500px;
 	}
 	#nav-wrap > li > a {
 		padding: 9px 30px;
-		border-radius:3px 3px 0 0;
-		font-weight:700;
-		color:rgba(255,255,255,0.6);
-		text-transform:uppercase;
-		font-size:17px;
+		border-radius:3px;
+		font-weight:400;
+		color:rgba(255,255,255,0.75);
+		//text-transform:uppercase;
+		font-size:19px;
 		font-family:adelle-sans, sans-serif;
 		@media #{$breakpoint-tablet} {
 			font-size: 17px;}
 		}
 	#nav-wrap > li.selected > a {color:#fff;}
 	#nav-wrap > li:last-child {}
-	#nav-wrap > li:last-child > a {padding-right: 20px;
+	#nav-wrap > li:last-child > a {padding-right: 30px;
 		@media #{$breakpoint-menu} {
 			padding-right:30px;
 			}
 		}
 	#nav-wrap > li:hover > a {
-		//border-bottom: 3px solid rgba(0,0,0,0.5);
-		
+    background: rgba(0, 0, 0, 0.33) none repeat scroll 0 0;
 		@media #{$breakpoint-menu} {
 			border:0;
 			}
 		}
-	#nav-wrap > li:hover .mega-dropdown, #nav-wrap > li:hover > ul {height: auto; left: auto;background:#fff;width:45%;margin-top: 10px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+	#nav-wrap > li:hover .mega-dropdown, #nav-wrap > li:hover > ul {height: auto; left: auto;background:#fff;width:45%;margin-top:8px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
 		@media #{$breakpoint-menu} {
 			width:auto;left: 0;margin: 0;padding: 10px 10px 10px 18px;position: relative;box-shadow: none;background:none;
 			}
@@ -945,7 +948,8 @@ $header-image-small-height:	500px;
 		}
 	#body-wrapper {
 		margin: 0 auto;
-		padding-bottom:1em; 
+		padding-bottom:0; 
+		background:#f1f1f1;
 		}
 	.body-content-small {
 		padding: 4em 7em 1em;
