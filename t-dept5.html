@@ -132,7 +132,8 @@
 <style>
 	.department #banner{
 		/*background:rgba(0, 0, 0, 0) linear-gradient(135deg, #0077c1 0%, #41ad4b 100%) repeat scroll 0 0 !important;*/
-		background:#0077c1;}
+		background:#0077c1;
+		box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.6);}
 	.hero-bg-image {
 		background:url('http://www.ct.edu/files/images/header-new386.jpg');
 		background-size:cover;
@@ -173,7 +174,7 @@
 		color:rgba(255,255,255,0.7);}
 		
 	.hero-no-image {
-		padding:3em 1em;
+		padding:3em 1em 5em;
 		background:transparent /*linear-gradient(180deg, #f6f6f6 0%, #fff 100%)*/;
 		}
 	.hero-no-image .row{
@@ -207,12 +208,12 @@
 	    margin: 0 auto;
 	    padding: 10px;}
   
-		ul.tabs {display:block;background:red;}
 		ul.tabs li {display:block;}
 		
 		ul.tabs {
-	    background: #f9f9f9 none repeat scroll 0 0;
-	    margin: 0;
+			display: block;
+	    background: #f9f9f9;
+	    margin: 0 1em;
 	    opacity: 0;
 	    position: absolute;
 	    transform: translateY(-10%);
@@ -221,7 +222,10 @@
 	    visibility: hidden;
 	    z-index: -1;
 	    box-shadow:0 0 8px rgba(0, 0, 0, 0.22);
-	    width:100%;}
+	    width:auto;
+	    border:0;
+	    left:0;
+	    right:0;}
     ul.tabs.active {
 	    opacity: 1;
 	    position: absolute;
@@ -230,7 +234,8 @@
 	    z-index:999;
 	    height:auto;}
 		ul.tabs li a {display:block;letter-spacing:1px;}
-	    
+	  ul.tabs li a.active:before, ul.tabs li a.active:after {content:none;}
+	  ul.tabs li a.active {background:#eee;}
 		.hamburger {    
 			display: table-cell;
 	    margin-right: 10px;
@@ -291,7 +296,7 @@
 
 
 
-<section class="body-content body-content-box box-shadow-big">
+<section class="body-content body-content-box box-shadow-big" data-sr="over 0.5s">
 <div class="nav-sub margin-medium">	
 	<div class="navControl">
 		<div id="hamburger" class="hamburger">

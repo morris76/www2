@@ -2325,38 +2325,16 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.7);
   padding: 10px;
 }
-.department #banner h1 #logo-connscu-abr:after {
-  background: #87A7C6;
-  background: rgba(255, 255, 255, 0.365);
-  content: none;
-  height: 44px;
-  margin-left: 13px;
-  position: absolute;
-  top: -5px;
-  width: 1px;
-}
-@media (max-width: 990px) {
-  .department #banner h1 #logo-connscu-abr:after {
-    top: -7px;
-    margin-left: 12px;
-  }
-}
-@media (max-width: 767px) {
-  .department #banner h1 #logo-connscu-abr:after {
-    top: 20%;
-    height: 60%;
-    width: 1px;
-  }
-}
 @media (max-width: 990px) {
   .department #banner h1 #logo-connscu-abr {
-    display: table-cell;
+    display: inline-block;
     font-size: 22px;
     height: auto;
     padding: 5px;
     vertical-align: middle;
     top: 0;
     line-height: 30px;
+    margin-right: 5px;
   }
 }
 @media (max-width: 767px) {
@@ -2366,7 +2344,8 @@ html {
     line-height: 1.2em;
     position: relative;
     vertical-align: middle;
-    top: 0;
+    top: 13px;
+    margin-right: 10px;
   }
 }
 .department #banner h1 #logo-dept {
@@ -2381,7 +2360,7 @@ html {
 }
 @media (max-width: 990px) {
   .department #banner h1 #logo-dept {
-    display: table-cell;
+    display: inline-block;
     font-size: 26px;
     height: auto;
     padding: 0  0 0 10px;
@@ -2396,7 +2375,7 @@ html {
     font-size: 0.9rem;
     height: auto;
     line-height: 1.2em;
-    padding: 0 85px 0 5px;
+    padding: 0 85px 0 0;
     position: relative;
     vertical-align: middle;
     top: 0;
