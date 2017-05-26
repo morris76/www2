@@ -202,12 +202,14 @@ $(window).hashchange( function(){
 
 /****************** Responsive Navigation ***************/
 if ($(window).width() > 990) {
-	var $header = $("#banner nav"),
-  $clone = $header.before($header.clone().addClass("clone"));
+	var header = $("#banner nav");
+  clone 	= header.before(header.clone().addClass("clone"));
+  //clone2 	= $("#banner nav").clone();
 
 	$(window).on("scroll", function() {
-	  var fromTop = $("body").scrollTop();
-	  $('body').toggleClass("down", (fromTop > 300));
+	  var fromTop = $(document).scrollTop();
+	  console.log(fromTop);
+	  $('.department').toggleClass("down", (fromTop > 300));
 	});
 
 	$("#nav-wrap > li").mouseover(function () {
