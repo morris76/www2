@@ -430,7 +430,7 @@ h2 {
 
 h3 {
   font-size: 1.45em;
-  line-height: 1.857142858em;
+  line-height: 1.657142858em;
   margin-top: 0.92857143em;
   margin-bottom: 0.92857143em;
 }
@@ -2478,7 +2478,7 @@ html {
   }
 }
 .department #nav-wrap > li > a {
-  padding: 9px 30px;
+  padding: 9px 25px;
   border-radius: 3px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.75);
@@ -2494,11 +2494,11 @@ html {
   color: #fff;
 }
 .department #nav-wrap > li:last-child > a {
-  padding-right: 30px;
+  padding-right: 25px;
 }
 @media (max-width: 990px) {
   .department #nav-wrap > li:last-child > a {
-    padding-right: 30px;
+    padding-right: 25px;
   }
 }
 .department #nav-wrap > li:hover > a {
@@ -4183,7 +4183,7 @@ ul.document li:before {
 }
 
 .hero-hero-image::before, .hero-bg-image::before {
-  background: rgba(0, 0, 0, 0.4) linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 55%, rgba(0, 0, 0, 0.35) 85%, rgba(0, 0, 0, 0.8) 100%) repeat scroll 0 0;
+  background: transparent linear-gradient(rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.41) 50%, rgba(0, 0, 0, 0.77) 70%) repeat scroll 0 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 70%);
   bottom: 0;
   content: "";
@@ -4200,7 +4200,7 @@ ul.document li:before {
   background-size: cover;
   margin: 0 auto;
   max-width: 90em;
-  padding: 16em 0 4em;
+  padding: 16em 0 6em;
   position: relative;
 }
 
