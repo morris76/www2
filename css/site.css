@@ -2561,7 +2561,6 @@ html {
 .department #body-wrapper {
   margin: 0 auto;
   padding-bottom: 0;
-  background: #f1f1f1;
 }
 .department .body-content-small {
   padding: 4em 7em 1em;
@@ -3390,15 +3389,12 @@ section#body-wrapper.active:after {
 }
 
 .subhead-line {
-  overflow: hidden;
-  text-align: center;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
   padding-top: 1em;
 }
 .subhead-line:before {
   background-color: rgba(0, 0, 0, 0.1);
-  content: "";
   display: inline-block;
   height: 3px;
   position: relative;
@@ -3411,7 +3407,7 @@ section#body-wrapper.active:after {
   background-color: rgba(0, 0, 0, 0.1);
   content: "";
   display: inline-block;
-  height: 3px;
+  height: 1px;
   position: relative;
   vertical-align: middle;
   width: 50%;
@@ -3529,11 +3525,10 @@ ul.nav-filter .inactive {
 ul.tabs {
   padding: 0;
   margin: 2em 0 5em 0;
-  border: 1px solid #f2f2f2;
   overflow: visible;
   position: relative;
   white-space: nowrap;
-  background: rgba(0, 0, 0, 0.02);
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 990px) {
   ul.tabs {
@@ -3594,12 +3589,11 @@ ul.tabs li a:hover {
   }
 }
 ul.tabs li .active:after {
-  content: " ";
   display: block;
   background: #C4634B;
   height: 3px;
   position: relative;
-  top: 22px;
+  top: 20px;
   margin: 0 -5px;
 }
 @media (max-width: 990px) {
@@ -4166,7 +4160,7 @@ ul.document li:before {
 
 .department #banner {
   background: transparent linear-gradient(165deg, #0077c1 0%, #00629e 100%) repeat scroll 0 0 !important;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 .hero-bg-image {
@@ -4212,7 +4206,7 @@ ul.document li:before {
 
 .hero-bg-image h1, .hero-hero-image h1 {
   color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hero-bg-image h3, .hero-hero-image h3 {
@@ -4225,7 +4219,7 @@ ul.document li:before {
 }
 
 .hero-no-image .row {
-  max-width: 62em;
+  max-width: 60em;
   margin: 0 auto;
 }
 
