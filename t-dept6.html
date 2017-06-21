@@ -36,12 +36,15 @@
 	</script>
 
 	<style>
+		
+@media (min-width: 767px){
 	.department #banner h1 {margin:30px 0;}
 	.department #banner h1 #logo-dept {font-size:30px;}
 	.department #banner h1 #logo-connscu-abr {font-size:30px;padding:7px;}
 	.department #banner #banner-wrap {display: flex;justify-content: space-between;align-items: center;}
 	.department .nav-main {width:auto;}
 	.department #nav-wrap, .department #nav-utility {margin: 0;padding: 0;}
+}
 	</style>
 	
 
@@ -109,30 +112,51 @@
     padding: 1em 1em 1em;
     background: #ececec;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-        position: relative;
+		position: relative;
     z-index: 1;
 }
+.hero-menu.dark	{background: #403f3f;}
+.hero-menu.white	{background: #FFF;}
 
-.hero-menu	.tabs{
+.hero-menu .tabs{
     
     padding: 0;
     box-shadow: none;
     margin: 0;
 }
-.hero-menu	ul.tabs li a {
+.hero-menu ul.tabs li a {
     padding: 5px 20px;
-    color: #7a7a7a;
+    color: #939393;
 }
-.hero-menu	ul.tabs li a.active {
-    background: #fff;
-    border-radius: 3px;
-    color:#515151;
+.hero-menu.dark ul.tabs li a.active {
+    color: #fff;
+}
+.hero-menu ul.tabs li a.active {
+    color:#2d2d2d;
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
 }
 #sub-menu li {display:inline-block;}
 </style>
-<section class="hero-menu">
+<section class="hero-menu sticky nav-sub">
 	<div class="row">
 		<div class="col-12 center-text">
+			
+			<div class="navControl">
+				<div id="hamburger" class="hamburger">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+		 	 Navigation
+			</div>
 			<ul class="tabs">
 				<li class="active"><a class="active" href="#about">About</a></li>
 				<li><a href='#' data-target="#major">By Major</a></li>
@@ -155,18 +179,7 @@
 
 
 
-<section class="body-content body-content-box box-shadow-big">
-<div class="nav-sub margin-medium">	
-	<div class="navControl">
-		<div id="hamburger" class="hamburger">
-		<span class="line"></span>
-		<span class="line"></span>
-		<span class="line"></span>
-	</div>
- 	 Navigation
-	</div>
-	
-</div>		
+<section class="body-content body-content-box box-shadow-big">		
 		<div class="row">
 			<div class="col-12  padding2 margin-medium">
 				<div class="col-4">
@@ -362,11 +375,12 @@
 
 <noscript>For the best experience, please enable javascript.</noscript>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/global_dept.js"></script>
 <script type="text/javascript" src="scripts/scrollReveal.min.js"></script>
+<script type="text/javascript" src="scripts/stickyfill.js"></script>
 
-<script type="text/javascript" charset="utf-8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/files/scripts/respond.min.js"></script>
 <![endif]-->
@@ -378,8 +392,22 @@
 <script type="text/javascript">
 
 
+
+
 $(document).ready(function() {
    
+$('.sticky').Stickyfill();
+
+var stickyMenu = $('.sticky').offset();
+var $window = $(window);
+
+$window.scroll(function() {
+    if ( $window.scrollTop() >= stickyMenu.top) {
+        $(".sticky").addClass("sticky-menu");
+    } else {
+    		$(".sticky").removeClass("sticky-menu");
+    }
+});
 
 $(".navControl").click(function(event){
 	$("ul.tabs, .nav-sub, #hamburger").toggleClass("active");
