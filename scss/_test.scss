@@ -642,10 +642,8 @@ $header-image-small-height:	500px;
 		position:relative;
 		padding:3em;
 		background: #fff none repeat scroll 0 0;
-    margin: -2em auto;
 			@media #{$breakpoint-menu} {
 				padding:2em 0 0;
-				margin:-2em 0.7em;
 				}	
 		}
 	#banner .no-menu {
@@ -1948,7 +1946,7 @@ ul.tabs {
 			padding: 20px 25px;
 			display: inline-block;
 			margin: 0;
-			font-weight: 400;
+			font-weight: 700;
 			color: #b5b5b5;
 			text-transform:uppercase;
 			font-size:0.9em;
@@ -2499,6 +2497,7 @@ ul.document {padding-left:0;
 	.hero-hero-image {
 		background:url('http://www.ct.edu/files/images/header-new386.jpg');
 		background-size:cover;
+		background-position:50% 0;
     margin: 0 auto;
     max-width: 90em;
     padding: 16em 0 6em;
@@ -2521,6 +2520,11 @@ ul.document {padding-left:0;
 		margin:0 auto;}
 	.hero-no-image h3 {
 		color:rgba(0,0,0,0.7);}
+		
+	.section-overlap {margin-top:-3em;margin-bottom:-3em;
+		@media #{$breakpoint-menu} {
+		}
+		}
 		
 	.padding-1 {padding:1em;}
 	.padding-2 {padding:2em;}

@@ -202,9 +202,6 @@ $(window).hashchange( function(){
 
 /****************** Responsive Navigation ***************/
 if ($(window).width() > 990) {
-	//var header = $("#banner nav");
-  //clone 	= header.before(header.clone().addClass("clone"));
-  //clone2 	= $("#banner nav").clone();
 
 	$(window).on("scroll", function() {
 	  var fromTop = $(document).scrollTop();
@@ -230,8 +227,8 @@ if ($(window).width() > 990) {
 }
 
 if ($(window).width() < 989) {
-	var $banner = $("#banner #banner-wrap"),
-  $cloneBanner = $banner.before($banner.clone().addClass("clone"));
+	//var $banner = $("#banner #banner-wrap"),
+  //$cloneBanner = $banner.before($banner.clone().addClass("clone"));
 	$(window).on("scroll", function() {
 	  var fromTop = $("body").scrollTop();
 	  $('body').toggleClass("down", (fromTop > 300));
