@@ -643,7 +643,7 @@ $header-image-small-height:	500px;
 		padding:3em;
 		background: #fff none repeat scroll 0 0;
 			@media #{$breakpoint-menu} {
-				padding:2em 0 0;
+				padding:1.5em;
 				}	
 		}
 	#banner .no-menu {
@@ -745,7 +745,7 @@ $header-image-small-height:	500px;
 			position: relative;
 			vertical-align: middle;
 			top:13px;
-			margin-right:10px;
+			margin-right:7px;
 			}
 		}
 
@@ -829,13 +829,17 @@ $header-image-small-height:	500px;
 		top: 0;
 		width:100%;
 		@media #{$breakpoint-menu} {
-			//top:-12px;
-			top:0;
-			width:100%;
-				
+			top:71px;
+			height:100vh;
+			align-self:baseline;
+			flex:1;
+			position:relative;
+			transform: translateX(110%);
 				&.active {
-					top:70px;
+					height:100vh;
+					transform: translateX(0%);
 					text-align: center;
+					position:relative;
 					}
 			}
 		@media #{$breakpoint-columns} {
@@ -1013,13 +1017,13 @@ $header-image-small-height:	500px;
 			// Slider Styles
 			-webkit-transform: translateY(0%);
 			-ms-transform: translateY(0%);
-			transform: translateY(0%);
+			transform: translateX(0%);
 			opacity:1;
 			background: #252525;
 			//background:rgba(37, 37, 37, 0.9);
-			height: 90%;
-			overflow: scroll;
-			position: fixed;
+			height: auto;
+			//overflow: scroll;
+			position: absolute;
 			visibility: visible;
 			//z-index:999;
 			}
@@ -1442,6 +1446,7 @@ footer ul {
 	margin:40px auto 0 auto;
 	max-width:100%;
 	padding-bottom:1em;
+	transition:all 0.3s;
 
 	#body-header {
 		padding-top:100px;}
@@ -1462,17 +1467,16 @@ footer ul {
 			section {
 				//display:none;
 				//transition-delay: 0.3s;
-				overflow:hidden;  
+				//overflow:hidden;  
 				//position:absolute;
-				visibility: hidden;
-	  		opacity: 0;
-	  		transition: visibility 1.0s, opacity 1.0s linear;
+				//visibility: hidden;
+	  		//opacity: 0;
+	  		//transition: visibility 1.0s, opacity 1.0s linear;
 			}
 		}
 	}
 section#body-wrapper:after {
-	//content: " ";
-	content:none;
+	content: "";
 	background: rgba(0, 0, 0, 0.75);
 	position: fixed;
 	top: 0;
@@ -1487,7 +1491,8 @@ section#body-wrapper:after {
 section#body-wrapper.active:after {
 	opacity:100;
 	display: block;
-	visibility:visible;}
+	visibility:visible;
+	}
 
 .body-content {
 	margin:0 auto;
@@ -2479,7 +2484,7 @@ ul.document {padding-left:0;
 		padding:12em 1em 5em;
 		position:relative;}
 	.hero-bg-image .row{
-		max-width:67em;
+		max-width:63em;
 		margin:0 auto;
 		padding:1em;}
 		
@@ -2538,25 +2543,27 @@ ul.document {padding-left:0;
 	.m-padding-4 {padding:4em;}
 	.m-padding-5 {padding:5em;}
 	
+	.dark .navControl { color:#fff;}
+	.dark .hamburger .line {background:#fff;}
 	.navControl { display:none;}
 	
 		@media #{$breakpoint-menu} {
 		.nav-sub {position:relative;display:block;}
 		.navControl {       
-			background: #fff;
 	    border-radius: 4px;
-	    box-shadow: 0 0 8px rgba(0, 0, 0, 0.22);
 	    cursor: pointer;
-	    display: table;
+	    display: flex;
+	    justify-content: flex-end;
 	    margin: 0 auto;
-	    padding: 10px;}
+	    padding: 0;}
   
 		ul.tabs li {display:block;}
 		
-		ul.tabs {
+		ul.tabs, .hero-menu ul.tabs {
+			padding: 1em 3em;
 			display: block;
 	    background: #f9f9f9;
-	    margin: 0 1em;
+	    margin:0 -1em;
 	    opacity: 0;
 	    position: absolute;
 	    transform: translateY(-10%);
@@ -2568,7 +2575,11 @@ ul.document {padding-left:0;
 	    width:auto;
 	    border:0;
 	    left:0;
-	    right:0;}
+	    right:0;
+	    text-align:left;}
+	  ul.tabs li:not(:last-child) {
+	  	border-bottom:1px solid rgba(0,0,0,0.05);
+	  	}
     ul.tabs.active {
 	    opacity: 1;
 	    position: absolute;
@@ -2578,10 +2589,10 @@ ul.document {padding-left:0;
 	    height:auto;}
 		ul.tabs li a {display:block;letter-spacing:1px;}
 	  ul.tabs li a.active:before, ul.tabs li a.active:after {content:none;}
-	  ul.tabs li a.active {background:#eee;}
+	  ul.tabs li a.active {
+	  	//background:#eee;
+	  	}
 		.hamburger {    
-			display: table-cell;
-	    margin-right: 10px;
 	    padding-right: 10px;
 	    vertical-align: middle;}
 		.hamburger .line{
