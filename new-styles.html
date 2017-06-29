@@ -55,36 +55,46 @@
 <body class="department">
 
 
-<header class="banner" id="banner" role="banner">
-   <div id="banner-wrap">
-	<h1><a href="/" id="logo-connscu-abr">CSCU</a><a href='/it' id="logo-dept">Transfer Navigator</a></h1>
-	<div id="nav-button" class="nav-button"></div>
-		<nav class="nav-main">
-         <ul id="nav-wrap" class="inline">
-         
-            <li><a href="/transfer/about">About</a></li>
-            <li><a href="/transfer/transferring">Transferring</a>
-                  <ul>
+<header class="banner stacked" id="banner" role="banner">
+  <div id="banner-wrap">
+		<h1><a href="/" id="logo-connscu-abr">CSCU</a><a href='/it' id="logo-dept">Transfer Navigator</a></h1>
+			
+				<div id="nav-button" class="nav-button navControl">
+					<div id="hamburger-top" class="hamburger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+			 	 Menu
+				</div>
+				
+			<nav class="nav-main">
+			
+	       <ul id="nav-wrap" class="inline">
+	       
+	          <li><a href="/transfer/about">About</a></li>
+	          <li><a href="/transfer/transferring">Transferring</a>
+	                <ul>
 										<li><a href='/transfer/transferring#ccc'>from CT Community Colleges</a></li>
 										<li><a href='/transfer/transferring#csu'>to CT State Universities</a></li>
 										<li><a href='/transfer/transferring#uconn'>to/from UConn</a></li>
 										<li><a href='/transfer/transferring#other'>to/from Private Institutions</a></li>
-                  </ul>
-                  </li>
-            <li><a href="/transfer/tickets">Transfer Tickets</a>
-                  <ul>
+	                </ul>
+	                </li>
+	          <li><a href="/transfer/tickets">Transfer Tickets</a>
+	                <ul>
 										<li><a href='/transfer/tickets'>How Tickets Work</a></li>
 										<li><a href='/transfer/tickets#major'>Search by Major</a></li>
 										<li><a href='/transfer/tickets#campus'>Search by Campus</a></li>
 										<li><a href='/transfer/tickets#category'>Search by Category</a></li>
 										<li><a href='/transfer/tickets#contact'>Contact</a></li>
-                  </ul>
-                 </li>
-            <li><a href="/transfer/contact">Contact</a>
-            </li>
-         </ul>
+	                </ul>
+	               </li>
+	          <li><a href="/transfer/contact">Contact</a>
+	          </li>
+	       </ul>
 	 
-      </nav>
+	    </nav>
    </div>
 </header>
 
@@ -104,30 +114,6 @@
 </section>
 -->
 <style>
-.hero-menu	{
-    padding: 1em 1em 1em;
-    background: #ececec;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-		position: relative;
-}
-.hero-menu.dark	{background: #232222;}
-.hero-menu.white	{background: #FFF;}
-
-.hero-menu ul.tabs{
-    padding: 0;
-    box-shadow: none;
-    margin: 0;
-}
-.hero-menu ul.tabs li a {
-    padding: 10px 20px;
-    color: #939393;
-}
-.hero-menu.dark ul.tabs li a.active {
-    color: #fff;
-}
-.hero-menu ul.tabs li a.active {
-    color:#2d2d2d;
-}
 .sticky {
     position: -webkit-sticky;
     position: sticky;
@@ -144,12 +130,12 @@
 	<div class="row">
 		<div class="col-12 center-text">
 			
-			<div class="navControl">
-				<div id="hamburger" class="hamburger">
-				<span class="line"></span>
-				<span class="line"></span>
-				<span class="line"></span>
-			</div>
+			<div id="nav-button-sub" class="nav-button navControl">
+				<div id="hamburger-sub" class="hamburger">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</div>
 		 	 Navigation
 			</div>
 			<ul class="tabs">
@@ -405,7 +391,7 @@ $window.scroll(function() {
 });
 
 $(".navControl").click(function(event){
-	$("ul.tabs, .nav-sub, #hamburger").toggleClass("active");
+	$("ul.tabs, .nav-sub, #hamburger-top").toggleClass("active");
 });
 $("ul.tabs li a").click(function(event){
 	$("ul.tabs").removeClass("active");
