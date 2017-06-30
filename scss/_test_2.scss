@@ -190,11 +190,9 @@ header .nav-main {
 	    transform: scale(1.2);
 	    opacity:0;
 	    visibility:hidden;
-	    width:100%;
 	    z-index:998;
     	text-align: center;
     	padding:3em 0;
-    	right:0;
 		}
 		
 }
@@ -205,6 +203,9 @@ header .nav-main {
 			@media #{$breakpoint-menu} {	
 					max-width:400px;
 					margin:0 auto;
+					padding:0 1em;
+					display:block;
+					width:100%;
 			}
 	}
 	header .nav-main > ul > li {
@@ -218,9 +219,10 @@ header .nav-main {
 	    
 			@media #{$breakpoint-menu} {	
 						display:block;
-						padding:20px 0;    
+						padding:10px 0;    
 						border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 				    text-align: left;
+						width:100%;
 					}
 	}
 	header .nav-main > ul > li > a {
@@ -235,9 +237,13 @@ header .nav-main {
 			@media #{$breakpoint-menu} {
 	    		display:block;
 	    		padding: 10px 1em;
+					width:100%;
 	    }
 	}
-
+	
+	/*-----
+	 Submenu Styles
+	----*/
 	header .nav-main > ul > li > ul {
 	    box-shadow: none;
 	    height: 0;
@@ -248,11 +254,22 @@ header .nav-main {
 	    text-align: left;
 	    transition: opacity 0.5s ease-in-out 0s;
 	    width: 100%;
+	    
+			@media #{$breakpoint-menu} {
+					display: none;
+					margin: 0 10px;
+					position: relative;
+					height: auto;
+					opacity: 1;
+					padding:10px 10px 10px 18px;
+					left:0;
+				  list-style-type:none;
+				}
 	}
 	header .nav-main > ul > li:hover > a {
 	    background: rgba(0, 0, 0, 0.33) none repeat scroll 0 0;
 	}
-	header .nav-main > ul > li:hover ul, header .nav-main > ul > li:active ul{
+	header .nav-main > ul > li:hover ul{
 	    background: #fff none repeat scroll 0 0;
 	    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
 	    height: auto;
@@ -265,11 +282,16 @@ header .nav-main {
 	    list-style-type:none;
 	    
 			@media #{$breakpoint-menu} {	
-						display:block;
-						padding:20px 0;
-						position:relative;
-						width:auto;
+						//display:block;
 						background:transparent;
+						width:100%;
+						right:0;
+						margin: 0 10px;
+				    position: relative;
+				    height: auto;
+				    opacity: 1;
+				    padding: 10px 10px 10px 18px;
+				    list-style-type:none;
 						
 					}
 	}
@@ -325,6 +347,54 @@ section#body-wrapper::after {
 .hero-menu ul.tabs li {
     display: inline-block;
 }
+
+
+#nav-button-sub { 
+		display:none;
+
+		@media #{$breakpoint-menu} {   
+		border-radius: 4px;
+		cursor: pointer;
+		display: flex;
+		justify-content: flex-end;
+		margin: 0 auto;
+		padding: 0;}
+}
+
+.hero-menu ul.tabs li a.active {
+    color: #2d2d2d;
+}
+.hero-menu ul.tabs li a {
+    padding: 10px 20px;
+}	    
+	    
+ul.tabs, .hero-menu ul.tabs {
+		@media #{$breakpoint-menu} { 
+		padding: 1em 3em;
+		display: block;
+	  background: #f9f9f9;
+	  margin:0 -1em;
+	  opacity: 0;
+	  position: absolute;
+	  transform: translateY(-10%);
+	  transition-duration: 0.5s;
+	  transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+	  visibility: hidden;
+	  z-index: -1;
+	  box-shadow:0 0 8px rgba(0, 0, 0, 0.22);
+	  width:auto;
+	  border:0;
+	  left:0;
+	  right:0;
+	text-align:left;}}
+	
+    ul.tabs.active {
+	    opacity: 1;
+	    position: absolute;
+	    transform: translateY(0%);
+	    visibility: visible;
+	    z-index:999;
+	    height:auto;}
 ul.tabs li .active::after {
     background: #c4634b none repeat scroll 0 0;
     content: " ";
@@ -333,12 +403,6 @@ ul.tabs li .active::after {
     margin: 0 -5px;
     position: relative;
     top: 6px;
-}
-.hero-menu ul.tabs li a.active {
-    color: #2d2d2d;
-}
-.hero-menu ul.tabs li a {
-    padding: 10px 20px;
 }
 ul.tabs li a.active {
 }
@@ -361,6 +425,7 @@ ul.tabs li a {
 
 
 
+.center-text {text-align:center;}
 
 #skiptocontent {
   height: 1px;

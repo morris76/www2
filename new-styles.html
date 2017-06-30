@@ -358,194 +358,37 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/global_dept.js"></script>
-<script type="text/javascript" src="scripts/scrollReveal.min.js"></script>
 <script type="text/javascript" src="scripts/stickyfill.js"></script>
 
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-<!--[if lt IE 9]>
-<script type="text/javascript" src="/files/scripts/respond.min.js"></script>
-<![endif]-->
 
-
-<!--datatables-->
-
-<!--datatables-->
 <script type="text/javascript">
-
-
-
 
 $(document).ready(function() {
    
-$('.sticky').Stickyfill();
+	$('.sticky').Stickyfill();
 
-var stickyMenu = $('.sticky').offset();
-var $window = $(window);
+	var stickyMenu = $('.sticky').offset();
+	var $window = $(window);
 
-$window.scroll(function() {
-    if ( $window.scrollTop() >= stickyMenu.top) {
-        $(".sticky").addClass("sticky-menu");
-    } else {
-    		$(".sticky").removeClass("sticky-menu");
-    }
-});
-
-$(".navControl").click(function(event){
-	$("ul.tabs, .nav-sub, #hamburger-top").toggleClass("active");
-});
-$("ul.tabs li a").click(function(event){
-	$("ul.tabs").removeClass("active");
-});
-
- /****************** Date Tables ***************/
-    var responsiveHelper = undefined;
-    var breakpointDefinition = {
-        tablet: 1024,
-        phone : 680
-    };
-    var tableElement = $('#sort-table');
-    var tableElement2 = $('#sort-table2');
-
-    tableElement.dataTable({
-
-     "aoColumnDefs": [{
-         "bVisible": false, "bSearchable": true, "mData": 0, "aTargets": [0]
-      }, {
-         'aTargets': [1],
-         "mData": 1,
-         'mRender': function (data, type, full) {
-               return data + ': <a href="/files/tap/' + full[4]+ '.pdf" target="_blank">Associate Degree Req. (pdf)</a>';
-         }
-      }, {
-         "bVisible": false, "bSearchable": true, "mData": 2, "aTargets": [2]
-      }, {
-         "bVisible": false, "bSearchable": true, "mData": 3, "aTargets": [3]
-      }, {
-         "bVisible": false, "bSearchable": true, "mData": 4, "aTargets": [4]
-      }], 
-
-      "bDeferRender": true,
-      "sDom": 't',
-
-      "aaSorting": [[0,'asc'],[1,'asc']],
-      "oSearch": {"sSearch": "community college"},
-			//"sScrollY": "260px",
-      "sAjaxSource" : 'http://www.ct.edu/files/scripts/tap.txt',
-      "bLengthChange": false, "bPaginate": false
-
-
-    //}).rowGrouping({bExpandableGrouping: true,asExpandedGroups: [""]});
-    //}).rowGrouping({bExpandableGrouping: true});
-    });
-						
-								
-    tableElement2.dataTable({
-
-     "aoColumnDefs": [{
-         "bVisible": false, "bSearchable": true, "mData": 0, "aTargets": [0]
-      }, {
-         'aTargets': [1],
-         "mData": 1,
-         'mRender': function (data, type, full) {
-               return data + ': <em class="light"><a href="/files/tap/' + full[4]+ '.pdf" target="_blank">'+ full[2] +' (pdf)</a>';
-         }
-      }, {
-         "bVisible": false, "bSearchable": true, "mData": 2, "aTargets": [2]
-      }, {
-         "bVisible": false, "bSearchable": true, "mData": 3, "aTargets": [3]
-      }, {
-         "bVisible": false, "bSearchable": true, "mData": 4, "aTargets": [4]
-      }],  
-
-      "bDeferRender": true,
-      "sDom": 't',
-      "aaSorting": [[0,'asc'],[1,'asc']],
-      "oSearch": {"sSearch": "State"},
-			//"sScrollY": "260px",
-      "sAjaxSource" : '/files/scripts/tap.txt',
-      "bLengthChange": false, "bPaginate": false
-
-    //}).rowGrouping({bExpandableGrouping: true,asExpandedGroups: [""]});
-    //}).rowGrouping({bExpandableGrouping: true});
-    });
-
-
-			filter1 = $(this).attr('id');
-			console.log(filter1);
-	    		$('#sort-table').dataTable().fnFilter("0", 0, true, true, true, false);
-	      	$('#sort-table2').dataTable().fnFilter("0", 0, true, true, true, false);
-				
-		$(".major").click(function(){
-			filter1 = $(this).attr('id');
-			console.log(filter1);
-		  $('#keyword-college, #keyword-university, #sort-table, #sort-table2').addClass("not-visible");
-			if (filter1 == '') {
-				
-        setTimeout(function() { 
-        	$('#keyword-college, #keyword-university, #sort-table, #sort-table2').removeClass("not-visible");
-        	$('#keyword-college').html("Select a major to view degree requirements"); 
-	      	$("#keyword-university").html("Select a major to view degree requirements");
-	    		$('#sort-table').dataTable().fnFilter("0", 0, true, true, true, false);
-	      	$('#sort-table2').dataTable().fnFilter("0", 0, true, true, true, false);
-        }, 500);
-				//console.log("working");
-				}
-			else {
-				
-        setTimeout(function() { 
-        	$('#keyword-college, #keyword-university, #sort-table, #sort-table2').removeClass("not-visible");
-        	$('#keyword-college').html("Follow the <strong>" + filter1 + "</strong> degree requirements at any campus below"); 
-	      	$("#keyword-university").html("Follow the <strong>" + filter1 + "</strong> degree requirements at any campus below");
-	      	$('#sort-table').dataTable().fnFilter(filter1, 0, true, true, true, false);
-	      	$('#sort-table2').dataTable().fnFilter(filter1, 0, true, true, true, false);
-        }, 500);
-		    
-				};
-				
-      $(".dataTables_wrapper").addClass("visible");
-			$(".major.active").removeClass("active");
-      $(this).addClass("active");
-			});
-
-});
-
-var delay = (function(){
-   var timer = 0;
-   return function(callback, ms){
-      clearTimeout (timer);
-      timer = setTimeout(callback, ms);
-      };
-   })();
-
-</script>
-<script type="text/javascript">
-
-var config = {
-	reset:  false,
-	vFactor: 0.35
-}
-
-window.sr = new scrollReveal(config);
-
-$(document).ready(function(){
-
-	//equal height
-	$.fn.setAllToMaxHeight = function(){
-	return this.height( Math.max.apply(this, $.map( this , function(e){ return $(e).height() }) ) );}
-
-	$(document).ready(function() {
-		$(window).load(function() {
-		$('.grey-box').setAllToMaxHeight()
-		});
-
-		$(window).resize(function() {
-		$('.grey-box').css('height','auto');
-		$('.grey-box').setAllToMaxHeight();
-		});
+	$window.scroll(function() {
+	    if ( $window.scrollTop() >= stickyMenu.top) {
+	        $(".sticky").addClass("sticky-menu");
+	    } else {
+	    		$(".sticky").removeClass("sticky-menu");
+	    }
 	});
 
+	$(".navControl").click(function(event){
+		$(this).closest("section, header").find("ul.tabs, .nav-sub, .hamburger").toggleClass("active");
+	});
+	$("ul.tabs li a").click(function(event){
+		//$("ul.tabs").removeClass("active");
+	});
+
+
 });
 
 </script>
 
-</body></html>
+</body>
+</html>

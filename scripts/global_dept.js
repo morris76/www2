@@ -294,7 +294,7 @@ $.scrollDepth();
 /****************** Responsive Navigation ***************/
 
 
-$(".nav-button").on("click",function(event){
+$("#nav-button").on("click",function(event){
 	$(".nav-main").toggleClass("active");
 	$("header").toggleClass("active");
 	$(".nav-button").toggleClass("active"); 
@@ -323,12 +323,10 @@ if($(window).width() < 990){
 	$('#nav-wrap > li:has(ul) > a').append("<i class='fa fa-fw fa-angle-down'></i>");
 	//});
 
-	$('#nav-wrap > li:has(ul) > a').click(function(event) {
+	$('#nav-wrap > li:has(ul) > a').on('click', function(event)  {
     event.preventDefault()
-		//$(this).parent('li').toggleClass("active");
-		//console.log($(this));
-		//$(this).parent('li').find('ul').slideToggle(500).css({});
-		//$(this).slideToggle(500).css({});
+		$(this).parent('li').toggleClass("active");
+		$(this).parent('li').find('ul').addClass('active').slideToggle(500);
     });
   
     
