@@ -183,16 +183,19 @@ header .nav-main {
     align-self: center;
     
 		@media #{$breakpoint-menu} {		
-	    align-self: baseline;
-	    flex: 1 1 0;
-	    height: 100vh;
-	    position: absolute;
-	    transform: scale(1.2);
-	    opacity:0;
-	    visibility:hidden;
-	    z-index:998;
-    	text-align: center;
-    	padding:3em 0;
+		    align-self: baseline;
+		    flex: 1 1 0;
+		    height: 100vh;
+		    position: absolute;
+		    transform: scale(1.2);
+		    opacity:0;
+		    visibility:hidden;
+		    z-index:998;
+	    	text-align: center;
+	    	padding:3em 0;
+					    
+				//width may break mobile stickies....
+				width:100%;
 		}
 		
 }
@@ -242,7 +245,9 @@ header .nav-main {
 	}
 	
 	/*-----
-	 Submenu Styles
+	
+	 Main menu drop downs
+	 
 	----*/
 	header .nav-main > ul > li > ul {
 	    box-shadow: none;
@@ -303,112 +308,100 @@ header .nav-main {
 	    padding: 5px 0;
 	}
 
-header .nav-main.active {
-    transform: scale(1);
-    opacity: 1;
-    visibility: visible;
-}
+	header .nav-main.active {
+	    transform: scale(1);
+	    opacity: 1;
+	    visibility: visible;
+	}
 
 
-section#body-wrapper.active::after {
-    display: block;
-    opacity: 100;
-    visibility: visible;
-}
-section#body-wrapper::after {
-    background: rgba(0, 0, 0, 0.95) none repeat scroll 0 0;
-    bottom: 0;
-    content: "";
-    left: 0;
-    opacity: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition-duration: 0.3s;
-    visibility: hidden;
-    z-index: 90;
-}
 
+/*-----
+
+ dim body for mobile main menu
+
+----*/
+	section#body-wrapper.active::after {
+	    display: block;
+	    opacity: 100;
+	    visibility: visible;
+	}
+	section#body-wrapper::after {
+	    background: rgba(0, 0, 0, 0.95) none repeat scroll 0 0;
+	    bottom: 0;
+	    content: "";
+	    left: 0;
+	    opacity: 0;
+	    position: fixed;
+	    right: 0;
+	    top: 0;
+	    transition-duration: 0.3s;
+	    visibility: hidden;
+	    z-index: 90;
+	}
+
+/*-----
+
+ Secondary Hero Menu Styles
+
+----*/
 .hero-menu {
     background: #ececec none repeat scroll 0 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-    padding: 1em;
+    padding: 0.5em;
     position: relative;
     z-index: 1;
 }
-.hero-menu.dark	{background: #232222;}
-.hero-menu.white	{background: #FFF;}
+.hero-menu.dark, .hero-menu.dark ul.tabs	{background: #232222;}
+.hero-menu.white, .hero-menu.white ul.tabs	{background: #FFF;}
 
 .hero-menu ul.tabs {
     box-shadow: none;
     margin: 0;
-    padding: 0;
+    padding: 0;  
+    
+		@media #{$breakpoint-menu} { 
+				padding: 1em 3em;
+				display: block;
+			  background: #ececec;
+			  margin:0 -1em;
+			  opacity: 0;
+			  position: absolute;
+			  transform: translateY(-10%);
+			  transition-duration: 0.5s;
+			  transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+			  visibility: hidden;
+			  z-index: -1;
+			  box-shadow:0px 7px 8px -6px rgba(0, 0, 0, 0.22);
+			  width:auto;
+			  border:0;
+			  left:0;
+			  right:0;
+				text-align:left;}
 }
+.hero-menu ul.tabs.active {
+		opacity: 1;
+		position: absolute;
+		transform: translateY(0%);
+		visibility: visible;
+		z-index:999;
+		height:auto;
+}
+	    
 .hero-menu ul.tabs li {
     display: inline-block;
-}
-
-
-#nav-button-sub { 
-		display:none;
-
-		@media #{$breakpoint-menu} {   
-		border-radius: 4px;
-		cursor: pointer;
-		display: flex;
-		justify-content: flex-end;
-		margin: 0 auto;
-		padding: 0;}
-}
-
-.hero-menu ul.tabs li a.active {
-    color: #2d2d2d;
+    
+		@media #{$breakpoint-menu} { 
+				display:block;
+				max-width:400px;
+				margin:0 auto;
+				&:not(:last-child) {
+						border-bottom:1px solid rgba(0,0,0,0.05);
+					}
+			}
 }
 .hero-menu ul.tabs li a {
     padding: 10px 20px;
-}	    
-	    
-ul.tabs, .hero-menu ul.tabs {
-		@media #{$breakpoint-menu} { 
-		padding: 1em 3em;
-		display: block;
-	  background: #f9f9f9;
-	  margin:0 -1em;
-	  opacity: 0;
-	  position: absolute;
-	  transform: translateY(-10%);
-	  transition-duration: 0.5s;
-	  transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
-	  visibility: hidden;
-	  z-index: -1;
-	  box-shadow:0 0 8px rgba(0, 0, 0, 0.22);
-	  width:auto;
-	  border:0;
-	  left:0;
-	  right:0;
-	text-align:left;}}
-	
-    ul.tabs.active {
-	    opacity: 1;
-	    position: absolute;
-	    transform: translateY(0%);
-	    visibility: visible;
-	    z-index:999;
-	    height:auto;}
-ul.tabs li .active::after {
-    background: #c4634b none repeat scroll 0 0;
-    content: " ";
-    display: block;
-    height: 3px;
-    margin: 0 -5px;
-    position: relative;
-    top: 6px;
-}
-ul.tabs li a.active {
-}
-ul.tabs li .active {
-}
-ul.tabs li a {
     border: 0 none;
     color: #888686;
     display: inline-block;
@@ -417,15 +410,136 @@ ul.tabs li a {
     font-weight: 700;
     margin: 0;
     text-transform: uppercase;
+    
+		@media #{$breakpoint-menu} { 
+				display:block;
+			}
+}	 
+.hero-menu ul.tabs li a.active {
+		color: #2d2d2d;
 }
 
+.hero-menu ul.tabs li .active::after {
+    background: #c4634b none repeat scroll 0 0;
+    content: " ";
+    display: block;
+    height: 3px;
+    margin: 0 -5px;
+    position: relative;
+    top: 6px;
+    
+		@media #{$breakpoint-menu} {
+				content: none;
+		}
+}
+		
+#nav-button-sub { 
+		display:none;
+
+		@media #{$breakpoint-menu} {   
+				font-family:$font-sans;
+				border-radius: 4px;
+				cursor: pointer;
+				display: flex;
+				justify-content: flex-end;
+				margin: 0 auto;
+				padding: 0;}
+}
+ 
+.hero-menu.dark #nav-button-sub, .hero-menu.dark  ul.tabs li a.active{ 
+		color:rgba(255,255,255,0.9);
+}  
 
 
+	.hero-bg-image {
+		background:url('http://www.ct.edu/files/images/header-new386.jpg');
+		background-size:cover;
+		padding:12em 1em 5em;
+		position:relative;}
+	.hero-bg-image .row{
+		max-width:63em;
+		margin:0 auto;
+		padding:1em;}
+		
+	.hero-hero-image::before, .hero-bg-image::before {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.41) 50%, rgba(0, 0, 0, 0.77) 70%) repeat scroll 0 0;
+    background:linear-gradient(rgba(0,0,0,0.3) 30%, hsla(0, 0%, 0%, 0.3) 50%, rgba(0, 0, 0, 0.6) 70%);
+    bottom: 0;
+    content: "";
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;}
+	.hero-hero-image {
+		background:url('http://www.ct.edu/files/images/header-new386.jpg');
+		background-size:cover;
+		background-position:50% 0;
+    margin: 0 auto;
+    max-width: 90em;
+    padding: 16em 0 6em;
+		position:relative;
+    
+		@media #{$breakpoint-menu} {
+    		padding: 6em 0 3em;
+		}}
+	.hero-hero-image .row{
+		max-width:62em;
+		margin:0 auto;
+		padding:1em 1em;}
+	.hero-bg-image h1, .hero-hero-image h1 {
+		color:#fff;text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);}
+	.hero-bg-image h3, .hero-hero-image h3 {
+		color:rgba(255,255,255,0.7);}
+		
+	.hero-no-image {
+		padding:3em 1em 5em;
+		background:transparent;
+		}
+	.hero-no-image .row{
+		max-width:61em;
+		margin:0 auto;}
+	.hero-no-image h3 {
+		color:rgba(0,0,0,0.7);}
+		
+	.body-content-box {
+    position: relative;
+    padding: 3em;
+    background: #fff none repeat scroll 0 0;
+    margin: 0 auto;
+    max-width: 64em;
+}
+	.section-overlap {margin-top:-3em;margin-bottom:-3em;
+		@media #{$breakpoint-menu} {
+		}
+		}
+		
+	.box-shadow-big {box-shadow:0 0 32px rgba(0, 0, 0, 0.16);}
+	
+	.padding-1 {padding:1em;}
+	.padding-2 {padding:2em;}
+	.padding-3 {padding:3em;}
+	.padding-4 {padding:4em;}
+	.padding-5 {padding:5em;}
+	
+	.m-padding-1 {padding:1em;}
+	.m-padding-2 {padding:2em;}
+	.m-padding-3 {padding:3em;}
+	.m-padding-4 {padding:4em;}
+	.m-padding-5 {padding:5em;}
 
-
-
+.thin {font-weight:200;}
+.bold {font-weight:700;}
 
 .center-text {text-align:center;}
+
+.sticky {position: -webkit-sticky;position: sticky;top: 0;}
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
+}
 
 #skiptocontent {
   height: 1px;
