@@ -147,7 +147,8 @@ header h1 #logo-dept {
 }
 	.hamburger {    
     padding-right: 6px;
-    vertical-align: middle;}
+    vertical-align: middle;
+    align-self: center;}
 	.hamburger .line{
     background-color: #3d3b3b;
     display: block;
@@ -193,6 +194,7 @@ header .nav-main {
 		    z-index:998;
 	    	text-align: center;
 	    	padding:3em 0;
+	    	left:0;
 					    
 				//width may break mobile stickies....
 				width:100%;
@@ -321,6 +323,9 @@ header .nav-main {
  dim body for mobile main menu
 
 ----*/
+	section#body-wrapper.active * {
+	    height: 0;
+	}
 	section#body-wrapper.active::after {
 	    display: block;
 	    opacity: 100;
@@ -339,7 +344,9 @@ header .nav-main {
 	    visibility: hidden;
 	    z-index: 90;
 	}
-
+	footer.active *{
+		height:0;}
+	section#body-wrapper {text-align: center;}
 /*-----
 
  Secondary Hero Menu Styles
@@ -348,7 +355,7 @@ header .nav-main {
 .hero-menu {
     background: #ececec none repeat scroll 0 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-    padding: 0.5em;
+    padding: 1em;
     position: relative;
     z-index: 1;
 }
@@ -441,7 +448,7 @@ header .nav-main {
 				border-radius: 4px;
 				cursor: pointer;
 				display: flex;
-				justify-content: flex-end;
+				justify-content: center;
 				margin: 0 auto;
 				padding: 0;}
 }
@@ -455,7 +462,8 @@ header .nav-main {
 		background:url('http://www.ct.edu/files/images/header-new386.jpg');
 		background-size:cover;
 		padding:12em 1em 5em;
-		position:relative;}
+		position:relative;
+		text-align:left;}
 	.hero-bg-image .row{
 		max-width:63em;
 		margin:0 auto;
@@ -480,6 +488,7 @@ header .nav-main {
     max-width: 90em;
     padding: 16em 0 6em;
 		position:relative;
+		text-align:left;
     
 		@media #{$breakpoint-menu} {
     		padding: 6em 0 3em;
@@ -496,6 +505,7 @@ header .nav-main {
 	.hero-no-image {
 		padding:3em 1em 5em;
 		background:transparent;
+		text-align:left;
 		}
 	.hero-no-image .row{
 		max-width:61em;
@@ -507,8 +517,10 @@ header .nav-main {
     position: relative;
     padding: 3em;
     background: #fff none repeat scroll 0 0;
-    margin: 0 auto;
+    margin: 0 1em;
     max-width: 64em;
+    display:inline-block;
+    text-align:left;
 }
 	.section-overlap {margin-top:-3em;margin-bottom:-3em;
 		@media #{$breakpoint-menu} {
