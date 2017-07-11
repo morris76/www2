@@ -27,6 +27,7 @@ $font-sans:		"Adelle-sans", arial;
 
 body {
 	transition: all 0.3s ease-in-out 0s;
+	line-height:1.925em;
 }
 
 a {
@@ -47,7 +48,8 @@ header {
 		position:relative;
 		z-index:99;
 }
-header.active {position:static;}
+header.active {//position:static;
+	}
 
 header.stacked #banner-wrap {
 	
@@ -89,7 +91,7 @@ header h1 #logo-connscu-abr {
 		@media #{$breakpoint-menu} {
 			font-size:60%;
 			line-height:60%;
-    	padding: 6px;
+    	padding: 10px 6px;
     	margin:0 5px 0 0;
     	
 		}
@@ -104,7 +106,7 @@ header h1 #logo-dept {
 		@media #{$breakpoint-menu} {
 			font-size:60%;
 			line-height:120%;
-    	padding: 6px 0;
+    	padding: 0;
 		}
 }
 
@@ -185,7 +187,7 @@ header .nav-main {
 		    visibility:hidden;
 		    z-index:998;
 	    	text-align: center;
-	    	padding:3em 0;
+	    	padding:6em 0;
 	    	left:0;
 					    
 				//width may break mobile stickies....
@@ -299,7 +301,8 @@ header .nav-main {
 	    display: block;
 	    font-family: $font-sans;
 	    font-size: 15px;
-	    padding: 5px 0;
+	    padding: 10px 0;
+	    line-height: 20px;
 	}
 
 	header .nav-main.active {
@@ -317,6 +320,7 @@ header .nav-main {
 ----*/
 	section#body-wrapper.active * {
 	    height: 0;
+	    opacity:0;
 	}
 	section#body-wrapper.active::after {
 	    display: block;
@@ -336,9 +340,12 @@ header .nav-main {
 	    visibility: hidden;
 	    z-index: 90;
 	}
-	footer.active *{
-		height:0;}
+	footer.active, footer.active *{
+		height:0;
+		opacity:0;}
 	section#body-wrapper {text-align: center;}
+	
+	
 /*-----
 
  Secondary Hero Menu Styles
@@ -554,58 +561,64 @@ footer {
     color:#ABAEB1;
   }
 
-    .footer-content{
-			margin: 0 auto;
-			max-width: 77em;
-			padding: 0 1em;
-			position: relative;
+.footer-content{
+		margin: 0 auto;
+		max-width: 77em;
+		padding: 0 1em;
+		position: relative;
     
 
-	#footer-contact {
-		margin:0;padding:1em 0;
-	}
-	
-	#footer-contact li {
-		display:inline-block;margin: 0 10px;
-		
-		@media #{$breakpoint-menu} {
-			display:inline-block;
-			}
-		.fa {
-		font-size:20px;
+		#footer-contact {
+				margin:0;padding:1em 0;
 		}
-	}
 
-	.fa {
-		color:#C4634B;
-		width: 1.3em;transition: all 0.25s ease-in-out 0s;
-	}
-	a {
-	color:rgba(255, 255, 255, 0.68);
-		&:hover {
-		color:#fff;
-			.fa {
-				color:#fff;
+		#footer-contact li {
+				display:inline-block;margin: 0 10px;
+
+				@media #{$breakpoint-menu} {
+						display:inline-block;
+				}
+				
+				.fa {
+						font-size:20px;
 				}
 		}
-	}
-	
-	&.active {
-		display:none;}
-		
-	.dark-grey-box {padding:30px;border:1px solid rgba(0,0,0, 0.55)
-		img {
-			box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-    	max-width: 190px;
-    }
-    a {
-	    color: #fff;
+
+		.fa {
+				color:#C4634B;
+				width: 1.3em;transition: all 0.25s ease-in-out 0s;
 		}
-	}
+		
+		a {
+				color:rgba(255, 255, 255, 0.68);
+				
+				&:hover {
+						color:#fff;
+				
+						.fa {
+								color:#fff;
+						}
+				}
+		}
+
+		&.active {
+				display:none;}
+
+		.dark-grey-box {padding:30px;border:1px solid rgba(0,0,0, 0.55)
+				
+				img {
+						box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+						max-width: 190px;
+				}
+				
+				a {
+						color: #fff;
+				}
+		
+		}
 }
 
 footer h3 {
-    //color: $color-red;
     font-size: 0.9em;
     text-transform: uppercase;    
     border-bottom: 1px solid #c4634b;
@@ -619,17 +632,17 @@ footer ul {
     padding: 0;
     
     li {
-    list-style:none;padding:0.3em 0 ;
+    		list-style:none;padding:0.3em 0 ;
 
-	a {
-	color:#ABAEB1;
-	}
+				a {
+						color:#ABAEB1;
+				}
     }
 }
+
 #footer-address {
-	//border-top:1px solid rgba(255,255,255,0.1);
-	margin:1em 0 0;
-	padding:1em 0 0;
+		margin:1em 0 0;
+		padding:1em 0 0;
 }
 	
 .padding-1 {padding:1em;}
@@ -690,12 +703,14 @@ footer ul {
 .color-blue 			{color:$color-blue;}
 .color-red-light 	{color:$color-red-light;}
 
+.sans-serif {font-family:$font-sans;}
+.serif 			{font-family:$font-serif;}
+
 .sticky {position: -webkit-sticky;position: sticky;top: 0;}
-.sticky:before,
-.sticky:after {
+.sticky:before, .sticky:after {
     content: '';
     display: table;
-}
+ }
 
 #skiptocontent {
   height: 1px;
