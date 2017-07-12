@@ -55,7 +55,7 @@
 <body class="department">
 
 
-<header class="banner stacked" id="banner" role="banner">
+<header class="banner" id="banner" role="banner">
   <div id="banner-wrap">
 		<h1><a href="/" id="logo-connscu-abr">CSCU</a><a href='/p20win' id="logo-dept">P20 WIN</a></h1>
 			
@@ -72,22 +72,14 @@
 			
 	       <ul id="nav-wrap" class="inline">
 	       
-	          <li><a href="/transfer/about">About</a>
+	          <li><a href="about.html">About</a>
 	                <ul>
-										<li><a href='/transfer/transferring#ccc'>Overview</a></li>
-										<li><a href='/transfer/transferring#csu'>Contact</a></li>
-										<li><a href='/transfer/transferring#uconn'>FAQs</a></li>
+										<li><a href='about.html#overview'>Overview</a></li>
+										<li><a href='about.html#contact'>Contact</a></li>
+										<li><a href='about.html#faq'>FAQs</a></li>
 	                </ul></li>
-	          <li><a href="/transfer/transferring">Data Request</a>
-	                <ul>
-										<li><a href='/transfer/transferring#ccc'>from CT Community Colleges</a></li>
-										<li><a href='/transfer/transferring#csu'>to CT State Universities</a></li>
-										<li><a href='/transfer/transferring#uconn'>to/from UConn</a></li>
-										<li><a href='/transfer/transferring#other'>to/from Private Institutions</a></li>
-	                </ul>
-	                </li>
-	          <li><a href="/transfer/tickets">Data</a></li>
-	          <li><a href="/transfer/contact">Contact</a>
+	          <li><a href="requests.html">Data Requests</a></li>
+	          <li><a href="data.html">Data</a></li>
 	          </li>
 	       </ul>
 	 
@@ -98,48 +90,61 @@
 <section id="body-wrapper" class="">
 
 <style>
-	    
+
+#sub-menu li {display:inline-block;}
+.button {padding:12px 18px; border:1px solid #c73e1d; font-family:adelle-sans; text-transform:uppercase;color:#333;display:inline-block;}
+.button:hover {background:#c73e1d; color:#FFF;}
+.hero-no-image {background:transparent linear-gradient(180deg, rgba(102, 93, 93, 0.17) 0%, #ffffff 100%);}
+.row {position:relative;}
+#overlap-1 {position: absolute;right: -20px;top: 5em;background:#fff;z-index:1}
+#overlap-2 {position: absolute;left: -20px;top: 5em;background:#fff;z-index:1;}
+.icon-header {text-shadow:-1px -1px 0 #C5C9CD, 1px -1px 0 #C5C9CD, -1px 1px 0 #C5C9CD, 1px 1px 0 #C5C9CD; color:#FFF;}
 </style>
-<!--
+
+
+
+
 <section class="hero-no-image">
 	<div class="row">
-		<div class="col-12 center-text">
-			<h1 class="sans-serif">Transfer Tickets</h1>
-			<h3 class="thin italic">Degree programs for Connecticut Community College students that transfer to Connecticut State Universities and Charter Oak without either losing any credits or being required to take extra credits in order to complete a bachelor's degree in that same discipline.</h3>
+		<div class="col-12 center center-text">
+			<h1 class="">Preschool through 20 and Workforce Information Network</h1>
+			<h3 class="thin italic">Improving education and employment opportunities for students through the secure sharing of data</h3>
 		</div>
 	</div>
 </section>
--->
-<style>
-
-#sub-menu li {display:inline-block;}
-.button {padding:12px 18px; border:1px solid #c73e1d; font-family:adelle-sans; text-transform:uppercase;color:#333;}
-.button:hover {background:#c73e1d; color:#FFF;}
-</style>
-
-
-
 
 <section class="body-content body-content-box ">
-	
-	<h1 class="">P20 WIN</h1>
-	<h3 class="thin italic margin-b-2">The Preschool through 20 and Workforce Information Network (P20 WIN), through secure sharing of data, ensures individuals successfully navigate educational pathways into the workforce. </h3>
 			
-			<div class="row">
-				<div class="col-6">
-					<i class="fa fa-3x fa-database" aria-hidden="true"></i>
-					<h2 class="color-red subhead-line">Data Requests</h2>
+			<div class="row margin-b-4">
+				<div class="col-8 padding-4 box-shadow-big" data-sr="enter left please, and hustle 20px">
+					<h2 class="color-red subhead-line margin-0">What is P20 WIN?</h2>
+					<p>P20 WIN is a network of CT agencies sharing secure data to learn and improve from education and employment outcomes in the state:
+						<ul>
+							<li>State Department of Education (SDE)</li>	
+							<li>Board of Regents for Higher Education (BOR)</li>	
+							<li>University of Connecticut (UConn)</li>	
+							<li>Department of Labor (DOL)</li>	
+							<li>Connecticut Conference of Independent Colleges (CCIC)</li>	
+						</ul>
+						Leadership from each agency meets regularly to increase data interoperability for the benefit of the state.</p>
+					<a href='requests.html' class="button">Learn More</a>
+				</div>
+				<div class="col-5 box-shadow-big" id="overlap-1" data-sr="wait 0.2s, enter left, over 1s">
+				  <img src="http://www.ct.edu/files/images/image-library2.png">
+				</div>
+			</div>
+			
+			<div class="row margin-b-4">
+				<div class="col-5 box-shadow-big" id="overlap-2" data-sr="wait 0.2s, enter left, over 1s">
+				  <img src="http://www.ct.edu/files/images/image-library.png">
+				</div>
+				<div class="col-8 padding-4 right-0 box-shadow-big" data-sr="spin 60deg, roll 10deg">
+					<h2 class="color-red subhead-line margin-0">Data Requests</h2>
 					<p>Each data request requires substantial documentation and the execution of a data sharing agreement before any personally identifiable data can be shared or linked. Refer to the P20 WIN Data Request Management Procedure (pdf) for a description of the process for requesting data and descriptions of the required documentation.</p>
 					<a href='requests.html' class="button">View Requests</a>
 				</div>
-				<div class="col-6">
-				  <img src="http://www.ct.edu/files/images/image-library.png">
-				</div>
 			</div>
 
-	
-		
-
 </section>
 
 </section>
@@ -147,7 +152,7 @@
 
 
 
-<footer data-sr="over 0.5s">
+<footer data-sr="bottom over 0.5s">
 <div class="footer-content">
 <div class="row">
 	<div class="col-12 center">
@@ -239,12 +244,18 @@
 <noscript>For the best experience, please enable javascript.</noscript>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/global_dept.js"></script>
-<script type="text/javascript" src="scripts/stickyfill.js"></script>
+<script type="text/javascript" src="/scripts/global_dept.js"></script>
+<script type="text/javascript" src="/scripts/stickyfill.js"></script>
 
+<script type="text/javascript" src="/scripts/scrollReveal.min.js"></script>
 
 <script type="text/javascript">
 
+
+var config = {
+}
+
+window.sr = new scrollReveal(config);
 $(document).ready(function() {
    
 	$('.sticky').Stickyfill();

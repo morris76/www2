@@ -433,10 +433,10 @@ header .nav-main {
     background: #c4634b none repeat scroll 0 0;
     content: " ";
     display: block;
-    height: 3px;
-    margin: 0 -10px;
+    height: 4px;
+    margin: 0 -5px;
     position: relative;
-    top: 18px;
+    top: 1px;
     
 		@media #{$breakpoint-menu} {
 				content: none;
@@ -506,7 +506,7 @@ header .nav-main {
 		color:rgba(255,255,255,0.7);}
 		
 	.hero-no-image {
-		padding:3em 1em 5em;
+		padding:3em 1em;
 		background:transparent;
 		text-align:left;
 		}
@@ -524,6 +524,9 @@ header .nav-main {
     max-width: 64em;
     display:inline-block;
     text-align:left;
+    
+		@media #{$breakpoint-menu} {
+			padding:1em}
 }
 	.section-overlap-top {margin-top:-3em;}
 	.section-overlap-bottom {margin-bottom:-3em;
@@ -645,6 +648,7 @@ footer ul {
 		padding:1em 0 0;
 }
 	
+.padding-0 {padding:0em;}
 .padding-1 {padding:1em;}
 .padding-2 {padding:2em;}
 .padding-3 {padding:3em;}
@@ -669,6 +673,7 @@ footer ul {
 .padding-b-4 {padding-bottom:4em;}
 .padding-b-5 {padding-bottom:5em;}
 
+.margin-0 {margin:0em;}
 .margin-1 {margin:1em;}
 .margin-2 {margin:2em;}
 .margin-3 {margin:3em;}
@@ -705,6 +710,35 @@ footer ul {
 
 .sans-serif {font-family:$font-sans;}
 .serif 			{font-family:$font-serif;}
+
+
+.toggle {
+	 margin-bottom: 12px;}
+	 
+.toggle .text {
+    cursor: pointer;
+    color:$color-link;
+    font-size: 1.1em;
+    font-family: $font-sans;
+    font-weight: 400;}
+    
+.toggle .text:before {
+		content:"";
+		font-family:fontawesome;
+		display:inline-block;
+		color:#c4634b;font-size: 15px;
+		cursor: pointer;
+		margin-right:10px;
+		transition:all 0.5s;}
+    
+.toggle.expanded .text:before {
+	transform:rotate(180deg);}
+		
+.content {margin:0 2em;}
+	
+.no-margin {margin:0 !important}
+.no-padding {padding:0 !important;}
+
 
 .sticky {position: -webkit-sticky;position: sticky;top: 0;}
 .sticky:before, .sticky:after {
