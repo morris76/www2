@@ -446,3 +446,33 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+#boxer.mobile .inline_content {
+    padding: 1em;
+    margin-bottom: 8em;
+}
+#boxer.mobile .boxer-close, #boxer.mobile .boxer-close:hover {
+    padding: 10px;
+    text-indent: 0;
+    top: initial;
+    width: auto;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    text-align: center;
+    font-family: adelle-sans;
+    background:#c73e1d;
+    border: 30px solid #fff;
+    color:#fff;
+}
+#boxer.mobile .boxer-close:after {
+  color: rgba(255,255,255,0.7);
+}
+span.boxer-close:before {
+    content: "";
+    border: 1px solid #c73e1d;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

@@ -76,10 +76,10 @@
 	                <ul>
 										<li><a href='about.html#overview'>Overview</a></li>
 										<li><a href='about.html#contact'>Contact</a></li>
-										<li><a href='about.html#faq'>FAQs</a></li>
+										<li><a href='about.html#faqs'>FAQs</a></li>
 	                </ul></li>
 	          <li><a href="requests.html">Data Requests</a></li>
-	          <li><a href="data.html">Data</a></li>
+	          <li><a href="data.html">Charts</a></li>
 	          </li>
 	       </ul>
 	 
@@ -94,7 +94,7 @@
 #sub-menu li {display:inline-block;}
 .button {padding:12px 18px; border:1px solid #c73e1d; font-family:adelle-sans; text-transform:uppercase;color:#333;display:inline-block;}
 .button:hover {background:#c73e1d; color:#FFF;}
-.hero-no-image {background:transparent linear-gradient(180deg, rgba(102, 93, 93, 0.17) 0%, #ffffff 100%);}
+.hero-no-image {background:transparent linear-gradient(180deg, rgba(102, 93, 93, 0.1) 0%, #ffffff 100%);}
 .row {position:relative;}
 #overlap-1 {position: absolute;right: -20px;top: 5em;background:#fff;z-index:1}
 #overlap-2 {position: absolute;left: -20px;top: 5em;background:#fff;z-index:1;}
@@ -104,7 +104,7 @@
 
 
 
-<section class="hero-no-image">
+<section class="hero-no-image padding-b-1">
 	<div class="row">
 		<div class="col-12 center center-text">
 			<h1 class="">Preschool through 20 and Workforce Information Network</h1>
@@ -129,18 +129,18 @@
 						Leadership from each agency meets regularly to increase data interoperability for the benefit of the state.</p>
 					<a href='requests.html' class="button">Learn More</a>
 				</div>
-				<div class="col-5 box-shadow-big" id="overlap-1" data-sr="wait 0.2s, enter left, over 1s">
+				<div class="col-5 m-no box-shadow-big" id="overlap-1" data-sr="wait 0.2s, enter left, over 1s">
 				  <img src="http://www.ct.edu/files/images/image-library2.png">
 				</div>
 			</div>
 			
 			<div class="row margin-b-4">
-				<div class="col-5 box-shadow-big" id="overlap-2" data-sr="wait 0.2s, enter left, over 1s">
+				<div class="col-5 box-shadow-big m-no" id="overlap-2" data-sr="wait 0.2s, enter left, over 1s">
 				  <img src="http://www.ct.edu/files/images/image-library.png">
 				</div>
 				<div class="col-8 padding-4 right-0 box-shadow-big" data-sr="spin 60deg, roll 10deg">
 					<h2 class="color-red subhead-line margin-0">Data Requests</h2>
-					<p>Each data request requires substantial documentation and the execution of a data sharing agreement before any personally identifiable data can be shared or linked. Refer to the P20 WIN Data Request Management Procedure (pdf) for a description of the process for requesting data and descriptions of the required documentation.</p>
+				<p>Each data request requires substantial documentation and the execution of a data sharing agreement before any personally identifiable data can be shared or linked. Refer to the <a href='/files/pdfs/P20WIN-DataRequestProcedure-Final_01202015.pdf' target="_blank">P20 WIN Data Request Management Procedure (pdf)</a> for a description of the process for requesting data and descriptions of the required documentation.</p>
 					<a href='requests.html' class="button">View Requests</a>
 				</div>
 			</div>
@@ -152,7 +152,7 @@
 
 
 
-<footer data-sr="bottom over 0.5s">
+<footer>
 <div class="footer-content">
 <div class="row">
 	<div class="col-12 center">
@@ -253,23 +253,14 @@
 
 
 var config = {
+	mobile:true,
+	wait:     '0.2s',
+	vFactor:  0.2
 }
 
 window.sr = new scrollReveal(config);
 $(document).ready(function() {
    
-	$('.sticky').Stickyfill();
-
-	var stickyMenu = $('.sticky').offset();
-	var $window = $(window);
-
-	$window.scroll(function() {
-	    if ( $window.scrollTop() >= stickyMenu.top) {
-	        $(".sticky").addClass("sticky-menu");
-	    } else {
-	    		$(".sticky").removeClass("sticky-menu");
-	    }
-	});
 
 	$(".navControl").click(function(event){
 		$(this).closest("section, header").find("ul.tabs, .nav-sub, .hamburger").toggleClass("active");
