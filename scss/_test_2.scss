@@ -322,8 +322,7 @@ header .nav-main {
 
 ----*/
 	section#body-wrapper.active * {
-	    height: 0;
-	    opacity:0;
+	    max-height: 100vh;
 	}
 	section#body-wrapper.active::after {
 	    display: block;
@@ -339,7 +338,7 @@ header .nav-main {
 	    position: fixed;
 	    right: 0;
 	    top: 0;
-	    transition-duration: 0.3s;
+	    transition-duration: 0.5s;
 	    visibility: hidden;
 	    z-index: 90;
 	}
