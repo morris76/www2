@@ -300,6 +300,7 @@ $("#nav-button").on("click",function(event){
 	$(".nav-button").toggleClass("active"); 
 	$("#body-wrapper").toggleClass("active");  
 	$("footer").toggleClass("active"); 
+	$("body").toggleClass("active"); 
 	$("body").removeClass("boxer-open");  
 	event.stopPropagation();
 
@@ -310,17 +311,30 @@ $("#nav-button").on("click",function(event){
             $('header').removeClass('active');
             $('.nav-button').removeClass('active');
 						$("#body-wrapper").removeClass("active"); 
+						$("body").removeClass("active"); 
 						$("footer").removeClass("active");  
         }
 	})
 });
+
+	$('header .nav-main > ul > li > ul > li > a').on('click', function(e){
+            $('.nav-main').removeClass('active');
+            $('#hamburger-top').removeClass('active');
+            $('header').removeClass('active');
+            $('.nav-button').removeClass('active');
+						$("#body-wrapper").removeClass("active"); 
+						$("body").removeClass("active"); 
+						$("footer").removeClass("active");  
+});
+	
+//add down arrow to menu items with subs
+$('#nav-wrap > li:has(ul) > a').addClass("downarrow");
 
 if($(window).width() < 990){
 
 
 
 	//$(window).load(function() {
-	$('#nav-wrap > li:has(ul) > a').append("<i class='fa fa-fw fa-angle-down'></i>");
 	//});
 
 	$('#nav-wrap > li:has(ul) > a').on('click', function(event)  {
