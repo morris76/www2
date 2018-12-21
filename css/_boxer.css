@@ -374,12 +374,20 @@
 
 #boxer.mobile .boxer-close,
 #boxer.mobile .boxer-close:hover {
-  height: 40px;
-  width: 40px;
-  top: 0;
-  right: 0;
-  background: #111111;
-  border-radius: 0;
+padding: 10px;
+    text-indent: 0;
+    top: initial;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: adelle-sans, sans-serif;
+    background: #fff;
+    border: 0;
+    color: #000;
+    margin: 0 auto;
+    width: 240px;
+}
 }
 
 #boxer.mobile .boxer-close:before,

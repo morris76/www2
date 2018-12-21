@@ -1,0 +1,564 @@
+<!doctype html>
+<!--[if lt IE 8]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>CSCU - LibGuides</title>
+	<meta name="description" content="">
+	<meta name="author" content="Connecticut State Colleges & Universities">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="/css/site_2.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<script src="//use.typekit.net/tba7jib.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	
+   <!--[if lt IE 9]>
+   <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-25950326-1']);
+		_gaq.push(['_setSiteSpeedSampleRate', 100]);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		//ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';   
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	<style>
+	/*	
+@media (min-width: 767px){
+	.department #banner h1 {margin:30px 0;}
+	.department #banner h1 #logo-dept {font-size:30px;}
+	.department #banner h1 #logo-connscu-abr {font-size:30px;padding:7px;}
+	.department #banner #banner-wrap {display: flex;justify-content: space-between;align-items: center;}
+	.department .nav-main {width:auto;}
+	.department #nav-wrap, .department #nav-utility {margin: 0;padding: 0;}
+	
+}
+*/
+	</style>
+	
+
+</head>
+
+<body class="department">
+
+
+<header class="banner" id="banner" role="banner">
+  <div id="banner-wrap">
+		<h1>
+			<a href="/" id="logo-connscu-abr"><img src='http://www.ct.edu/files/images/logo-cscu.svg' alt=""CSCU Home" /></a>
+			<a href='index.html' id="logo-dept">OpenCSCU</a></h1>
+			
+				<div id="nav-button" class="nav-button navControl">
+					<div id="hamburger-top" class="hamburger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+			 	 Menu
+				</div>
+				
+			<nav class="nav-main">
+			
+	       <ul id="nav-wrap" class="inline">
+	       
+	          <li><a href="#">About</a>
+	                <ul>
+										<li><a href='#'>What are OERs</a></li>
+										<li><a href='#'>OER Examples</a></li>
+										<li><a href='#'>FAQs</a></li>
+	                </ul></li>
+	          <li><a href="#" class="">Get Started Guide</a></li>
+		        <li><a href="#" class="">Help</a></li>
+	          
+	       </ul>
+	 
+	    </nav>
+   </div>
+</header>
+
+<section id="body-wrapper" class="">
+
+<style>
+header {background:#0d5aa2;}
+#sub-menu li {display:inline-block;}
+
+.hero-hero-image {
+  background-image: url(http://www.ct.edu/files/images/header-new367.jpg);}
+.hero-no-image {background:transparent linear-gradient(180deg, rgba(102, 93, 93, 0.1) 0%, #ffffff 100%);
+   }
+.row {position:relative;}
+#overlap-1 {position: absolute;right: -20px;top: 5em;background:#fff;z-index:1}
+#overlap-2 {position: absolute;left: -20px;top: 5em;background:#fff;z-index:1;}
+.icon-header {text-shadow:-1px -1px 0 #C5C9CD, 1px -1px 0 #C5C9CD, -1px 1px 0 #C5C9CD, 1px 1px 0 #C5C9CD; color:#FFF;}
+
+
+header .nav-main>ul>li>a.button-menu svg {
+    margin-right: 5px;
+		}
+
+
+h3 svg {
+    background: #f4f7fb none repeat scroll 0 0;
+    border: 1px solid #d3e7f9;
+    border-radius: 50%;
+    display: block;
+    height: 70px;
+    margin-bottom: 1em;
+    overflow: visible !important;
+    padding: 14px;
+    width: 70px;
+}
+@media (max-width: 990px){
+		header .nav-main>ul>li>a.button-menu {
+		    background: none;
+		    border: 0;
+		    justify-content: flex-start !important;
+				}
+		h3 svg {width:50px;height:50px;padding:10px;}
+}
+
+@media (max-width: 767px){
+	h3 {display: flex;align-items: center;}
+	h3 svg {margin-bottom:0;margin-right:15px;}
+}
+input.question,
+textarea.question {
+  font-size: 32px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: 1px solid #ccc;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  padding:12px;
+    max-width: 550px;
+    width: 80%;
+}
+/* Underline and Placeholder */
+
+input.question + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -90px;
+  font-size: 22px;
+  color: #333;
+}
+
+
+input.question:valid + label {
+  border-color: green;
+}
+
+
+input.question + label > span {
+    font-weight: 300;
+    margin: 0 auto;
+    position: relative;
+    color: #8F8F8F;
+    font-size: 32px;
+    top: -46px;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    width: 80%;
+    max-width: 550px;
+    display: block;
+    text-align: left;
+    padding: 0 12px;
+}.fa {
+    color: rgba(255,255,255,0.6);
+}
+h2.s-lib-box-title {
+    font-weight: 700;
+    font-size: 1.45em;
+    line-height: 1.657142858em;
+    margin-top: 0;
+    margin-bottom: 0.92857143em;
+}
+  table, table td, table tr, table th { display: block; text-align: left;} 
+  table tr { margin: 0; padding: 20px 0;  }
+  table td  { margin-left: 0; padding: 0; }
+  table thead { display: none; }
+  tr td:first-child {font-weight:700;}
+
+</style>
+
+
+
+
+<section class="hero-no-image">
+<div class="row center center-text">
+		<div class="col-12 padding-2">
+			<h1 class="bold">OpenCSCU Support Services</h1>
+			
+			<p class="">Many faculty and staff across CSCU are available to support OER.  Select from several options below for help. You may also <a href='https://cscu.libanswers.com/form.php?queue_id=2347' class="boxer">Submit a Question Online</a> or <a href="sms:+18602383611">Text us: 860-238-3611</a> for additional help.</p>
+			<a href="#chat" class="button margin-1">Live Chat <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a> 
+			<a href="#subject" class="button button-red margin-1">Contacts by Subject <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a> 
+			<a href="#campus" class="button button-red margin-1">Contacts by Campus <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a> 
+		</div>
+	</div>
+</section>
+
+<section class="body-content body-content-box padding-0 padding-t-0">
+			
+			<h1 class="subhead-line-center center-text color-red bod italic section-small">Help available on every campus</h1>
+			<div class="row col-12 center margin-b-4 margin-t-3">
+				
+				
+				<div id="chat" class="col-4 padding-2 box-shadow-small top-red">
+					<strong class="color-light italic sans-serif">ONLINE SUPPORT</strong>
+					<script type="text/javascript" src="//lgapi-us.libapps.com/web/jquery/js/1.12.1_jquery.min.js"></script>
+		            <script type="text/javascript" src="//lgapi-us.libapps.com/web/jquery/js/jquery-ui.min.js?2695"></script>
+		            <script type="text/javascript" src="//lgapi-us.libapps.com/web/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		            <script type="text/javascript" src="//lgapi-us.libapps.com/web/js1.25.5/springshare.public.min.js"></script>
+		            <script type="text/javascript" src="//lgapi-us.libapps.com/web/js1.25.5/springshare.common.min.js"></script>
+		            <script type="text/javascript" src="//lgapi-us.libapps.com/web/js1.25.5/common/springspace_sui_helptip.js"></script>
+		           <script src="//lgapi-us.libapps.com/sa.php?site_id=13202" onload="jQuery(window).on('load', function() {springSpace.springTrack.init({_st_site_id: '13202'});});"></script>
+		            <script>springSpace.Common = springSpace.Common || { };
+		            springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159}};
+		            springSpace.Common.baseURL = "//lgapi-us.libapps.com/";
+		            springSpace.Common.apiLoad = true;</script><script>
+								springshare_widget_config_1532966388104 = { path: 'boxes/18558576' };
+								</script>
+								<div id="s-lg-widget-1532966388104"></div>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi-us.libapps.com/widgets.php?site_id=13202&widget_type=8&output_format=1&widget_title=Live+Chat&widget_height=&widget_width=&widget_embed_type=1&guide_id=742097&box_id=18558576&map_id=21794106&content_only=0&config_id=1532966388104";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1532966388104");</script>
+				</div>
+				
+				<div id="subject" class="col-4 padding-2 box-shadow-small margin-b-3 top-red" data-sr="enter left please, and hustle 20px">
+					<strong class="color-light italic sans-serif">BY SUBJECT</strong>
+					<h2 class="section-common margin-0">Faculty Collaborators by Subject</h2>
+					<p>Select a Subject:</p>
+					
+					<select class="button-red" id="FacultyList" name="dropdown2">
+ 						<option value="0">Select a Subject</option>
+					</select>
+					
+                  <table  width="100%" " id="faculty" style='display:none;'>
+                  </table>
+					<div id="SubjectContact"></div>
+				</div>
+				
+				<div id="campus" class="col-4 padding-2 box-shadow-small margin-b-3 top-red" data-sr="enter left please, and hustle 20px">
+					<strong class="color-light italic sans-serif">BY CAMPUS</strong>
+					<h2 class="section-common margin-0">OER Librarian & Council Reps</h2>
+					<p>Select a Campus:</p>
+					
+					<select class="button-red" id="CampusContactList" name="dropdown">
+ 						<option value="0">Select a Campus</option>
+					</select>
+					<div id="CampusContact"></div>
+				</div>
+				
+				
+			</div>
+			
+	
+</section>
+
+
+</section>
+<style>
+
+</style>
+<footer>
+<div class="footer-content center">
+   <div class="row">
+      <div class="col-3 t-col-4 margin-t-2  dark-grey-box padding-2">
+         <div class="">61 Woodland Street<br>Hartford, CT 06105</div>
+         <ul id="footer-contact">
+            <li><a href="/about/system-office#contact"><i class="fa  fa-envelope fa-inverse"></i> Contact</a></li>
+            <li><a href="/about/system-office#directions"><i class="fa  fa-car  fa-inverse"></i> Directions</a></li>
+            <li><i class="fa  fa-phone  fa-inverse"></i> 860-723-0000</li>  
+         </ul>
+         
+         <div class="">&copy; CSCU  </div>
+      </div>
+      
+   <div class="col-9 t-col-8">
+      
+      <div class="row">
+         
+            <div class="col-8  padding-2">
+               <h3 class="subhead-line">CSCU Resources</h3>
+               <ul class="list-2-column">
+                    <li><a href="http://my.commnet.edu/" target="_blank">myCommNet</a></li>
+                    <li><a href="/365" target="_blank">Office 365</a></li>
+                    <li><a href="http://www.ct.edu/netid" target="_blank">NetID</a></li>
+                    <li><a href="http://commons.ct.edu/" target="_blank">CSCU Commons</a></li>
+                    <li><a href="https://calendar.ct.edu" target="_blank">Training Calendar</a></li>
+                    <li><a href="/hr/employment">Employment</a></li>    
+                    <li><a href="/directory">Directories</a></li>    
+                    <li><a href="hr/policies#bor">BOR Policies</a></li>    
+                    <li><a href="/faculty">Faculty Resources</a></li>   
+               </ul>
+            </div>
+            
+            <div class="col-4 padding-2">
+               <h3 class="subhead-line">Social Media</h3>
+               <ul>  
+                  <li><a href="http://www.twitter.com/cscunews" target="_new"><i class="fa  fa-twitter  fa-inverse"></i> Twitter</a></li>
+                  <li><a href="http://www.flickr.com/photos/wcsu_upd/" target="_new"><i class="fa  fa-flickr  fa-inverse"></i> Flickr</a></li>
+                  <li><a href="https://www.linkedin.com/in/connscu" target="_new"><i class="fa  fa-linkedin-square  fa-inverse"></i> LinkedIn</a></li>
+                  <li><a href="http://www.youtube.com/connscu" target="_new"><i class="fa  fa-youtube  fa-inverse"></i> YouTube</a></li>
+                  <li><a href="/newsroom/connect"><i class="fa  fa-share-alt  fa-inverse"></i> CSCU Connect</a></li>
+               </ul>
+            </div>
+      </div>
+      
+   </div>
+</div>
+</div>
+</footer>
+
+
+<noscript>For the best experience, please enable javascript.</noscript>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/global_dept.js"></script>
+<script type="text/javascript" src="/scripts/stickyfill.js"></script>
+<script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>		
+<script type="text/javascript" charset="utf-8" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://cdn.datatables.net/plug-ins/f2c75b7247b/api/fnFilterClear.js"></script>
+<script type="text/javascript" src="/scripts/scrollReveal.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		
+      
+      var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1RzS_sPRdxhExPCIJJDSij5e06PnQfLmTu6lTvcpfemI/edit#gid=0';
+			
+			var table = {};
+			var slct2 = '';
+			var facTable = '';
+			
+      $('#faculty').sheetrock({
+					url: mySpreadsheet,
+					query: "select A,B,C,E order by A",
+					callback : tableIDindex
+      });
+      
+      function tableIDindex(error, options, response) {
+      	
+		      	
+							
+							
+							table = "<table>" + response.html + "</table>";
+
+					    $(table).find('tr').each(function (i) {
+					        var $tds = $(this).find('td');
+					            productId = $tds.eq(0).text();
+					            
+					            if (productId != '') {
+					            	//console.log(slct2.indexOf(productId));
+					            		if (slct2.indexOf(productId) <= 0 ) {
+   												slct2 += "<option id='" + productId + "' value='" + productId + "'>" + productId + "</option>"
+					            			
+					            		}
+					            }
+					    });		
+					    
+							document.getElementById("FacultyList").innerHTML += slct2;
+
+
+
+					   facTable = $('#faculty').DataTable ({
+
+					     "aoColumnDefs": [{
+					         'aTargets': [1],
+					         "mData": 3, "sTitle": "Email",
+					         'mRender': function (data, type, full) {
+					               return '<a href="' + full[3] + '" target="_blank" onclick="_gaq.push([\'_trackEvent\', \'external\', \'click\', $(this).attr(\'href\')]);" class="boxer" data-boxer-width="850" data-boxer-height="800">' + data + '</a>';
+					         }
+					      }, {
+					         "bVisible": false, "bSearchable": true, "mData": 0, "aTargets": [3], "sTitle": "System"
+					      }, {
+					         "bVisible": true, "bSearchable": true, "mData": 1, "aTargets": [0], "sTitle": "Name"
+					      }, {
+					         "bVisible": true, "bSearchable": true, "mData": 2, "aTargets": [2], "sTitle": "System"
+					      }], 
+
+					      "bDeferRender": true,
+					      "iDisplayLength": 100,
+					      "sDom": '<"top"><"clear">t<"clear"><"bottom">',
+					      "aaSorting": [[0,'asc']],
+					      "oSearch": {"sSearch": ""}
+					    });
+    
+							$('select#FacultyList').on('change', function() {    
+											facTable
+							        .columns( 3 )
+							        .search( $(this).find('option:selected').attr('id') )
+							        .draw();
+							        $("#faculty").css("display", "block");
+							        console.log($(this).find('option:selected').attr('id'));
+
+							});
+					 
+					 }
+		
+		
+});
+</script>
+<script type="text/javascript">
+var str = '';
+var slct = '';
+var campuses = [
+  ["Asnuntuck CC","Matt Hall","Director of Library Services","mhall@asnuntuck.edu","860.253.3171","Katie O'Connell","Director of Educational Technology","koconnell@asnuntuck.edu","860.253.3109"],
+  ["Capital CC","Eileen Rhodes","Director of Library Services","erhodes@ccc.edu","860.906.5021","Eileen Rhodes","Director of Library Services","erhodes@ccc.edu","860.906.5021"],
+  ["Central CSU","Sharon Clapp","Digital Resources Librarian","sclapp@ccsu.edu","860.832.2059","Sharon Clapp","Digital Resources Librarian","sclapp@ccsu.edu","860.832.2059"],
+  ["Eastern CSU","Angela Walker","Research & Instruction Librarian","walkerang@easternct.edu","860.465.5566","Kim Ward","Associate Prof. of Mathematics","WardK@easternct.edu","860.465.4544"],
+  ["Gateway CC","Clara Ogbaa","Director of Library & Ed Tech","cogbaa@gatewayct.edu","203.285.2058","Lynn Roller","Distance Learning Prof. ","lroller@gatewayct.edu","203.285.2570"],
+  ["Housatonic CC","Curleen Elliot","Librarian","celliott@housatonic.edu","203.332.5179","Jennifer Nohai-Seaman","Assistant Prof. of Mathematics","JNohai-Seaman@housatonic.edu","203-332-8554"],
+  ["Manchester CC","Debbie Herman","Director of Library & Ed Tech","dherman@manchestercc.edu","860.512.2872","Tim Boto","Assistant Dir. Ed Tech & Distance Learning","tboto@manchestercc.edu","860.512.2852"],
+  ["Middlesex CC","Cindi Li","Digital Services / Systems Librarian","LLi@mxcc.edu","860.343.5835","Cindi Li","Digital Services / Systems Librarian","LLi@mxcc.edu","860.343.5835"],
+  ["Naugatuck Valley CC","Jenna Stebbins","Reference Librarian","jstebbins@nvcc.edu","203.596.8712","Sarah Gager","Dean of Students","SGager@nvcc.commnet.edu","203.575.8086"],
+  ["Northwestern CT CC","Seth Kershner","Public Services Librarian","skershner@nwcc.edu","860.738.6481","Bev King","Director of Educational Technology","bking@nwcc.edu","860.738.6323"],
+  ["Norwalk CC","Linda Lerman","Director of Library Services","LLerman@norwalk.edu","203.857.7211","Lois Aime","Director of Educational Technology","LAime@ncc.commnet.edu","203.857.7288"],
+  ["Quinebaug Valley CC","Jennifer Cournoyer","Director of Library Services","jcournoyer@qvcc.edu","860.932.4131","Jennifer Cournoyer","Director of Library Services","jcournoyer@qvcc.edu","860.932.4131"],
+  ["Southern CSU","Rebecca Hedreen","Reference Librarian","Hedreenr1@southernct.edu","203.392.5753","Bogdan Zamfir","Director of Adaptive Technology","zamfirb1@southernct.edu","203.392.5798"],
+  ["Three Rivers CC","Pam Williams","Reference & Instruction Librarian","pwilliams@trcc.edu","860.215.9306","Kem Barfield","Director of Educational Technology","KBarfield1@trcc.commnet.edu","860.215.9402"],
+  ["Tunxis CC","Rachel Hyland","Reference & Instruction Librarian","rhyland@tunxis.edu","860.773.1545","Adrianne Kelly","Director of Educational Technology","AKelly@txcc.commnet.edu","860.773.1371"],
+  ["Western CSU","Aura Lippincott","Instructional Designer","lippincotta@wcsu.edu","203.837.3287","Sean Murthy","Prof. of Computer Science","murthys@wcsu.edu","203.837.3287"]
+]
+
+for (var i = 0; i < campuses.length; i++) {
+	 var campusNameID = campuses[i][0].replace(/\s/g, "").toLowerCase()
+   var campusName = "<strong>" + campuses[i][0] + "</strong><br>";
+   var campusContact1 = "<strong>" + campuses[i][1] + "</strong><br>";
+   var campusContactTitle1 = "<em>" + campuses[i][2] + "</em><br>";
+   var campusContactEmail1  = "<a href=mailto:" + campuses[i][3] + ">" + campuses[i][3] + "</a><br>";
+   var campusContactPhone1 = "" + campuses[i][4] + "<br>";
+   var campusContact2 = "<strong>" + campuses[i][5] + "</strong><br>";
+   var campusContactTitle2 = "<em>" + campuses[i][6] + "</em><br>";
+   var campusContactEmail2  = "<a href=mailto:" + campuses[i][7] + ">" + campuses[i][7] + "</a><br>";
+   var campusContactPhone2 = "" + campuses[i][8] + "<br>";
+
+   slct += "<option value='" + campusNameID + "'>" + campusName + "</option>"
+   str += "<div class='box card simple margin-t-2' id='" + campusNameID + "'>" + campusContact1 +  campusContactTitle1 + campusContactEmail1 + campusContactPhone1  + "<br>" + campusContact2 +  campusContactTitle2 + campusContactEmail2 + campusContactPhone2  + "</div>"
+   
+} 
+
+document.getElementById("CampusContactList").innerHTML += slct;
+document.getElementById("CampusContact").innerHTML = str;
+
+
+    //$('.box').hide().filter("#divarea1").show();
+    $('.box').hide();
+    
+$('select#CampusContactList').on('change', function() {
+        var selectedId= $(this).find(':selected').text().replace(/\s/g, "").toLowerCase();
+        console.log(selectedId);
+        $('.box').hide().filter('#' + selectedId).show();
+});
+
+
+
+/*
+var str2 = '';
+var slct2 = '';
+var subjects = [
+  ["Psychology","Becky DeVito","Capital","Professor","bdevito@capitalcc.edu","Debra Zavatkay","Northwestern","Adjunct Professor","dzavatkay@nwcc.edu"],
+  ["Art","Sue Berg","Northwestern","Program Coordinator","sberg@nwcc.edu","Carianne Garside","Tunxis","Assistant Professor","cgarside@tunxis.edu"],
+  ["English","Jay Whitaker","Northwestern","Adjunct Professor","jwhitaker2@nwcc.edu","April Dolata","Northwestern","Professor","adolata@nwcc.edu"],
+  ["Allied Health","Jane O'Grady","Northwestern","Professor","jogrady@nwcc.edu","","","",""],
+  ["Early Childhood","Michele Better","Northwestern","Program Coordinator","Mbetter@nwcc.edu","","","",""],
+  ["Philosophy","Carol Johnson","Northwestern","Adjunct Professor","cjohnson@nwcc.edu","","","",""],
+  ["Biology","Tara Jo Holmberg","Northwestern","Professor","tholmberg@nwcc.edu","","","",""],
+  ["Environmental Science","Tara Jo Holmberg","Northwestern","Professor","tholmberg@nwcc.edu","","","",""],
+  ["Accounting","Crystal Amara","Tunxis","Adjunct Professor","camara@tunxis.edu","","","",""],
+  ["Sociology","Brian Donohue-Lynch","Quinebaug","Professor","blynch@qvcc.edu","","","",""],
+  ["Public Speaking","Jayne Battye","Quinebaug","Professor","jbattye@qvcc.edu","","","",""],
+  ["International Relations","Jayne Battye","Quinebaug","Professor","jbattye@qvcc.edu","","","",""]
+]
+
+for (var i = 0; i < subjects.length; i++) {
+	 var SubjectID = subjects[i][0].replace(/\s/g, "").toLowerCase();
+   var SubjectName = "<strong>" + subjects[i][0] + "</strong><br>";
+   var subjectsContact1 = "<strong>" + subjects[i][1] + "</strong><br>";
+   var subjectsContactCampus1 = "<strong>" + subjects[i][2] + "</strong><br>";
+   var subjectsContactTitle1 = "<em>" + subjects[i][3] + "</em><br>";
+   var subjectsContactEmail1  = "<a href=mailto:" + subjects[i][4] + ">" + subjects[i][4] + "</a><br>";
+   
+   if (subjects[i][5]  != "") {
+	   var subjectsContact2 = "<strong>" + subjects[i][5] + "</strong><br>";
+	   var subjectsContactCampus2 = "<strong>" + subjects[i][6] + "</strong><br>";
+	   var subjectsContactTitle2 = "<em>" + subjects[i][7] + "</em><br>";
+	   var subjectsContactEmail2  = "<a href=mailto:" + subjects[i][8] + ">" + subjects[i][8] + "</a><br>";
+   	str2 += "<div class='box2 card simple margin-t-2' id='" + SubjectID + "'>" + subjectsContact1 +  subjectsContactCampus1 + subjectsContactTitle1 + subjectsContactEmail1  + "<br>" + subjectsContact2 +  subjectsContactCampus2 + subjectsContactTitle2 + subjectsContactEmail2  + "</div>";
+   } else {
+   		str2 += "<div class='box2 card simple margin-t-2' id='" + SubjectID + "'>" + subjectsContact1 +  subjectsContactCampus1 + subjectsContactTitle1 + subjectsContactEmail1  + "</div>";
+   	
+   	}
+
+   slct2 += "<option value='" + SubjectID + "'>" + SubjectName + "</option>";
+   
+} 
+
+document.getElementById("SubjectContactList").innerHTML += slct2;
+document.getElementById("SubjectContact").innerHTML = str2;
+
+    $('.box2').hide();
+
+    
+$('select#SubjectContactList').on('change', function() {
+        var selectedId2= $(this).find(':selected').text().replace(/\s/g, "").toLowerCase();
+        $('.box2').hide().filter('#' + selectedId2).show();
+});
+
+*/
+    
+var config = {
+	mobile:true,
+	wait:     '0.2s',
+	vFactor:  0.2
+}
+
+window.sr = new scrollReveal(config);
+jQuery(document).ready(function($){
+   
+   
+
+	$(".navControl").click(function(event){
+		$(this).closest("section, header").find("ul.tabs, .nav-sub, .hamburger").toggleClass("active");
+	});
+
+
+});
+
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,585 @@
+<!doctype html>
+<!--[if lt IE 8]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>CSCU - LibGuides</title>
+	<meta name="description" content="">
+	<meta name="author" content="Connecticut State Colleges & Universities">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="/css/site_2.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<script src="//use.typekit.net/tba7jib.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	
+   <!--[if lt IE 9]>
+   <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-25950326-1']);
+		_gaq.push(['_setSiteSpeedSampleRate', 100]);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		//ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';   
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	<style>
+	/*	
+@media (min-width: 767px){
+	.department #banner h1 {margin:30px 0;}
+	.department #banner h1 #logo-dept {font-size:30px;}
+	.department #banner h1 #logo-connscu-abr {font-size:30px;padding:7px;}
+	.department #banner #banner-wrap {display: flex;justify-content: space-between;align-items: center;}
+	.department .nav-main {width:auto;}
+	.department #nav-wrap, .department #nav-utility {margin: 0;padding: 0;}
+	
+}
+*/
+	</style>
+	
+
+</head>
+
+<body class="department">
+
+
+<header class="banner" id="banner" role="banner">
+  <div id="banner-wrap">
+		<h1>
+			<a href="/" id="logo-connscu-abr"><img src='http://www.ct.edu/files/images/logo-cscu.svg' alt=""CSCU Home" /></a>
+			<a href='index.html' id="logo-dept">OpenCSCU</a></h1>
+			
+				<div id="nav-button" class="nav-button navControl">
+					<div id="hamburger-top" class="hamburger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+			 	 Menu
+				</div>
+				
+			<nav class="nav-main">
+			
+	       <ul id="nav-wrap" class="inline">
+	       
+	          <li><a href="#">About</a>
+	                <ul>
+										<li><a href='#'>What are OERs</a></li>
+										<li><a href='#'>OER Examples</a></li>
+										<li><a href='#'>FAQs</a></li>
+	                </ul></li>
+	          <li><a href="#" class="">Get Started Guide</a></li>
+		        <li><a href="#" class="">Help</a></li>
+	          
+	       </ul>
+	 
+	    </nav>
+   </div>
+</header>
+
+<section id="body-wrapper" class="">
+
+<style>
+header {background:#0d5aa2;}
+#sub-menu li {display:inline-block;}
+
+.hero-bg-image {
+  background-image: url("http://www.ct.edu/files/images/header-new339.jpg");}
+.hero-bg-image:before {    background: #072f549c;}
+.row {position:relative;}
+#overlap-1 {position: absolute;right: -20px;top: 5em;background:#fff;z-index:1}
+#overlap-2 {position: absolute;left: -20px;top: 5em;background:#fff;z-index:1;}
+.icon-header {text-shadow:-1px -1px 0 #C5C9CD, 1px -1px 0 #C5C9CD, -1px 1px 0 #C5C9CD, 1px 1px 0 #C5C9CD; color:#FFF;}
+
+
+header .nav-main>ul>li>a.button-menu svg {
+    margin-right: 5px;
+		}
+
+
+h3 svg {
+    background: #f4f7fb none repeat scroll 0 0;
+    border: 1px solid #d3e7f9;
+    border-radius: 50%;
+    display: block;
+    height: 70px;
+    margin-bottom: 1em;
+    overflow: visible !important;
+    padding: 14px;
+    width: 70px;
+}
+@media (max-width: 990px){
+		header .nav-main>ul>li>a.button-menu {
+		    background: none;
+		    border: 0;
+		    justify-content: flex-start !important;
+				}
+		h3 svg {width:50px;height:50px;padding:10px;}
+}
+
+@media (max-width: 767px){
+	h3 {display: flex;align-items: center;}
+	h3 svg {margin-bottom:0;margin-right:15px;}
+}
+input.question,
+input.question {
+font-size: 26px;
+font-weight: 300;
+border-radius: 2px;
+margin: 0;
+border: 1px solid #ccc;
+transition: padding-top 0.2s ease, margin-top 0.2s ease;
+padding: 12px;
+width: 500px;
+background: rgba(255,255,255,0.3);
+}
+
+input.question + label {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+}
+}
+
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+font-size: 20px;
+color: transparent;
+}
+
+input.question + label > span {
+    font-weight: 300;
+    margin: 0 auto;
+    position: absolute;
+    color: rgba(0,0,0,0.6);
+    font-size: 32px;
+    top: -25px;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    padding: 0 12px;
+    left: -500px;
+}
+input[type="button"], input[type="reset"], input[type="submit"] {
+background: #eee;
+border: 0;
+padding: 12px;
+position: relative;
+font-size: 26px;
+border:1px solid #fff;
+}
+ul.list-multi-column {
+column-count: 3;
+column-gap: 2em;}
+
+ul.hero-button-list {
+margin:1em 0;padding:0;list-style:none;display:inline-block;
+				}
+ul.hero-button-list li{
+margin:0 1em 1em 0;display:inline-block;
+				}
+</style>
+
+
+
+
+<section class="hero-no-image bg-offwhite ">
+<div class="row">
+		<div class="col-10 padding-2">
+			<h1 class="bold">Quick Start Guide</h1>
+			
+			<p>Welcome to a network of librarians and faculty who support the use of Open Educational Resources (OER) in the CSCU system</p>
+			<ul class="hero-button-list">
+				<li><a href="#search" class="button button-red">Search <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a></li>
+				<li><a href="#modify" class="button button-red">Modify/Edit <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a></li>
+				<li><a href="#create" class="button button-red">Create <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a> </li>
+			</ul>
+			 
+			
+			 
+		</div>
+		<div class="col-2" style="max-height:150px;">
+			<svg id="cc774093-8b64-45c7-8077-699a43d4914b" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="814" height="778.22" viewBox="0 0 814 778.22"><defs><linearGradient id="29b91a8c-5031-4728-9934-4de601869dbd" x1="253.26" y1="778.22" x2="253.26" y2="105.1" gradientUnits="userSpaceOnUse"><stop offset="0.01" stop-color="gray" stop-opacity="0.25"/><stop offset="0.54" stop-color="gray" stop-opacity="0.12"/><stop offset="1" stop-color="gray" stop-opacity="0.1"/></linearGradient><linearGradient id="1256144c-81fa-4390-be21-e94fb20836e2" x1="49.76" y1="202.38" x2="49.76" y2="112.93" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b3b3b3" stop-opacity="0.25"/><stop offset="0.54" stop-color="#b3b3b3" stop-opacity="0.1"/><stop offset="1" stop-color="#b3b3b3" stop-opacity="0.05"/></linearGradient><linearGradient id="8f0ddb95-6166-4bb1-9b4d-46cd9e3d30e6" x1="408.68" y1="722.31" x2="408.68" y2="49.2" xlink:href="#29b91a8c-5031-4728-9934-4de601869dbd"/><linearGradient id="2acd927f-116a-42d0-926b-2e100ad401a0" x1="205.18" y1="146.48" x2="205.18" y2="57.02" xlink:href="#1256144c-81fa-4390-be21-e94fb20836e2"/><linearGradient id="dd98f1d5-faf2-451f-bb12-7f13808eec29" x1="560.74" y1="673.12" x2="560.74" y2="0" xlink:href="#29b91a8c-5031-4728-9934-4de601869dbd"/><linearGradient id="523444de-12f9-4e88-a28a-f69f2aefc1da" x1="357.24" y1="97.28" x2="357.24" y2="7.83" xlink:href="#1256144c-81fa-4390-be21-e94fb20836e2"/></defs><title>files1</title><polygon points="506.51 778.22 0 778.22 0 189.97 76.53 105.1 506.51 105.1 506.51 778.22" fill="url(#29b91a8c-5031-4728-9934-4de601869dbd)"/><polygon points="498.69 760.33 8.95 760.33 8.95 194.56 82.94 112.93 498.69 112.93 498.69 760.33" fill="#fafafa"/><rect x="56.76" y="182.81" width="238.59" height="40.25" fill="#e0e0e0"/><rect x="57.24" y="292.95" width="174.84" height="40.25" fill="#e0e0e0"/><rect x="57.24" y="458.43" width="392.18" height="147.59" fill="#ffffff"/><rect x="360.55" y="183.37" width="88.87" height="40.25" fill="#f5f5f5"/><rect x="360.55" y="245.99" width="88.87" height="40.25" fill="#f5f5f5"/><polygon points="90.57 112.93 90.57 202.38 8.95 202.38 8.95 194.56 82.74 112.93 90.57 112.93" fill="url(#1256144c-81fa-4390-be21-e94fb20836e2)"/><polygon points="8.75 194.56 82.74 112.93 82.74 194.56 8.75 194.56" fill="#eee"/><polygon points="661.93 722.31 155.42 722.31 155.42 134.06 231.95 49.2 661.93 49.2 661.93 722.31" fill="url(#8f0ddb95-6166-4bb1-9b4d-46cd9e3d30e6)"/><polygon points="654.11 704.42 164.37 704.42 164.37 138.65 238.36 57.02 654.11 57.02 654.11 704.42" fill="#fafafa"/><rect x="212.18" y="126.91" width="238.59" height="40.25" fill="#e0e0e0"/><rect x="212.66" y="237.04" width="174.84" height="40.25" fill="#e0e0e0"/><rect x="212.66" y="402.53" width="392.18" height="147.59" fill="#ffffff"/><rect x="515.97" y="127.47" width="88.87" height="40.25" fill="#f5f5f5"/><rect x="515.97" y="190.08" width="88.87" height="40.25" fill="#f5f5f5"/><polygon points="245.99 57.02 245.99 146.47 164.37 146.47 164.37 138.65 238.16 57.02 245.99 57.02" fill="url(#2acd927f-116a-42d0-926b-2e100ad401a0)"/><polygon points="164.17 138.65 238.16 57.02 238.16 138.65 164.17 138.65" fill="#eee"/><polygon points="814 673.12 307.49 673.12 307.49 84.87 384.01 0 814 0 814 673.12" fill="url(#dd98f1d5-faf2-451f-bb12-7f13808eec29)"/><polygon points="806.17 655.23 316.43 655.23 316.43 89.45 390.43 7.83 806.17 7.83 806.17 655.23" fill="#fff"/><rect x="364.25" y="77.71" width="238.59" height="40.25" fill="#e0e0e0"/><rect x="364.73" y="187.85" width="174.84" height="40.25" fill="#e0e0e0"/><rect x="364.73" y="353.33" width="392.18" height="147.59" fill="#ffffff"/><rect x="668.04" y="78.27" width="88.87" height="40.25" fill="#e0e0e0"/><rect x="668.04" y="140.88" width="88.87" height="40.25" fill="#e0e0e0"/><rect x="668.04" y="203.5" width="88.87" height="40.25" fill="#e0e0e0"/><polygon points="398.06 7.83 398.06 97.28 316.43 97.28 316.43 89.45 390.23 7.83 398.06 7.83" fill="url(#523444de-12f9-4e88-a28a-f69f2aefc1da)"/><polygon points="316.23 89.45 390.23 7.83 390.23 89.45 316.23 89.45" fill="#eee"/></svg>
+		</div>
+	</div>
+</section>
+<section class="body-content bg-offwhite">
+<section class="body-content-box box-shadow-small top-orange m-padding-2 margin-b-3"  id="search">
+			<div class="row">
+					<strong class="color-light sans-serif">OPTION 1</strong>
+					<h2 class="bold subhead-line italic margin-t-0">Search</h2>
+			</div>
+		
+			<div class="row ">
+				<div class="col-12 margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<p>The quickest and easiest way to get started with OERs is to search existing resources. OERCommons connects some of the most XX resoures into a single online search.  </p>
+					
+				<h3 class="subhead-line-center center-text color-orange bod italic section-small">Search OERCommons</h3>
+			<form action="https://www.oercommons.org/search" >
+				<input type="text" name="f.search" class="question box-shadow-small" id="nme" required autocomplete="off" />
+				<label for="nme"><span>Enter Keyword(s)</span></label>
+				<input type="hidden" name="f.sublevel" value="college-upper-division" />
+				<input value="Search" type="submit">
+			</form>
+				</div>
+			</div>
+				<h3 class="subhead-line-center center-text color-orange bod italic section-small">Quick Subject Search</h3>
+			<div class="row ">
+				
+				<div class="col-12 margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<p>Quickly search through over 100,000 OER resources on OER Commons, or begin with a topic below:</p>
+					<ul class="list-multi-column"> 
+								<li class="major" id="Accounting"><a href='https://www.oercommons.org/search?f.search=Accounting&f.sublevel=college-upper-division'>Accounting</a></li>
+               <li class="major" id="Art"><a href='https://www.oercommons.org/search?f.search=Art&f.sublevel=college-upper-division'>Art</a></li>
+               <li class="major" id="Biology"><a href='https://www.oercommons.org/search?f.search=Biology&f.sublevel=college-upper-division'>Biology</a></li>
+               <li class="major" id="Business Administration"><a href='https://www.oercommons.org/search?f.search=Business&f.sublevel=college-upper-division'>Business Administration</a></li>
+               <li class="major" id="Chemistry"><a href='https://www.oercommons.org/search?f.search=Chemistry&f.sublevel=college-upper-division'>Chemistry</a></li>
+               <li class="major" id="Communication"><a href='https://www.oercommons.org/search?f.search=Communication&f.sublevel=college-upper-division'>Communication</a></li>
+               <li class="major" id="Computer Science"><a href='https://www.oercommons.org/search?f.search=Computer%20Science&f.sublevel=college-upper-division'>Computer Science</a></li>
+               <li class="major" id="Criminology"><a href='https://www.oercommons.org/search?f.search=Criminology&f.sublevel=college-upper-division'>Criminology</a></li>
+               <li class="major" id="Early Childhood"><a href='https://www.oercommons.org/search?f.search=Early%20Childhood&f.sublevel=college-upper-division'>Early Childhood Teacher Credential</a></li>
+               <li class="major" id="Elementary Education"><a href='https://www.oercommons.org/search?f.search=Elementary%20Education&f.sublevel=college-upper-division'>Elementary Education</a></li>
+               <li class="major" id="English"><a href='https://www.oercommons.org/search?f.search=English&f.sublevel=college-upper-division'>English</a></li>
+               <li class="major" id="Exercise Science"><a href='https://www.oercommons.org/search?f.search=Exercise%20Science&f.sublevel=college-upper-division'>Exercise Science</a></li>
+               <li class="major" id="Finance"><a href='https://www.oercommons.org/search?f.search=Finance&f.sublevel=college-upper-division'>Finance</a></li>
+               <li class="major" id="French"><a href='https://www.oercommons.org/search?f.search=French&f.sublevel=college-upper-division'>French</a></li>
+               <li class="major" id="German"><a href='https://www.oercommons.org/search?f.search=German&f.sublevel=college-upper-division'>German</a></li>
+               <li class="major" id="History"><a href='https://www.oercommons.org/search?f.search=History&f.sublevel=college-upper-division'>History</a></li>
+               <li class="major" id="Italian"><a href='https://www.oercommons.org/search?f.search=Italian&f.sublevel=college-upper-division'>Italian</a></li>
+               <li class="major" id="Marketing"><a href='https://www.oercommons.org/search?f.search=Marketing&f.sublevel=college-upper-division'>Marketing</a></li>
+               <li class="major" id="Management"><a href='https://www.oercommons.org/search?f.search=Management&f.sublevel=college-upper-division'>Management</a></li>
+               <li class="major" id="Mathematics"><a href='https://www.oercommons.org/search?f.search=Mathematics&f.sublevel=college-upper-division'>Mathematics</a></li>
+               <li class="major" id="Music"><a href='https://www.oercommons.org/search?f.search=Music&f.sublevel=college-upper-division'>Music</a></li>
+               <li class="major" id="Physical Education"><a href='https://www.oercommons.org/search?f.search=Physical%20Education&f.sublevel=college-upper-division'>Physical Education</a></li>
+               <li class="major" id="Physics"><a href='https://www.oercommons.org/search?f.search=Physics&f.sublevel=college-upper-division'>Physics</a></li>
+               <li class="major" id="Political Science"><a href='https://www.oercommons.org/search?f.search=Political%20Science&f.sublevel=college-upper-division'>Political Science</a></li>
+               <li class="major" id="Psychology"><a href='https://www.oercommons.org/search?f.search=Psychology&f.sublevel=college-upper-division'>Psychology</a></li>
+               <li class="major" id="Spanish"><a href='https://www.oercommons.org/search?f.search=Spanish&f.sublevel=college-upper-division'>Spanish</a></li>
+               <li class="major" id="Social Work"><a href='https://www.oercommons.org/search?f.search=Social%20Work&f.sublevel=college-upper-division'>Social Work</a></li>
+               <li class="major" id="Sociology"><a href='https://www.oercommons.org/search?f.search=Sociology&f.sublevel=college-upper-division'>Sociology</a></li>
+               <li class="major" id="Special Education"><a href='https://www.oercommons.org/search?f.search=Special%20Education&f.sublevel=college-upper-division'>Special Education</a></li>
+               <li class="major" id="Theatre"><a href='https://www.oercommons.org/search?f.search=Theatre&f.sublevel=college-upper-division'>Theatre</a></li>
+               <li class="major" id="Visual Arts"><a href='https://www.oercommons.org/search?f.search=Visual%20Arts&f.sublevel=college-upper-division'>Visual Arts</a></li>
+              </ul>
+               
+				</div>
+				</div>
+				<h3 class="subhead-line-center center-text color-orange bod italic section-small">Specific Searches</h3>
+			<div class="row ">
+				<div class="col-4 padding-2 box-shadow-small bg-white margin-b-3 margin-t-2" data-sr="enter left please, and hustle 20px">
+					<h3 class="color-  margin-0">Image Search</h3>
+<ul>
+<li class=""><a href="https://search.creativecommons.org/" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '42957958'});">Creative Commons Image Search</a></li>
+<li class=""><a href="https://www.google.com/advanced_search" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '42958162'});">Google Advanced Search</a> 
+<em>Make sure to select appropriate usage rights in drop down.</em></li>
+</ul>
+				</div>
+				<div class="col-4 padding-2 box-shadow-small bg-white margin-b-3 margin-t-2" data-sr="enter left please, and hustle 20px">
+					<h3 class="color-  margin-0">Textbook Search</h3>
+					<p>Enter keyword(s) below to see available OERs</p>
+					<ul>
+						<li><a href=''>Open Course Library</a></li>
+						<li><a href=''>Lumen Learning</a></li>
+						<li><a href=''>Saylor Academy</a></li>
+						<li><a href=''>OpenStax</a></li>
+						<li><a href=''>Open Textbook Library</a></li>
+					</ul>
+				</div>
+				<div class="col-4 padding-2 box-shadow-small bg-white margin-b-3 margin-t-2" data-sr="enter left please, and hustle 20px">
+					<h3 class="color-  margin-0">Full Courses </h3>
+					<p>Enter keyword(s) below to see available OERs</p>
+					<ul>
+						<li><a href=''>Open Course Library</a></li>
+						<li><a href=''>Lumen Learning</a></li>
+						<li><a href=''>Saylor Academy</a></li>
+						<li><a href=''>OpenStax</a></li>
+						<li><a href=''>Open Textbook Library</a></li>
+					</ul>
+				</div>
+				
+			</div>
+</section>
+
+<section class="body-content-box box-shadow-small margin-b-3 top-green m-padding-2" data-sr="enter left please, and hustle 20px" id="modify">
+			<div class="row">
+					<strong class="color-light sans-serif">OPTION 2</strong>
+					<h2 class="bold subhead-line italic margin-t-0">Modify/Edit Existing OERs</h2>
+					<p>Follow the steps below to begin modifying an OER to fit your program</p>
+			</div>
+			<div class="row margin-b-4">
+				
+				<div class="col-4 box-shadow-small padding-2 top- margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<strong class="color-light italic sans-serif">STEP 1</strong>
+					<h3 class="margin-0">Search First</h3>
+					<p>Begin by searching for existing OERs.</p>
+					<a href='' class="button button-orange">Search Now</a>
+					 <!--
+						If you find OERs that you'd like to edit for your specific needs, note the If you find resources, determine if they need revisions or remixing of other OER content (Be sure to note the Creative Commons licensing requirements)-->
+				</div>
+				
+				<div class="col-4 box-shadow-small padding-2 top- margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<strong class="color-light italic sans-serif">STEP 2</strong>
+					<h3 class="margin-0">Select Resource to Edit</h3>
+					<p>Determine whether to revise or remix other OER content (Note the <a href='https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/'>Creative Commons licensing requirements</a>)</p>
+				</div>
+				
+				<div class="col-4 box-shadow-small padding-2 top- margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<strong class="color-light italic sans-serif">STEP 3</strong>
+					<h3 class="margin-0">Create Your Content</h3>
+					<p>Begin by searching for existing OERs.</p>
+					<a href='' class="button button-purple">Begin Creating</a>
+				</div>
+			</div>
+
+</section>
+
+<section class="body-content-box  box-shadow-small margin-b-3 top-purple m-padding-2" data-sr="enter left please, and hustle 20px" id="create">
+			<div class="row">
+					<strong class="color-light sans-serif">OPTION 3</strong>
+					<h2 class="bold subhead-line italic margin-t-0">Create Content</h2>
+					<p>Creating OER content can be as simple as creating a Word document. When determining the format of your content, try to be mindful of how others may access what you share. While many have Microsoft Word, not everyone does. A RTF file format may be more accessible than a DOCX file, just as a PPT file is easier to edit than a PDF of the same presentation.Be mindful of accessibility concerns when crafting or revising your content. Many programs like Microsoft Word have built-in Accessibility Checkers that can guide you through the steps to ensure your document can be read by screen readers and other assistive technologies</p>
+			</div>
+			
+			<h3 class="subhead-line-center center-text color-purple bod italic section-small">Content Creation Tools</h3>
+			<div class="row margin-b-4 margin-t-3">
+				
+				<div class="col-6 margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<h3>Resource Builder</h3>
+					<p>Online builder makes it easy to combine text, pictures, sounds, files, and video, and save them as openly licensed educational resources — which can then be shared with friends, colleagues and educators from around the world</span></p>
+					<p><em>Requires Free Account</em></p>
+					<a href="https://www.oercommons.org/authoring-overview#open-author-section" class="button button-purple">Launch Resource Builder</a>
+				</div>
+				
+				<div class="col-6 margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<h3>Module Builder</h3>
+					<p>Create both student and instructor facing content views. The Module can consist of sequenced tasks, which can incorporate a step-by-step approach to learning. Each task can have associated resources available for download. </span></p>
+					<p><em>Requires Free Account</em></p>
+					<a href="https://www.oercommons.org/authoring-overview#module-section" class="button button-purple">Launch Module Builder</a>
+				</div>
+				
+			</div>
+			
+			
+			<h3 class="subhead-line-center center-text color-purple bod italic section-small">Considerations</h3>
+			<div class="row margin-b-4 margin-t-3">
+				
+				<div class="col-6 margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<h3>Accessibility</h3>
+					<p>Just like traditional textbooks, open educational materials must be accessible to <em><strong>all students</strong></em>. &nbsp;Below are resources that help with accessibility standards for OER.</span></p>
+						<ul >
+						<li class=""><a href="http://www.oeconsortium.org/resources/toolkits/accessibility/" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '42871268'});">Open Education Consortium Addressing Accessibility</a></li>
+						<li class=""><a href="http://aem.cast.org/" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '42871316'});">National Center on Accessible Learning Materials</a></li>
+						<li class=""><a href="http://oeraccess.merlot.org/" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '42871359'});">Merlot and California State University OER and Accessibility</a></li>
+						</ul>
+				</div>
+				
+				<div class="col-6 margin-b-3 " data-sr="enter left please, and hustle 20px">
+					<h3>Licensing</h3>
+					<p>For new work, visit Creative Commons to select a license that best suits your intentions. 
+					<a href='https://creativecommons.org/choose/' class="button button-purple">License Creation Tool</a>
+					<p></p><em>NOTE: A Creative Commons license is perpetual and irrevocable. This ensures individuals adopting OER that they will always have access to the selected OER. </em></p>
+						<a href='' class="">Learn More About Licensing</a>
+						<!--
+					For outside materials, verify you have the rights to include them.  Additionally, if you have adopted someone else’s work, verify the original author’s Creative Commons licensing to ensure that you select the proper license.
+					<a href='http://www.openwa.org/attrib-builder/' class="button button-purple">License Attribution Tool</a>-->
+					</p>
+				</div>
+				
+			</div>
+
+</section>
+</section>
+
+
+</section>
+<style>
+
+</style>
+<footer>
+<div class="footer-content center">
+   <div class="row">
+      <div class="col-3 t-col-4 margin-t-2  dark-grey-box padding-2">
+         <div class="">61 Woodland Street<br>Hartford, CT 06105</div>
+         <ul id="footer-contact">
+            <li><a href="/about/system-office#contact"><i class="fa  fa-envelope fa-inverse"></i> Contact</a></li>
+            <li><a href="/about/system-office#directions"><i class="fa  fa-car  fa-inverse"></i> Directions</a></li>
+            <li><i class="fa  fa-phone  fa-inverse"></i> 860-723-0000</li>  
+         </ul>
+         
+         <div class="">&copy; CSCU  </div>
+      </div>
+      
+   <div class="col-9 t-col-8">
+      
+      <div class="row">
+         
+            <div class="col-8  padding-2">
+               <h3 class="subhead-line">CSCU Resources</h3>
+               <ul class="list-2-column">
+                    <li><a href="http://my.commnet.edu/" target="_blank">myCommNet</a></li>
+                    <li><a href="/365" target="_blank">Office 365</a></li>
+                    <li><a href="http://www.ct.edu/netid" target="_blank">NetID</a></li>
+                    <li><a href="http://commons.ct.edu/" target="_blank">CSCU Commons</a></li>
+                    <li><a href="https://calendar.ct.edu" target="_blank">Training Calendar</a></li>
+                    <li><a href="/hr/employment">Employment</a></li>    
+                    <li><a href="/directory">Directories</a></li>    
+                    <li><a href="hr/policies#bor">BOR Policies</a></li>    
+                    <li><a href="/faculty">Faculty Resources</a></li>   
+               </ul>
+            </div>
+            
+            <div class="col-4 padding-2">
+               <h3 class="subhead-line">Social Media</h3>
+               <ul>  
+                  <li><a href="http://www.twitter.com/cscunews" target="_new"><i class="fa  fa-twitter  fa-inverse"></i> Twitter</a></li>
+                  <li><a href="http://www.flickr.com/photos/wcsu_upd/" target="_new"><i class="fa  fa-flickr  fa-inverse"></i> Flickr</a></li>
+                  <li><a href="https://www.linkedin.com/in/connscu" target="_new"><i class="fa  fa-linkedin-square  fa-inverse"></i> LinkedIn</a></li>
+                  <li><a href="http://www.youtube.com/connscu" target="_new"><i class="fa  fa-youtube  fa-inverse"></i> YouTube</a></li>
+                  <li><a href="/newsroom/connect"><i class="fa  fa-share-alt  fa-inverse"></i> CSCU Connect</a></li>
+               </ul>
+            </div>
+      </div>
+      
+   </div>
+</div>
+</div>
+</footer>
+
+
+<noscript>For the best experience, please enable javascript.</noscript>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/global_dept.js"></script>
+<script type="text/javascript" src="/scripts/stickyfill.js"></script>
+
+<script type="text/javascript" src="/scripts/scrollReveal.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+    //$('.box').hide().filter("#divarea1").show();
+    $('.box').hide();
+
+    $('#dropdown').change(function() {
+        var selectedId= $(this).find(':selected').text().replace(/\s/g, "").toLowerCase();
+        console.log(selectedId);
+        $('.box').hide().filter('#' + selectedId).show();
+    });
+});
+</script>
+<script type="text/javascript">
+
+
+var config = {
+	mobile:true,
+	wait:     '0.2s',
+	vFactor:  0.2
+}
+
+window.sr = new scrollReveal(config);
+jQuery(document).ready(function($){
+   
+   // *only* if we have anchor on the url
+    if(window.location.hash) {
+
+        // smooth scroll to the anchor id
+        $('html, body').animate({
+            scrollTop: $(window.location.hash).offset().top + 'px'
+        }, 1000, 'swing');
+    }
+
+	$(".navControl").click(function(event){
+		$(this).closest("section, header").find("ul.tabs, .nav-sub, .hamburger").toggleClass("active");
+	});
+	
+	
+	// Cache selectors
+var lastId,
+    topMenu = $(".hero-no-image"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 500);
+ 
+  //$('.tabs').animate({scrollLeft: $('a.active').offset().left + $('a.active').outerWidth(true)/2 + $('.tabs').scrollLeft() - $('.tabs').width()/2}, 500);
+  $('.button').animate({scrollLeft:  $(this).offset().left +  $(this).outerWidth(true)/2 + $('.tabs').scrollLeft() - $('.tabs').width()/2}, 500);
+  e.preventDefault();
+});
+	// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight + 20;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       console.log(menuItems);
+         menuItems.removeClass("active");
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href='#"+id+"']").addClass("active");
+         
+   }   
+   
+  $('.button').animate({scrollLeft:  $('a.active').offset().left +  $('a.active').outerWidth(true)/2 + $('.tabs').scrollLeft() - $('.tabs').width()/2}, 500);
+        var myScrollPos = $('a.active').offset().left + $('a.active').outerWidth(true)/2 + $('.tabs').scrollLeft() - $('.tabs').width()/2;
+        //$('.tabs').scrollLeft(myScrollPos);
+        //$('.tabs').animate({scrollLeft: myScrollPos });
+                    
+});
+
+
+});
+
+</script>
+
+</body>
+
+
+</html>

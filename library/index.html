@@ -59,7 +59,7 @@
   <div id="banner-wrap">
 		<h1>
 			<a href="/" id="logo-connscu-abr"><img src='http://www.ct.edu/files/images/logo-cscu.svg' alt=""CSCU Home" /></a>
-			<a href='index.html' id="logo-dept">LibGuides</a></h1>
+			<a href='index.html' id="logo-dept">OpenCSCU</a></h1>
 			
 				<div id="nav-button" class="nav-button navControl">
 					<div id="hamburger-top" class="hamburger">
@@ -80,19 +80,9 @@
 										<li><a href='#'>OER Examples</a></li>
 										<li><a href='#'>FAQs</a></li>
 	                </ul></li>
-	          <li><a href="#" class="">Create an OER</a></li>
-		          <li><a href="#" class="">Live Chat</a></li>
-	          <li><a href="#" class="button-menu">
-	          	<svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 64 64" aria-labelledby="title"
-							aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
-							  <title>login</title>
-							  <path data-name="layer2"
-							  fill="none" stroke="rgba(255, 255, 255, 0.75)" stroke-miterlimit="10" stroke-width="5" d="M29.973 22V6H62v52H29.973V42.001"
-							  stroke-linejoin="round" stroke-linecap="round"></path>
-							  <path data-name="layer1" fill="none" stroke="rgba(255, 255, 255, 0.75)" stroke-miterlimit="10"
-							  stroke-width="5" d="M2 32l48.99-.003M37.979 43L50.99 31.997 37.979 21"
-							  stroke-linejoin="round" stroke-linecap="round"></path>
-							</svg>Login</a></li>
+	          <li><a href="#" class="">Get Started Guide</a></li>
+		        <li><a href="#" class="">Help</a></li>
+	          
 	       </ul>
 	 
 	    </nav>
@@ -105,10 +95,20 @@
 header {background:#0d5aa2;}
 #sub-menu li {display:inline-block;}
 
-.hero-hero-image {
-  background-image: url(http://www.ct.edu/files/images/header-new367.jpg);}
-.hero-no-image {background:transparent linear-gradient(180deg, rgba(102, 93, 93, 0.1) 0%, #ffffff 100%);}
-.row {position:relative;}
+.hero-no-image::before {
+    background: transparent linear-gradient(180deg, rgba(102, 93, 93, 0.1) 0%, #ffffff 100%);
+    background-image: url(http://www.ct.edu/files/images/Asset%201.svg);
+    background-repeat: no-repeat;
+    background-position: 82% 17%;
+    background-size: 50%;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+}
 #overlap-1 {position: absolute;right: -20px;top: 5em;background:#fff;z-index:1}
 #overlap-2 {position: absolute;left: -20px;top: 5em;background:#fff;z-index:1;}
 .icon-header {text-shadow:-1px -1px 0 #C5C9CD, 1px -1px 0 #C5C9CD, -1px 1px 0 #C5C9CD, 1px 1px 0 #C5C9CD; color:#FFF;}
@@ -143,17 +143,97 @@ h3 svg {
 	h3 {display: flex;align-items: center;}
 	h3 svg {margin-bottom:0;margin-right:15px;}
 }
+input.question,
+textarea.question {
+  font-size: 32px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: 1px solid #ccc;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  padding:12px;
+    max-width: 550px;
+    width: 80%;
+}
+/* Underline and Placeholder */
 
+input.question + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -90px;
+  font-size: 22px;
+  color: #333;
+}
+
+
+input.question:valid + label {
+  border-color: green;
+}
+
+
+input.question + label > span {
+    font-weight: 300;
+    margin: 0 auto;
+    position: relative;
+    color: #8F8F8F;
+    font-size: 32px;
+    top: -46px;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    width: 80%;
+    max-width: 550px;
+    display: block;
+    text-align: left;
+    padding: 0 12px;
+}.fa {
+    color: rgba(255,255,255,0.6);
+}
+.inline li {display:inline;}
+.iconCircle{
+    background: #f4f7fb none repeat scroll 0 0;
+    border: 1px solid #d3e7f9;
+    border-radius: 50%;
+    display: block;
+    height: 70px;
+    margin-bottom: 1em;
+    overflow: visible !important;
+    padding: 14px;
+    width: 70px;
+}
 </style>
 
 
 
 
 <section class="hero-no-image">
-	<div class="row">
-		<div class="col-12 center center-text">
-			<h1 class="bold">CSCU LibGuides</h1>
-			<h3 class="thin italic">Supporting use of open educational resources (OERs). Explore, create, and collaborate with educators around the world to improve curriculum.</h3>
+<div class="row">
+		<div class="col-10 padding-2">
+			<h1 class="bold">Explore. Create. Collaborate.</h1>
+			
+			<p class="">Welcome to a network of librarians and faculty who support the use of Open Educational Resources (OER) in the CSCU system</p>
+			<a href="" class="button  margin-1">Why Use OERs? <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a> 
+			<a href="" class="button button-red margin-1">Get Started <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a> 
+			<a href="" class="button button-red margin-1">OER Support <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a> 
 		</div>
 	</div>
 </section>
@@ -161,75 +241,42 @@ h3 svg {
 <section class="body-content body-content-box padding-0 padding-t-0">
 			
 			<div class="row margin-b-2">
-					<div class="col-12">
-						
-				<h2 class="subhead-line-center center-text italic bold">Get Started</h2>
-					</div>
+				
+				<div class="col-12">
+					<h1 class="subhead-line-center center-text color-red bod italic section-small">Get Started with 3 Options</h1>
+						<p></p>
+				</div>
+					
 			</div>
 			
-			<div class="row margin-b-4">
+			<div class="row col-12 center margin-b-4">
 				
-				<div class="col-3 padding-2 box-shadow-small margin-b-3 top-orange" data-sr="enter left please, and hustle 20px">
-					<h3 class="color-  margin-0">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="30" aria-labelledby="title" aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
-						  <path data-name="layer2" d="M24 52a8 8 0 0 1 8 8V16a8 8 0 0 0-8-8H2v44zM54 8h8v44H40a8 8 0 0 0-8 8" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="
-    stroke: rgba(13, 90, 162, 0.46);
-"></path>
-						  <path data-name="layer2" d="M32 16a8 8 0 0 1 8-8h2" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke: rgba(13, 90, 162, 0.46);"></path>
-						  <path data-name="layer1" fill="none" stroke="#0d5aa2" stroke-miterlimit="10" stroke-width="3" d="M54 26l-6-4-6 4V4h12v22z" stroke-linejoin="round" stroke-linecap="round"></path>
-						</svg>
-						OER 101</h3>
-					<p>Learn what OERs are and how to use them</p>
-					<a href='' class="button button-orange">Learn More</a>
+				<div class="col-4 padding-2 box-shadow-small margin-b-3 top-orange" data-sr="enter left please, and hustle 20px">
+					<strong class="color-light italic sans-serif">OPTION 1</strong>
+					<h3 class="color-  margin-0">Search</h3>
+					<p>Search and find OERs available for your course</p>
+					<a href='' class="button button-orange">Search OERs <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a>
 				</div>
 				
-				<div class="col-3 padding-2 box-shadow-small margin-b-3 top-green" data-sr="enter left please, and hustle 20px">
-					<h3 class="color-  margin-0">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="30" aria-labelledby="title" aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
-						  <path data-name="layer2" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="3" d="M16 48H2V2h46v14" stroke-linejoin="round" stroke-linecap="round" style="
-    stroke: #a2bed8;
-"></path><path data-name="layer2" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="3" d="M16 16h46v46H16z" stroke-linejoin="round" stroke-linecap="round" style="
-    stroke: #0d5aa2;
-"></path>
-						  
-						  <path data-name="layer1" fill="none" stroke="#0d5aa2" stroke-miterlimit="10" stroke-width="3" d="M39 26v26m13-13H26" stroke-linejoin="round" stroke-linecap="round"></path>
-						</svg>
-						Create an OER</h3>
-					<p>Create your own OER to use in the classroom</p>
-					<a href='' class="button button-green">Get Started</a>
+				<div class="col-4 padding-2 box-shadow-small margin-b-3 top-green" data-sr="enter left please, and hustle 20px">
+					<strong class="color-light italic sans-serif">OPTION 2</strong>
+					<h3 class="color-  margin-0">Modify/Edit</h3>
+					<p>Search for OERs you can modify/edit to perfectly fit your program</p>
+					<a href='' class="button button-green">Get Started <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a>
 				</div>
 				
-				
-				<div class="col-3 padding-2 box-shadow-small margin-b-3 top-purple" data-sr="enter left please, and hustle 20px">
-					<h3 class="color-  margin-0">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="30" aria-labelledby="title" aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
-						  <path data-name="layer2" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M28 34v14h16.9L56 59.1V48h6V26H52" style="
-    stroke: rgba(13, 90, 162, 0.51);
-"></path>
-						  <path data-name="layer1" fill="none" stroke="#0d5aa2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M52 4H2v30h8v11l11.1-11H52V4z"></path>
-						</svg>
-					Live Support</h3>
-					<p>Get realtime support for library services</p>
-					<a href='' class="button button-purple">Chat Now</a>
-				</div>
-				
-				<div class="col-3 padding-2 box-shadow-small margin-b-3 top-orange" data-sr="enter left please, and hustle 20px">
-					<h3 class="color-  margin-0">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="30" aria-labelledby="title" aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
-						  <path data-name="layer2" d="M24 52a8 8 0 0 1 8 8V16a8 8 0 0 0-8-8H2v44zM54 8h8v44H40a8 8 0 0 0-8 8" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="
-    stroke: rgba(13, 90, 162, 0.46);
-"></path>
-						  <path data-name="layer2" d="M32 16a8 8 0 0 1 8-8h2" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke: rgba(13, 90, 162, 0.46);"></path>
-						  <path data-name="layer1" fill="none" stroke="#0d5aa2" stroke-miterlimit="10" stroke-width="3" d="M54 26l-6-4-6 4V4h12v22z" stroke-linejoin="round" stroke-linecap="round"></path>
-						</svg>
-						What are OERs</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-					<a href='' class="button button-orange">Learn More</a>
+				<div class="col-4 padding-2 box-shadow-small margin-b-3 top-purple" data-sr="enter left please, and hustle 20px">
+					<strong class="color-light italic sans-serif">OPTION 3</strong>
+					<h3 class="color-  margin-0">Create</h3>
+					<p>Get started in creating your own OER for classroom and sharing</p>
+					<a href='' class="button button-purple">Get Started <i class="fa fa-fw fa-arrow-circle-right" aria-hidden="true"></i></a>
 				</div>
 				
 			</div>
-
+			
+	
 </section>
+
 
 </section>
 <style>
@@ -294,6 +341,19 @@ h3 svg {
 
 <script type="text/javascript" src="/scripts/scrollReveal.min.js"></script>
 
+<script>
+	$(document).ready(function() {
+
+    //$('.box').hide().filter("#divarea1").show();
+    $('.box').hide();
+
+    $('#dropdown').change(function() {
+        var selectedId= $(this).find(':selected').text().replace(/\s/g, "").toLowerCase();
+        console.log(selectedId);
+        $('.box').hide().filter('#' + selectedId).show();
+    });
+});
+</script>
 <script type="text/javascript">
 
 

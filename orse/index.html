@@ -1,0 +1,889 @@
+
+<!doctype html>
+<!--[if lt IE 8]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+   <title>CSCU - Research & System Effectiveness</title>
+   <meta name="description" content="">
+   <meta name="author" content="Connecticut State Colleges & Universities">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+   <link rel="stylesheet" href="http://www.ct.edu/files/css/site_2.css?d=10032017">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+   <script src="//use.typekit.net/tba7jib.js"></script>
+   <script>try{Typekit.load();}catch(e){}</script>
+   
+   <!--[if lt IE 9]>
+   <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   
+   
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25950326-1']);
+      _gaq.push(['_setSiteSpeedSampleRate', 100]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      //ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';   
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+
+   <style>
+   /* 
+@media (min-width: 767px){
+   .department #banner h1 {margin:30px 0;}
+   .department #banner h1 #logo-dept {font-size:30px;}
+   .department #banner h1 #logo-connscu-abr {font-size:30px;padding:7px;}
+   .department #banner #banner-wrap {display: flex;justify-content: space-between;align-items: center;}
+   .department .nav-main {width:auto;}
+   .department #nav-wrap, .department #nav-utility {margin: 0;padding: 0;}
+   
+}
+*/
+   </style>
+   
+
+</head>
+
+<body class="department">
+
+<header class="banner" id="banner" role="banner">
+  <div id="banner-wrap">
+      <h1>
+         <a href="/" id="logo-connscu-abr"><img src='http://www.ct.edu/files/images/logo-cscu.svg' alt=""CSCU Home" /></a>
+         <a href='/orse' id="logo-dept">Research & System Effectiveness</a>
+      </h1>
+         
+            <div id="nav-button" class="nav-button navControl">
+               <div id="hamburger-top" class="hamburger">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+               </div>
+             Menu
+            </div>
+            
+         <nav class="nav-main">
+         
+          <ul id="nav-wrap" class="inline">
+             <li><a href="/orse/about">About</a>
+                   <ul>
+                              <li><a href='/orse/about#mission'>Mission & Ethics</a></li>
+                              <li><a href='/orse/about#staff'>Staff</a></li>
+                              <li><a href='/orse/about#partnerships'>Partnerships & P20-WIN</a></li>
+                   </ul></li>
+             <li><a href="/orse/data">Data Center</a>
+                   <ul>
+                              <li><a href='/orse/data#visualizations'>Visualizations</a></li>
+                              <li><a href='/orse/data#sheets'>Data Sheets</a></li>
+                              <li><a href='/orse/data#achievement'>Student Achievement</a></li>
+                              <li><a href='/orse/data#navigator'>College Navigator</a></li>
+                              <li><a href='/orse/data#ipeds'>IPEDS</a></li>
+                   </ul></li>
+             <li><a href="/orse/request">Request Data</a></li>
+          </ul>
+    
+       </nav>
+   </div>
+</header>
+
+<section id="body-wrapper" class="">
+
+<style>
+
+#sub-menu li {display:inline-block;}
+.button:hover {background:#c73e1d; color:#FFF;}
+.row {position:relative;}
+#overlap-1 {position: absolute;right: -20px;top: 5em;background:#fff;z-index:1}
+#overlap-2 {position: absolute;left: -20px;top: 5em;background:#fff;z-index:1;}
+.icon-header {text-shadow:-1px -1px 0 #C5C9CD, 1px -1px 0 #C5C9CD, -1px 1px 0 #C5C9CD, 1px 1px 0 #C5C9CD; color:#FFF;}
+h3 svg {
+    background: #f4f7fb none repeat scroll 0 0;
+    border: 1px solid #d3e7f9;
+    border-radius: 50%;
+    display: block;
+    height: 70px;
+    margin-bottom: 1em;
+    overflow: visible !important;
+    padding: 14px;
+    width: 70px;
+}
+@media (max-width: 990px){
+      header .nav-main>ul>li>a.button-menu {
+          background: none;
+          border: 0;
+          justify-content: flex-start !important;
+            }
+      h3 svg {width:50px;height:50px;padding:10px;}
+}
+
+@media (max-width: 767px){
+   h3 {display: flex;align-items: center;}
+   h3 svg {margin-bottom:0;margin-right:15px;}
+}
+
+tr:nth-child(even) {background-color: #f7f7f7;}
+</style>
+
+<section class="hero-menu white sticky nav-sub">
+   <div class="row">
+      <div class="col-12 center-text">
+         
+         <div id="nav-button-sub" class="nav-button navControl">
+            <div id="hamburger-sub" class="hamburger">
+               <span class="line"></span>
+               <span class="line"></span>
+               <span class="line"></span>
+            </div>
+          Navigation
+         </div>
+         <ul class="tabs">
+            <li><a href="" data-target="#visualizations">Visualizations</a></li>
+            <li><a href="" data-target="#sheets">Data Sheets</a></li>
+            <li><a href="" data-target="#achievement">Student Achievement</a></li>
+            <li><a href="" data-target="#navigator">College Navigator</a></li>
+            <li><a href="" data-target="#ipeds">IPEDS</a></li>
+         </ul> 
+      </div>
+   </div>
+</section>
+
+
+<div id="tab-content">
+   
+   <div class="about" id="achievement">
+      <section class="hero-no-image padding-b-1">
+      <div class="row">
+         <div class="col-12 center center-text">
+            <h1 class="bold">Student Achievement</h1>
+            <p>The Student Achievement Measure is supported by six sponsoring associations, working together to provide a more comprehensive and accurate picture of student progress and completion as students move across institutions and state boundaries. </p>
+         </div>
+      </div>
+      </section>
+
+      <section class="body-content body-content-box ">
+               
+               <div class="row margin-b-4">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footable footable-loaded no-paging" data-page-size="40" data-sort="false">
+  <thead>
+    <tr>
+      <th>Campus</th>
+      <th>Report</th>
+    </tr>
+  </thead>
+  <tbody>
+ <tr class="participants-table-row">
+<td>Asnuntuck Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/128577">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Capital Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/129367">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Central Connecticut State University</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/128771">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Eastern Connecticut State University</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/129215">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Gateway Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/130396">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Housatonic Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/129543">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Manchester Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/129695">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Middlesex Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/129756">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Naugatuck Valley Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/129729">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Northwestern Connecticut Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/130040">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Norwalk Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/130004">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Quinebaug Valley Community Colleg</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/130217">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Southern Connecticut State University</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/130493">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Three Rivers Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/129808">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Tunxis Community College</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/130606">Report</a></td>
+</tr>
+<tr class="participants-table-row">
+<td>Western Connecticut State University</td>
+<td><a class="published-data" href="http://www.studentachievementmeasure.org/participants/130776">Report</a></td>
+</tr>
+  </tbody>
+</table>
+               </div>
+      </section>
+      </div>
+   
+   <div class="about" id="visualizations">
+      <section class="hero-no-image padding-b-1">
+      <div class="row">
+         <div class="col-12 center center-text">
+            <h1 class="bold">Visualizations</h1>
+         </div>
+      </div>
+      </section>
+      
+    
+
+
+      <section class="body-content body-content-box ">
+               <a href="https://public.tableau.com/profile/connecticut.state.colleges.and.universities.office.of.research.a#!/vizhome/CSUSASRSATs/Dashboard" target="_blank" class="boxer" data-boxer-width="850" data-boxer-height="800">High School Success of University Applicants by School, Year and Type</a>
+               <div class="row margin-b-4">
+               
+                  <table  width="100%" id="hr">
+                    <script id="hr-template" type="text/x-handlebars-template">
+                    </script>
+                  </table>
+                  
+               </div>
+               
+
+      </section>
+   </div>
+
+   <div class="about" id="sheets">
+      <section class="hero-no-image padding-b-1">
+      <div class="row">
+         <div class="col-12 center center-text">
+            <h1 class="bold">Abstracts & Reports</h1>
+            <p>The Connecticut Board of Regents for Higher Education maintains a statistical abstract that includes data for the Connecticut State Colleges & Universities; some statewide data are also available. This resource is under development. Please check back for updates.</p>
+            
+         </div>
+      </div>
+      </section>
+
+      <section class="body-content body-content-box ">
+               
+               <div class="row margin-b-4">
+
+               <h2 class="margin-b-0 margin-t-2 color-red">Accountability Reports</h2>
+
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footable footable-loaded no-paging" data-page-size="40" data-sort="false">
+         <thead>
+            <tr>
+               <th>Report</th>
+               <th data-hide="phone">Year(s)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="footable-even" style="display: table-row;">
+               <td><a href="/files/opr/CSCU Accountability Report AY2017.pdf" target="_blank">Accountability Report (pdf)</a></td>
+               <td>2017</td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td><a href="/files/opr/2016 Accountability Report.pdf" target="_blank">Accountability Report (pdf)</a></td>
+               <td>2016</td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td><a href="/files/opr/HECC Accountability Report 2015.pdf" target="_blank">Accountability Report (pdf)</a></td>
+               <td>2015</td>
+            </tr>
+         </tbody>
+      </table>
+      
+      
+               <h2 class="margin-b-0 margin-t-2 color-red">Credit Enrollment</h2>
+
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footable footable-loaded no-paging" data-page-size="40" data-sort="false">
+         <thead>
+            <tr>
+               <th>Period</th>
+               <th data-hide="phone">Report</th>
+               <th data-hide="phone">Year(s)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Annual</td>
+               <td><a href="http://www.ct.edu/files/opr/Full_Time_Equivalent_Instructional_Activity_20170301.xlsx">Full-Time Equivalent (Instructional Activity) (xlsx)</a></td>
+               <td>2008-2017</td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Annual</td>
+               <td><a href="http://www.ct.edu/files/opr/12-mo-unduplicated-headcount.xlsx">Unduplicated Headcount (xlsx)</a></td>
+               <td>1993-2017</td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Fall</td>
+               <td><a href="http://www.ct.edu/files/opr/Fall 2018 Final Census 2018-10-31.pdf" target="_blank">Enrollment, Census Date Comparison (pdf)</a>&nbsp;|&nbsp;<a href="http://www.ct.edu/files/opr/Fall 2018 Final Census 2018-10-31.xlsx" target="_blank">(xls)</a></td>
+               <td>2017-2018</td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Fall</td>
+               <td><a href="http://www.ct.edu/files/opr/SA_Enr_FallHeadcount_V20161031.pdf" target="_blank">Fall Headcount (pdf)</a>&nbsp;|&nbsp;<a href="http://www.ct.edu/files/opr/SA_Enr_FallHeadcount_V20161031.xlsx" target="_blank">(xlsx)</a></td>
+               <td>1993-2018</td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Fall</td>
+               <td><a href="/files/opr/WEB Enrollment-by-Age-through-F2017.pdf" target="_blank">Enrollment by Age (pdf)</a> | <a href="/files/opr/WEB Enrollment-by-Age-through-F2017.xlsx" target="_blank">(xlsx)</a></td>
+               <td>2010-2017</td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Fall</td>
+               <td><a href="http://www.ct.edu/files/opr/WEB Enrollment-by-Gender-through-F-2016.pdf" target="_blank">Enrollment by Gender (pdf)</a> | <a href="http://www.ct.edu/files/opr/WEB Enrollment-by-Gender-through-F-2016.xlsx" target="_blank">(xlsx)</a></td>
+               <td>2010-2016</td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Fall</td>
+               <td><a href="http://www.ct.edu/files/opr/WEB Enrollment-by-Race-Ethnicity-through-F2016.xlsx" target="_blank">Enrollment by Race/Ethnicity (xlsx)</a></td>
+               <td>2010-2016</td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Fall</td>
+               <td><a href="http://www.ct.edu/files/opr/Enrollment by CT Town 2010-2016.xlsx" target="_blank">Enrollment by Town (xlsx)</a></td>
+               <td>2010-2016</td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Fall</td>
+               <td><a href="http://www.ct.edu/about/map" target="_blank">MAP - Enrollment by Town (interactive)</a></td>
+               <td>2016</td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Spring</td>
+               <td><a href="http://www.ct.edu/files/opr/SpringHeadcount.pdf" target="_blank">Spring Headcount (pdf)</a> | <a href="http://www.ct.edu/files/opr/SpringHeadcount.xlsx" target="_blank">(xlsx)</a></td>
+               <td>2009-2017</td>
+            </tr>
+         </tbody>
+      </table>
+
+               <h2 class="margin-b-0 margin-t-2 color-red">Non-Credit Enrollment</h2>
+
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footable footable-loaded no-paging" data-page-size="40" data-sort="false">
+         <thead>
+            <tr>
+               <th>Report</th>
+               <th data-hide="phone">Year(s)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="footable-even" style="display: table-row;">
+               <td><a href="http://www.ct.edu/files/opr/Noncredit Headcount 2016-2017.xlsx">Non-Credit Headcount (xlsx)</a></td>
+               <td>2002-2017</td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td><a href="http://www.ct.edu/files/opr/Nonredit Registrations 2014-2015.xlsx">Non-Credit Registrations (xlsx)</a></td>
+               <td>2002-2015</td>
+            </tr>
+         </tbody>
+      </table>
+
+               <h2 class="margin-b-2 margin-t-2 color-red">Completions</h2>
+
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footable footable-loaded no-paging" data-page-size="40" data-sort="false">
+         <thead>
+            <tr>
+               <th>Report</th>
+               <th data-hide="phone">Year(s)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="footable-even" style="display: table-row;">
+               <td><a href="http://www.ct.edu/files/opr/Completions-through-2013-2014.pdf" target="_blank">Credit Degree &amp; Certificate Completions (pdf)</a> | <a href="http://www.ct.edu/files/opr/Completions-through-2013-2014.xls" target="_blank">(xls)</a></td>
+               <td>1993-2014</td>
+            </tr>
+         </tbody>
+      </table>
+    
+
+               </div>
+       </section>
+   </div>               
+               
+    
+   
+   <div class="about" id="navigator">
+      <section class="hero-no-image padding-b-1">
+      <div class="row">
+         <div class="col-12 center center-text">
+            <h1 class="bold">College Navigator</h1>
+            <p>Direct links appear below for each institution to its College Navigator profile (U.S. Dept. of Education) and disclosures required by the Higher Education Opportunity Act (institutional web pages).</p>
+         </div>
+      </div>
+      </section>
+
+      <section class="body-content body-content-box ">
+               
+               <div class="row margin-b-4">
+      
+ <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footable footable-loaded no-paging" data-page-size="40" data-sort="false">
+         <thead>
+            <tr>
+               <th>Campus</th>
+               <th data-hide="phone">College Navigator</th>
+               <th data-hide="phone">HEOA</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Asnuntuck</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=128577" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.asnuntuck.edu/student-services/financial-aid" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Capital</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=129367" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.ccc.commnet.edu/studentrights.htm" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Gateway</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=130396" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.gatewayct.edu/About/College-Consumer-Information" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Housatonic</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=129543" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.hcc.commnet.edu/about/studentRightToKnow.asp" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Manchester</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=129695" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.mcc.commnet.edu/about/student-right-to-know.php" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Middlesex</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=129756" target="_blank">consumer profile</a></td>
+               <td><a href="http://mxcc.edu/Content/Student_Right_to_Know_Act_Information.asp" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Naugatuck Valley</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=129729" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.nv.edu/Current-Students/itemId/2075/Student-Consumer-Information" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Northwestern Connecticut</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=130040" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.nwcc.edu/current-students/student-consumer-information" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Norwalk</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=130004" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.ncc.commnet.edu/dept/ie/Institutional_Disclosures.asp" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Quinebaug Valley</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=130217" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.qvcc.edu/student_services/right_to_know/" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Three Rivers</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=129808" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.threerivers.edu/about/institution-administration/institutional-research/" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Tunxis</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=130606" target="_blank">consumer profile</a></td>
+               <td><a href="http://tunxis.edu/college-information/consumer-information/" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Charter Oak State College</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?s=CT&amp;id=128780">consumer profile</a></td>
+               <td><a href="http://www.charteroak.edu/aboutus/disclosures.cfm" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Central</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?s=CT&amp;id=128771">consumer profile</a></td>
+               <td><a href="http://www.ccsu.edu/page.cfm?p=5472" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Eastern</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=129215" target="_blank">consumer profile</a></td>
+               <td><a href="http://nutmeg.easternct.edu/pir/HEADisclosures.htm" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-odd" style="display: table-row;">
+               <td>Southern</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=130493" target="_blank">consumer profile</a></td>
+               <td><a href="http://www.southernct.edu/management_info_research/requireddisclosures/" target="_blank">disclosures</a></td>
+            </tr>
+            <tr class="footable-even" style="display: table-row;">
+               <td>Western</td>
+               <td><a href="http://nces.ed.gov/collegenavigator/?&amp;id=130776" target="_blank">consumer profile</a></td>
+               <td><a href="http://wcsu.edu/academics/consumer.asp" target="_blank">disclosures</a></td>
+            </tr>
+         </tbody>
+      </table>
+               </div>
+               
+      </section>
+   </div>
+               
+  <div class="about" id="ipeds">
+      <section class="hero-no-image padding-b-1">
+      <div class="row">
+         <div class="col-12 center center-text">
+            <h1 class="bold">IPEDS (Institution/Peer Comparisons)</h1>
+            <p>The Office of Policy and Research coordinates submission of all public higher education institutions in Connecticut to the Integrated Postsecondary Education Data System (IPEDS) at the National Center for Education Statistics (NCES). Submission of a wide range of data to the federal government is a requirement for participation in federal student aid programs under Title IV of the Higher Education Opportunity Act.</p>
+         </div>
+      </div>
+      </section>
+
+      <section class="body-content body-content-box ">
+               
+               <div class="row margin-b-4">
+      
+ <table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+         <thead>
+            <tr>
+               <th>Institution</th>
+               <th>2012</th>
+               <th>2013</th>
+               <th>2014</th>
+               <th>2015</th>
+               <th>2016</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Asnuntuck Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_128577.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/AsnuntuckCCIPEDSDFR2013_128577.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/AsnuntuckCC-IPEDSDFR2014_128577.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Asnuntuck%20CC%20IPEDSDFR2015_128577.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Asnuntuck CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Capital Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_129367.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/CapitalCCIPEDSDFR2013_129367.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Capital-CC-IPEDSDFR2014_129367.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Capital%20CC%20IPEDSDFR2015_129367.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Capital CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Gateway Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_130396.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/GatewayCCIPEDSDFR2013_130396.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Gateway-CC-IPEDSDFR2014_130396.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Gateway%20CC%20IPEDSDFR2015_130396.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Gateway CC IPEDS Data Feedback Report 2017.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Housatonic Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_129543.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/HousatonicCCIPEDSDFR2013_129543.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Housatonic-CC-IPEDSDFR2014_129543.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Housatonic%20CC%20IPEDSDFR2015_129543.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Housatonic CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Manchester Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_129695.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/ManchesterCCIPEDSDFR2013_129695.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Manchester-CC-IPEDSDFR2014_129695.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Manchester%20CC%20IPEDSDFR2015_129695.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Manchester CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Middlesex Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_129756.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/MiddlesexCCIPEDSDFR2013_129756.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Middlesex-CC-IPEDSDFR2014_129756.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Middlesex%20CC%20IPEDSDFR2015_129756.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Middlesex CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Naugatuck Valley Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_129729.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/NaugatuckValleyCCIPEDSDFR2013_129729.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Naugatuck-Valley-CC-IPEDSDFR2014_129729.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Naugatuck%20Valley%20CC%20IPEDSDFR2015_129729.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Naugatuck Valley CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Northwestern CT Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_130040.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/NorthwesternCTCCIPEDSDFR2013_130040.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Northwestern-CT-CC-IPEDSDFR2014_130040.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Northwestern%20CT%20IPEDSDFR2015_130040.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Northwestern CT CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Norwalk Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_130004.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/NorwalkCCIPEDSDFR2013_130004.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Norwalk-CC-IPEDSDFR2014_130004.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Norwalk%20CC%20IPEDSDFR2015_130004.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Norwalk CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Quinebaug Valley Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_130217.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/QuinebaugValleyCCIPEDSDFR2013_130217.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Quinebaug-Valley-CC-IPEDSDFR2014_130217.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Quinebaug%20Valley%20CC%20IPEDSDFR2015_130217.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Quinebaug Valley CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Three Rivers Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_129808.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/ThreeRiversCCIPEDSDFR2013_129808.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Three-Rivers-CC-IPEDSDFR2014_129808.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Three%20Rivers%20CC%20IPEDSDFR2015_129808.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Three Rivers CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Tunxis Community College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_130606.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/TunxisCCIPEDSDFR2013_130606.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Tunxis-CC-IPEDSDFR2014_130606.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/Tunxis%20CC%20IPEDSDFR2015_130606.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Tunxis CC IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Charter Oak State College</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_128780.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/CharterOakIPEDSDFR2013_128780.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/Charter-Oak-IPEDSDFR2014_128780.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/COSC%20IPEDSDFR2015_128780.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/Charter Oak State College IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Central Connecticut State University</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_128771.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/CCSU IPEDSDFR2013_128771.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/CCSU-IPEDSDFR2014_128771.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/CCSU%20IPEDSDFR2015_128771.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/CCSU IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Eastern Connecticut State University</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_129215.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/ECSU IPEDSDFR2013_129215.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/ECSU-IPEDSDFR2014_129215.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/ECSU%20IPEDSDFR2015_129215.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/ECSU IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Southern Connecticut State University</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_130493.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/SCSU IPEDSDFR2013_130493.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/SCSU-IPEDSDFR2014_130493.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/SCSU%20IPEDSDFR2015_130493.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/SCSU IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+            <tr>
+               <td>Western Connecticut State University</td>
+               <td><a href="http://nces.ed.gov/ipeds/DataCenter/DfrFiles/IPEDSDFR2012_130776.pdf" target="_blank">2012</a></td>
+               <td><a href="/files/opr/WCSU IPEDSDFR2013_130776.pdf" target="_blank">2013</a></td>
+               <td><a href="/files/opr/WCSU-IPEDSDFR2014_130776.pdf" target="_blank">2014</a></td>
+               <td><a href="/files/opr/WCSU%20IPEDSDFR2015_130776.pdf" target="_blank">2015</a></td>
+               <td><a href="/files/opr/WCSU IPEDS Data Feedback Report 2016.pdf" target="_blank">2016</a></td>
+            </tr>
+         </tbody>
+      </table>
+               </div>
+               
+      </section>
+   </div>
+
+</div><!-- end tab content-->
+
+</section>
+
+
+
+
+
+<footer>
+<div class="footer-content center">
+   <div class="row">
+      <div class="col-3 t-col-4 margin-t-2  dark-grey-box padding-2">
+         <div class="">61 Woodland Street<br>Hartford, CT 06105</div>
+         <ul id="footer-contact">
+            <li><a href="/about/system-office#contact"><i class="fa  fa-envelope fa-inverse"></i> Contact</a></li>
+            <li><a href="/about/system-office#directions"><i class="fa  fa-car  fa-inverse"></i> Directions</a></li>
+            <li><i class="fa  fa-phone  fa-inverse"></i> 860-723-0000</li>  
+         </ul>
+         
+         <div class="">&copy; CSCU  </div>
+      </div>
+      
+   <div class="col-9 t-col-8">
+      
+      <div class="row">
+         
+            <div class="col-8  padding-2">
+               <h3 class="subhead-line">CSCU Resources</h3>
+               <ul class="list-2-column">
+                    <li><a href="http://my.commnet.edu/" target="_blank">myCommNet</a></li>
+                    <li><a href="/365" target="_blank">Office 365</a></li>
+                    <li><a href="http://www.ct.edu/netid" target="_blank">NetID</a></li>
+                    <li><a href="http://commons.ct.edu/" target="_blank">CSCU Commons</a></li>
+                    <li><a href="https://calendar.ct.edu" target="_blank">Training Calendar</a></li>
+                    <li><a href="/hr/employment">Employment</a></li>    
+                    <li><a href="/directory">Directories</a></li>    
+                    <li><a href="hr/policies#bor">BOR Policies</a></li>    
+                    <li><a href="/faculty">Faculty Resources</a></li>   
+               </ul>
+            </div>
+            
+            <div class="col-4 padding-2">
+               <h3 class="subhead-line">Social Media</h3>
+               <ul>  
+                  <li><a href="http://www.twitter.com/cscunews" target="_new"><i class="fa  fa-twitter  fa-inverse"></i> Twitter</a></li>
+                  <li><a href="http://www.flickr.com/photos/wcsu_upd/" target="_new"><i class="fa  fa-flickr  fa-inverse"></i> Flickr</a></li>
+                  <li><a href="https://www.linkedin.com/in/connscu" target="_new"><i class="fa  fa-linkedin-square  fa-inverse"></i> LinkedIn</a></li>
+                  <li><a href="http://www.youtube.com/connscu" target="_new"><i class="fa  fa-youtube  fa-inverse"></i> YouTube</a></li>
+                  <li><a href="/newsroom/connect"><i class="fa  fa-share-alt  fa-inverse"></i> CSCU Connect</a></li>
+               </ul>
+            </div>
+      </div>
+      
+   </div>
+</div>
+</div>
+</footer>
+<noscript>For the best experience, please enable javascript.</noscript>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.ct.edu/files/scripts/global_dept.js"></script>
+<script type="text/javascript" src="http://www.ct.edu/files/scripts/stickyfill.js"></script>
+
+<script type="text/javascript" src="http://www.ct.edu/files/scripts/scrollReveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script type="text/javascript">
+
+
+
+$(document).ready(function() {
+
+      
+      var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1FdDcVmiH5Oqrnmx_GzvY2s5Woqz3WW49l98C4dakWD4/edit#gid=0';
+      var HRTemplate = Handlebars.compile($('#hr-template').html());
+
+      $('#hr').sheetrock({
+            url: mySpreadsheet,
+            query: "select A,B,C,D,E,F order by F asc",
+          // rowTemplate: HRTemplate,
+           callback : makeSortable
+      });
+      
+      function makeSortable(error, options, response) {
+           $(options.user.target).DataTable ({
+
+              "aoColumnDefs": [{
+                  'aTargets': [3],
+                  "mData": 0,
+                  "sTitle": "Data",
+                  'mRender': function (data, type, full) {
+                        return '<a href="' + full[1] + '" target="_blank" onclick="_gaq.push([\'_trackEvent\', \'external\', \'click\', $(this).attr(\'href\')]);" class="boxer" data-boxer-width="850" data-boxer-height="800">' + data + '</a>';
+                  }
+               }, {
+                  "bVisible": false, "bSearchable": true, "mData": 1, "aTargets": [1], "sTitle": "Link"
+               }, {
+                  "bVisible": true, "bSearchable": true, "mData": 2, "aTargets": [0], "sTitle": "System"
+               }, {
+                  "bVisible": true, "bSearchable": true, "mData": 3, "aTargets": [4], "sTitle": "Year(s)"
+               }, {
+                  "bVisible": true, "bSearchable": true, "mData": 4, "aTargets": [2], "sTitle": "Category"
+               }, {
+                  "bVisible": false, "bSearchable": true, "mData": 5, "aTargets": [5], "sTitle": "Index"
+               }], 
+
+               "bDeferRender": true,
+               "iDisplayLength": 100,
+               "sDom": '<"top"><"clear">t<"clear"><"bottom">',
+               "aaSorting": [[5,'asc']]
+
+             });
+
+        } 
+   
+   
+
+  //activate toggles
+   var $content = $(".content").hide();
+   $(".toggle").on("click", function (e) {
+         $(this).toggleClass("expanded");
+         $(this).next().slideToggle();
+   });
+
+  //activate sticky polyfill
+   //$('.sticky').Stickyfill();
+
+  //change class for sticky menu on scroll
+   var stickyMenu = $('.sticky').offset();
+   var $window = $(window);
+
+   $window.scroll(function() {
+       if ( $window.scrollTop() >= stickyMenu.top) {$(".sticky").addClass("sticky-menu");} else {$(".sticky").removeClass("sticky-menu");}
+   });
+
+  //activate hamburger menu
+   $(".navControl").click(function(event){
+      $(this).closest("section, header").find("ul.tabs, .nav-sub, .hamburger").toggleClass("active");
+   });
+      
+  //activate ajax tabs 
+   $('.hero-menu').easytabs({
+      panelContext: $("#tab-content"),
+      tabs: 'ul.tabs > li',
+      cache: true,
+      animationSpeed: "slow",
+      collapsedByDefault: false
+   });
+
+  //send browser to top after ajax menu click 
+   $("ul.tabs li a").click(function() {
+      $('html, body').animate({scrollTop:0}, 'slow');
+      $("ul.tabs").removeClass("active");
+      $(".hamburger").removeClass("active");
+   });
+   
+   if (location.hash) {
+  setTimeout(function() {
+
+    window.scrollTo(0, 0);
+  }, 1);
+   }
+
+});
+
+      window.addEventListener("load", function(){
+      
+      $(".boxer").boxer({
+         callback: function($target) {$(".icon-search").focus();}
+         
+      });
+});
+</script>
+
+</body>
+</html>

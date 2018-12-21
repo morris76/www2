@@ -43,17 +43,8 @@
 <header class="banner stacked" id="banner" role="banner">
   <div id="banner-wrap">
 		<h1>
-			<a href="/" id="logo-connscu-abr"><img src='http://www.ct.edu/files/images/logo-cscu.svg' alt=""CSCU Home" /></a>
+			<a href="/" id="logo-connscu-abr"><img src='http://www.ct.edu/files/images/logo-cscu.svg' alt="CSCU Home" /></a>
 			<a href='index.html' id="logo-dept">College Guaranteed Admissions</a></h1>
-			
-				<div id="nav-button" class="nav-button navControl">
-					<div id="hamburger-top" class="hamburger">
-						<span class="line"></span>
-						<span class="line"></span>
-						<span class="line"></span>
-					</div>
-			 	 Menu
-				</div>
    </div>
 </header>
 
@@ -97,7 +88,7 @@
     overflow: hidden;
     position: absolute;
     width: 100%;
-}label, input {
+}.menu-filters label, input {
   margin: 4px;
   padding: 10px 15px;
   background-color: none;
@@ -189,65 +180,68 @@ input[type=radio]:checked + label,  .fs-checkbox-checked label, input:focus  {
 		<div class="col-10 padding-3 center box-shadow-small bg-orange margin-b-2">
 			<h2 class="center-text subhead-line-center bg-light color-white text-shadow-small bold italic margin-t-0">Get Started</h2>
 			<form action="/" accept-charset="utf-8" id="ab-form" method="post">
-			<h3 class="italic margin-b-0">Name <span class="req">*</span></h3>
-							<input id="name" name="full_name" type="text" maxlength="355" required />
+			
+					<label for="name" class="name"><h3 class="italic margin-b-0">Name <span class="req">*</span></h3></label>
+					<input id="name" name="full_name" type="text" maxlength="355" required />
 							
-			<h3 class="italic margin-b-0">Email <span class="req">*</span></h3>
-							<input id="email" name="email" type="text" maxlength="355" required /><br>
+			
+					<label for="email" class="email"><h3 class="italic margin-b-0">Email <span class="req">*</span></h3></label>
+					<input id="email" name="email" type="text" maxlength="355" required /><br>
 							
-			<h3 class="italic margin-b-0">Phone <span class="req">*</span></h3>
-							<input id="phone" name="phone" type="text" maxlength="255" required /><br>
+			
+					<label for="phone" class="phone"><h3 class="italic margin-b-0">Phone <span class="req">*</span></h3></label>
+					<input id="phone" name="phone" type="text" maxlength="255" required /><br>
 							
 			<h3 class="italic margin-b-0">Select Your College: <small><a href='/supersaturday/map' class="color-red-light boxer" target="_blank" data-boxer-height="700" data-boxer-width="900">(view locations)</a></small></h3>
 								
 			<ul class="menu-filters padding-0 margin-0 margin-b-2">
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Asnuntuck" />
-					<label for="catPrograms">Asnuntuck<em></em></label>
+	      	<input id="Asnuntuck" type="radio" name="check_to" class="vis-hidden" value="Asnuntuck" />
+					<label for="Asnuntuck">Asnuntuck<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Capital" />
-					<label for="catPrograms">Capital<em></em></label>
+	      	<input id="Capital" type="radio" name="check_to" class="vis-hidden" value="Capital" />
+					<label for="Capital">Capital<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Gateway" />
-					<label for="catPrograms">Gateway<em></em></label>
+	      	<input id="Gateway" type="radio" name="check_to" class="vis-hidden" value="Gateway" />
+					<label for="Gateway">Gateway<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Housatonic" />
-					<label for="catPrograms">Housatonic<em></em></label>
+	      	<input id="Housatonic" type="radio" name="check_to" class="vis-hidden" value="Housatonic" />
+					<label for="Housatonic">Housatonic<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Manchester" />
-					<label for="catPrograms">Manchester<em></em></label>
+	      	<input id="Manchester" type="radio" name="check_to" class="vis-hidden" value="Manchester" />
+					<label for="Manchester">Manchester<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Middlesex" />
-					<label for="catPrograms">Middlesex<em></em></label>
+	      	<input id="Middlesex" type="radio" name="check_to" class="vis-hidden" value="Middlesex" />
+					<label for="Middlesex">Middlesex<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Naugatuck Valley" />
-					<label for="catPrograms">Naugatuck Valley<em></em></label>
+	      	<input id="Naugatuck" type="radio" name="check_to" class="vis-hidden" value="Naugatuck Valley" />
+					<label for="Naugatuck">Naugatuck Valley<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Northwestern CT" />
-					<label for="catPrograms">Northwestern CT<em></em></label>
+	      	<input id="Northwestern" type="radio" name="check_to" class="vis-hidden" value="Northwestern CT" />
+					<label for="Northwestern">Northwestern CT<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Norwalk" />
-					<label for="catPrograms">Norwalk<em></em></label>
+	      	<input id="Norwalk" type="radio" name="check_to" class="vis-hidden" value="Norwalk" />
+					<label for="Norwalk">Norwalk<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Quinebaug" />
-					<label for="catPrograms">Quinebaug Valley<em></em></label>
+	      	<input id="Quinebaug" type="radio" name="check_to" class="vis-hidden" value="Quinebaug" />
+					<label for="Quinebaug">Quinebaug Valley<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Three" />
-					<label for="catPrograms">Three Rivers<em></em></label>
+	      	<input id="Three" type="radio" name="check_to" class="vis-hidden" value="Three" />
+					<label for="Three">Three Rivers<em></em></label>
 				</li>
 	      <li>
-	      	<input id="catPrograms" type="radio" name="check_to" class="vis-hidden" value="Tunxis" />
-					<label for="catPrograms">Tunxis<em></em></label>
+	      	<input id="Tunxis" type="radio" name="check_to" class="vis-hidden" value="Tunxis" />
+					<label for="Tunxis">Tunxis<em></em></label>
 				</li>
 
 	   </ul>  

@@ -328,7 +328,7 @@ $("#nav-button").on("click",function(event){
 });
 	
 //add down arrow to menu items with subs
-$('#nav-wrap > li:has(ul) > a').addClass("downarrow");
+$('.nav-main > ul > li:has(ul) > a').addClass("downarrow");
 
 if($(window).width() < 990){
 
@@ -337,7 +337,7 @@ if($(window).width() < 990){
 	//$(window).load(function() {
 	//});
 
-	$('#nav-wrap > li:has(ul) > a').on('click', function(event)  {
+	$('.nav-main > ul > li:has(ul) > a').on('click', function(event)  {
     event.preventDefault()
 		$(this).parent('li').toggleClass("active");
 		$(this).parent('li').find('ul').addClass('active').slideToggle(500);
@@ -345,7 +345,7 @@ if($(window).width() < 990){
   
     
   //change dropdown boxes to lightboxes for mobile users
-  $("#nav-utility > li > a[data-dropdown]").each(function() {
+  $(".nav-main > ul > li > a[data-dropdown]").each(function() {
 		$(this).addClass('boxer');
 		var linkattr = $(this).attr('data-dropdown');
 		$(this).attr("href", linkattr)

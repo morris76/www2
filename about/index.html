@@ -14,9 +14,9 @@
 
 	<link rel="stylesheet" href="/css/site_2.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/lightbox.css">
 
 	<link rel="stylesheet" href="https://use.typekit.net/tba7jib.css">
-	<link rel="stylesheet" href="/css/lightbox.css">
 	
    <!--[if lt IE 9]>
    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -36,9 +36,78 @@
 	</script>
 	
 
+	<style>
+		h3 svg {
+    background: #f4f7fb none repeat scroll 0 0;
+    border: 1px solid #d3e7f9;
+    border-radius: 50%;
+    display: block;
+    height: 70px;
+    margin-bottom: 1em;
+    overflow: visible !important;
+    padding: 14px;
+    width: 70px;
+}
+.hero-bg-image h1, .hero-hero-image h1 {
+	font-size:5.6em;
+	font-style:italic;
+	text-shadow:0 0 10px 0 rgba(0, 0, 0, 0.4);
+	letter-spacing:0.03em;}
+.hero-bg-image:before, .hero-hero-image:before {
+    background: rgba(0, 0, 0, 0) -o-linear-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.6) 70%);
+    bottom: 0;
+    content: "";
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+.hero-bg-image {
+  background-image: url(http://www.ct.edu/files/images/header-new314.jpg);
+      background-size: cover;
+    position: relative;
+    text-align: left;
+    background-position: 50% top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+        min-height: 70vh;
+    display: flex;
+    flex-direction: column;}
+  .hero-bg-image .row {
+    max-width: 72em;min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-bg-image .row:last-child {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.hero-bg-image p.hero, .hero-hero-image p.hero {
+    font-size: 24px;
+    color: #fff;
+        text-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+@media only screen and (max-width: 767px) {
+
+.hero-bg-image .row:last-child {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-bg-image h1, .hero-hero-image h1 {
+font-size:3em;}
+.hero-bg-image p.hero, .hero-hero-image p.hero {    font-size: 20px;
+    line-height: 28px;}
+}
+	</style>
 </head>
 
-<body class="department">
+<body class="main">
+
 
 
 <header class="banner" id="banner" role="banner">
@@ -57,62 +126,96 @@
 				</div>
 				
 			<nav class="nav-main">
-			
+				
+				<ul id="nav-utility">
+         <li><a href="/cscu">Campuses</a></li>
+         <li><a href="/directory">Directory</a></li>
+         <li><a href="#">Departments</a>
+						    <ul>
+						      <li><a href="/facilities">Facilities</a></li>
+						      <li><a href="/finance">Finance</a></li>
+						      <li><a href="/hr">Human Resources</a></li>
+						      <li><a href="/it">Information Technology</a></li>
+						      <li><a href="/orse">Research &amp; System Effectiveness</a></li>
+						   </ul></li>
+	        <li><a href="#" class="">Regents</a>
+	              <ul>
+	                  <li><a href="/regents/meetings">Future Meetings/Agendas</a></li>
+	                  <li><a href="/regents/minutes">Past Meetings/Minutes</a></li>
+	                  <li><a href="/regents/members">Members</a></li>
+	                  <li><a href="/regents/committees">Committees</a></li>
+	                  <li><a href="/regents/bylaws">Bylaws</a></li>
+	                  <li><a href="/regents/policies">Policies</a></li>
+	                  <li><a href="/regents/archives">Archives (CSUS/CCC)</a></li>
+	                  <li><a href="/regents/mission">Mission, Vision, Goals</a></li>
+	              </ul></li>
+	              
+		        <li><a href="#" class="">Resources</a>
+	                <ul>
+		                  <li><a href="/initiatives/tap">Transfer &amp; Articulation</a></li>
+		                  <li><a href="/initiatives/p20win">P20 WIN</a></li>
+		                  <li><a href="/initiatives/gearup">Gear Up CT</a></li>
+		                  <li><a href="http://cscu.libguides.com/?b=g&d=a">OpenCSCU</a></li> <li><a href="http://my.commnet.edu/" target="_blank"><i class="fa fa-fw fa-sign-in header-arrow"></i> myCommNet</a></li>
+      <li><a href="http://commons.ct.edu/" target="_blank"><i class="fa fa-fw fa-group header-arrow"></i> ConnSCU Commons</a></li>
+      <li><a href="/365" target="_blank"><i class="fa fa-fw fa-envelope header-arrow"></i> Office 365</a></li>
+      <li><a href="http://www.ct.edu/netid" target="_blank"><i class="fa fa-fw fa-user header-arrow"></i> NetID</a></li>
+      <li><a href="https://calendar.ct.edu" target="_blank"><i class="fa fa-fw fa-calendar-o header-arrow"></i> Training Calendar</a></li>
+	                </ul></li>
+         </ul>
+         
 	       <ul id="nav-wrap" class="inline">
 	       
 	          <li><a href="#">About</a>
 	                <ul>
+		                  <li class="color-red margin-t-1 margin-b-0 bold small">About</li>
 		                  <li><a href="/about">About CSCU</a></li>
 		                  <li><a href="/about/leadership">Leadership</a></li>
-		                  <li><a href="/regents/mission">Mission, Vision, Goals</a></li>
-		                  <li><a href="/studentsfirst"> Students First</a></li>
-		                  <li class="color-red margin-t-2 margin-b-1 margin-b-0">System Office</li>
+		                  <li><a href="/studentsfirst">Students First</a></li>
+		                  <li><a href="about/map">Town by Town</a></li>
+		                  <li class="color-red margin-t-2 margin-b-0 bold small">System Office</li>
 		                  <li><a href="/hr/employment">Employment</a></li>
 		                  <li><a href="/finance#bids">Bid Opportunities</a></li>
-		                  <li><a href="/directory">Directory</a></li>
+		                  <li><a href="/directory">Directories</a></li>
 		                  <li><a href="/about/system-office">Departments</a></li>
 	                </ul></li>
 		        <li><a href="#" class="">Academics</a>
 	                <ul>
-		                  <li><a href="/academics">Program Search</a></li>
+		                  <li class="color-red margin-t-1 margin-b-0 bold small">Programs</li>
+		                  <li><a href="/academics">CSCU Programs</a></li>
+		                  <li><a href="/academics/nursing">Nursing - 2 Year</a></li>
+		                  <li><a href="/academics/nursing-cscu">Nursing - 4+ Year</a></li>
+		                  <li><a href="/academics/manufacturing">Manufacturing</a></li>
+		                  <li class="color-red margin-t-2 margin-b-0 bold small">Resources</li>
 		                  <li><a href="/academics/courses">Course Search</a></li>
 		                  <li><a href="/academics/calendar">Academic Calendars</a></li>
-				              <li class="color-red margin-t-2 margin-b-1 margin-b-0">Nursing</li>
-		                  <li><a href="/academics/nursing">CCC Nursing</a></li>
-		                  <li><a href="/academics/nursing-cscu">System Nursing</a></li>
-		                  <li class="color-red margin-t-2 margin-b-1 margin-b-0">System Office</li>
-		                  <li><a href="/academics/manufacturing">Manufacturing</a></li>
-		                  <li><a href="/cot">College of Technology</a></li>
+		                  <li><a href="/academics/calendar">Common Courses</a></li>
 	                </ul></li>
 		        <li><a href="#" class="">Admission</a>
 	                <ul>
+		                  <li class="color-red margin-t-1 margin-b-0 bold small">Attending</li>
 		                  <li><a href="/admission">Applying</a></li>
 		                  <li><a href="/transfer/about">Transferring</a></li>
+		                  <li><a href="/cot">College of Technology</a></li>
+		                  <li><a href="/transfer/contact">Contacts</a></li>
+		                  <li class="color-red margin-t-2 margin-b-0 bold small">Affording</li>
 		                  <li><a href="/admission/tuition">Tuition &amp; Fees</a></li>
 		                  <li><a href="/admission/finaid">Financial Aid</a></li>
 		                  <li><a href="/admission/veterans">Veteran Services</a></li>
-		                  <li><a href="/transfer/contact">Contacts</a></li>
 	                </ul></li>
-		        <li><a href="#" class="">Initiatives</a>
-	                <ul>	                	
-		                  <li><a href="/initiatives/library">Integrated Library Project</a></li>
-		                  <li><a href="/studentsuccess">Student Success Center</a></li>
-		                  <li><a href="/initiatives/tap">Transfer &amp; Articulation</a></li>
-		                  <li><a href="/initiatives/p20win">P20 WIN</a></li>
-		                  <li><a href="/initiatives/gearup">Gear Up CT</a></li>
-	                </ul></li>
-	          <li><a href="#" class="">Regents</a>
+		        <li><a href="#" class="">Transfers</a>
 	                <ul>
-		                  <li><a href="/regents/meetings">Meetings</a></li>
-		                  <li><a href="/regents/members">Members</a></li>
-		                  <li><a href="/regents/committees">Committees</a></li>
-		                  <li class="color-red margin-t-2 margin-b-1 margin-b-0">About</li>
-		                  <li><a href="/regents/bylaws">Bylaws</a></li>
-		                  <li><a href="/regents/policies">Policies</a></li>
-		                  <li><a href="/regents/archives">Archives (CSUS/CCC)</a></li>
-		                  <li><a href="/regents/mission">Mission, Vision, Goals</a></li>
+		                  <li class="color-red margin-t-1 margin-b-0 bold small">Transferring From:</li>
+		                  <li><a href="/transfer/transferring#ccc">Community Colleges</a></li>
+                 			<li><a href="/transfer/transferring#other">Private Institutions</a></li>
+		                  <li class="color-red margin-t-2 margin-b-0 bold small">Transferring To:</li>
+		                  <li><a href="/transfer/transferring#csu">State Universities</a></li>
+		                  <li><a href="/transfer/transferring#uconn">UConn</a></li>
+                 			<li><a href="/transfer/transferring#other">Private Institutions</a></li>
 	                </ul></li>
-		        <li><a href="#" class="">Newsroom</a>
+	                
+  
+	                
+		        <li><a href="#" class="">News</a>
 	                <ul>
 		                  <li><a href="/newsroom">News Releases</a></li>
 		                  <li><a href="/newsroom/contact">Media Contacts</a></li>
@@ -120,6 +223,19 @@
 		                  <li><a href="/newsroom/connect">CSCU Connect</a></li>
 		                  <li><a href="/newsroom/logo">CSCU Logo</a></li>
 	                </ul></li>
+         <li><a href="#search" class="boxer" data-boxer-height="200" data-boxer-width="500"><i class="fa fa-search"></i><span class="hidden">Search ct.edu</span></a>
+		      <div id="search" style="display: none;">
+		         <div class="inline_content">
+		            <h2>Search <span class="color-red">www.ct.edu</span></h2>
+		            <form action="http://www.ct.edu/search">       
+		            <input type="hidden" name="cx" value="0016495812735550506209:39odu85trt0">
+		            <input type="hidden" name="ie" value="UTF-8">
+		            <input type="text" name="q" size="" placeholder="search" title="" style="width:100%;" class="icon-search" id="search">
+		            <label for="search" class="hidden">Search www.ct.edu:</label>
+		            </form>
+		         </div>
+		      </div></li>
+
 	       </ul>
 	 
 	    </nav>

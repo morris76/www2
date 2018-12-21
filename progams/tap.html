@@ -1,0 +1,446 @@
+<!doctype html>
+<!--[if lt IE 8]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>CSCU - Transfer Navigator</title>
+	<meta name="description" content="">
+	<meta name="author" content="Connecticut State Colleges & Universities">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="/css/site_2.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.typekit.net/tba7jib.css">
+
+
+	<!--<script src="/files/scripts/modernizr-2.0.6.min.js"></script>
+	<script src="//use.typekit.net/tba7jib.js"></script>
+	<script>try{Typekit.load({});}catch(e){}</script>   -->
+   
+	
+   <!--[if lt IE 9]>
+   <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-25950326-1']);
+		_gaq.push(['_setSiteSpeedSampleRate', 100]);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		//ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';   
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	<style>
+	/*	
+@media (min-width: 767px){
+	.department #banner h1 {margin:30px 0;}
+	.department #banner h1 #logo-dept {font-size:30px;}
+	.department #banner h1 #logo-connscu-abr {font-size:30px;padding:7px;}
+	.department #banner #banner-wrap {display: flex;justify-content: space-between;align-items: center;}
+	.department .nav-main {width:auto;}
+	.department #nav-wrap, .department #nav-utility {margin: 0;padding: 0;}
+	
+}
+*/
+
+
+#sort-table,#sort-table2 {margin-top:0;border-top: 0;transition:all 0.5s ease 0s;}
+#sort-table > thead, #sort-table > thead > tr, #sort-table > thead > tr > th, #sort-table2 > thead, #sort-table2 > thead > tr, #sort-table2 > thead > tr > th  {height:0;padding:0;margin:0;display: none;}
+#sort-table2 > thead, #sort-table2 > thead > tr, #sort-table2 > thead > tr > th {height:0;padding:0;margin:0;}
+.dataTables_scrollHead {background:#e7e7e7;}
+#paginate,#paginate2 {text-align:center;margin:1em 0;}
+.info-box {text-align:right;padding-right:1em;}
+#clear-filters.hidden {display:none;}
+.dataTables_empty {display:none;}
+@media (min-width: 768px){
+	.col-step {width: 35.716%;}
+}
+@media (max-width: 767px){
+	.filter-entries {position:relative;top:1em;margin-bottom:4em;}
+	ul.nav-filter li:first-child a {padding-left: 20px;border:0;background:none;}
+	ul.nav-filter li a {color:#4F79A0;padding:15px 20px;display:inline-block;display:block;margin:0.5em 0;}
+	.filter-box {text-align:center;display:block;}
+	.filter-box div:first-child {display:block;padding:0;}
+	.info-box {text-align:center;display:block;padding-right:0;}
+	ul.nav-filter li input {margin: 20px 15px;}
+}
+/*table categories*/
+.group-item-expander {cursor: pointer;background:#e7e7e7;font-weight: 700;}
+.sub-menu ul#side-menu {padding:0;}
+.sub-menu ul#side-menu li:last-child {border:0;}
+#sub-menu {margin: 0 0 0 -6px;}
+
+#keyword-college, #keyword-university {background:#EFD4CD;border-radius: 3px;cursor: pointer;padding: 5px 12px;margin:2em 0 0;text-align:center;transition:all 0.5s ease 0s;}
+#keyword-college .text-small, #keyword-university .text-small {position: relative;top: -2px;}
+.major {color: #4f79a0;cursor: pointer;line-height: 20px;padding:6px;transition: all 0.2s ease 0s;display: inline-block;}
+.major.active {background-color: #efd4cd;border-radius: 3px;color: #26292c;cursor: pointer;}
+.major::after {background: rgba(113, 152, 187, 0.4);content: "";display: block; height: 2px;position: relative;}
+.major.active::after {background: rgba(38, 41, 44, 0.2);}
+.dataTables_scrollHead {display:none;} 
+.sub-menu > h2 {padding-top:0.5em;text-transform: uppercase;}
+.sub-menu > h3 {font-family:adelle;font-style:italic; line-height: 1.4em;}
+   
+.light {display: inline-block;line-height: 20px;}
+.not-visible {opacity:0;}
+	</style>
+	
+
+</head>
+
+<body class="department">
+
+
+<header class="banner" id="banner" role="banner">
+  <div id="banner-wrap">
+		<h1>
+			<a href="/" id="logo-connscu-abr"><img src='http://www.ct.edu/files/images/logo-cscu.svg' alt="CSCU Home" /></a>
+			<a href='/' id="logo-dept">Transfer Navigator</a>
+		</h1>
+			
+				<div id="nav-button" class="nav-button navControl">
+					<div id="hamburger-top" class="hamburger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+			 	 Menu
+				</div>
+				
+			<nav class="nav-main">
+			
+	       <ul id="nav-wrap" class="inline">
+	          <li><a href="/studentsfirst/neasc">Contact</a>
+	                <ul>
+										<li><a href='/studentsfirst/about#about'>How Tickets Work</a></li>
+										<li><a href='/studentsfirst/about#faqs'>by Major</a></li>
+										<li><a href='/studentsfirst/about#strategies'>by Campus</a></li>
+										<li><a href='/studentsfirst/about#webinars'>Contact</a></li>
+	                </ul></li>
+	       
+	          <li><a href="/studentsfirst/planning">Transfer Options</a>
+	                <ul>
+										<li><a href='/studentsfirst/about#about'>From Community Colleges</a></li>
+										<li><a href='/studentsfirst/about#about'>To State Universities</a></li>
+										<li><a href='/studentsfirst/about#about'>To UConn</a></li>
+	                </ul></li>
+	          <li><a href="/studentsfirst/neasc">Transfer Tickets</a>
+	                <ul>
+										<li><a href='/studentsfirst/about#about'>How Tickets Work</a></li>
+										<li><a href='/studentsfirst/about#faqs'>by Major</a></li>
+										<li><a href='/studentsfirst/about#strategies'>by Campus</a></li>
+										<li><a href='/studentsfirst/about#webinars'>Contact</a></li>
+	                </ul></li>
+	          <li><a href="/studentsfirst/neasc">Contact</a>
+	                <ul>
+										<li><a href='/studentsfirst/about#about'>How Tickets Work</a></li>
+										<li><a href='/studentsfirst/about#faqs'>by Major</a></li>
+										<li><a href='/studentsfirst/about#strategies'>by Campus</a></li>
+										<li><a href='/studentsfirst/about#webinars'>Contact</a></li>
+	                </ul></li>
+	       </ul>
+	 
+	    </nav>
+   </div>
+</header>
+
+<section id="body-wrapper" class="">
+
+<style>
+	header {background:#0d5aa2;}
+.hero-no-image > div {margin: 0 auto; max-width: 63em; padding: 0 1em;}
+.hero-hero-image {background:url("http://www.ct.edu/files/images/header-new402.jpg") repeat scroll 0 0 / cover ;}
+.hero-hero-image > div {margin: 0 auto; max-width: 63em; padding: 0 1em;}
+.hero-bg-image {
+    background: rgba(0, 0, 0, 0) url("http://www.ct.edu/files/images/header-new387.jpg") repeat scroll 50% 0 / auto 120%;
+}
+.hero-bg-image::before, .hero-hero-image::before {
+  background: rgba(0, 0, 0, 0) linear-gradient(rgba(25, 26, 28, 0.75) 30%, rgba(25, 26, 28, 0.3) 50%, rgba(25, 26, 28, 0.6) 70%) repeat scroll 0 0;}
+  
+#sub-menu li {display:inline-block;}
+.button {border:1px solid #d68206; display:inline-flex;color: rgba(51, 51, 51, 0.35);background:rgba(0, 0, 0, 0.07) none repeat scroll 0 0;}
+.button.active {padding:12px 18px; border:1px solid #0d5aa2; font-family:adelle-sans; text-transform:uppercase;color:#fff;display:inline-flex;background:#0d5aa2;box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);}
+.button:hover {background:#c73e1d; color:#FFF;}
+.row {position:relative;}
+#overlap-1 {position: absolute;right: -20px;top: 5em;background:#fff;z-index:1}
+#overlap-2 {position: absolute;left: -20px;top: 5em;background:#fff;z-index:1;}
+.icon-header {text-shadow:-1px -1px 0 #C5C9CD, 1px -1px 0 #C5C9CD, -1px 1px 0 #C5C9CD, 1px 1px 0 #C5C9CD; color:#FFF;}
+
+.hero-bg-image {
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+   clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+   -webkit-clip-path: url("#clip-shape"); 
+   clip-path: url("#clip-shape");
+}.icon-header-red {
+    color: #fcf4f2;
+    text-shadow: 1px 0 0 rgb(199, 62, 29), 0.533333px 0.833333px 0 rgb(199, 62, 29), -0.416667px 0.916667px 0 rgb(199, 62, 29), -0.983333px 0.133333px 0 rgb(199, 62, 29), -0.65px -0.75px 0 rgb(199, 62, 29), 0.283333px -0.966667px 0 rgb(199, 62, 29), 0.966667px -0.283333px 0 rgb(199, 62, 29);
+}.menu-filters {padding:0;}
+.menu-filters li{display:inline-block; list-style:none;line-height:3em;position:relative;}
+.vis-hidden {
+    border: 0 none;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}label {
+  margin: 4px;
+  padding: 10px 15px;
+  background-color: none;
+    border:1px solid #D38006;
+    color: #333;
+  transition:all 0.3s;
+  letter-spacing: 0.03em;
+  font-family:adelle-sans;
+  display:inline-block;
+  margin: 0 4px 8px 0;
+  padding: 0 15px;
+}
+
+.fs-checkbox.fs-light .fs-checkbox-marker {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    height: 0;
+    margin: 0;
+    width: 0;
+}
+.fs-checkbox-flag::before {content:none;}
+input:focus + label {
+  border-color: ;
+}
+
+input[type=radio]:checked + label,  .fs-checkbox-checked label  {
+  background-color: #FFB03B;
+  border: 1px solid #c27605;
+  color: #333;
+}
+.fs-checkbox.fs-light .fs-checkbox-marker {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    height: 0;
+    margin: 0;
+    width: 0;
+}
+
+
+
+</style>
+
+
+<section class="hero-no-image padding-b-4 padding-t-4">
+	<div class="row">
+		<div class="col-12 center center-text">
+			<h1 class="bold">Transfer Navigator</h1>
+			<h3 class="thin italic">Transferring at CSCU is easier than ever. Counselors are available in all 17 institutions to help make the process as smooth as possible.</h3>
+		</div>
+	</div>
+</section>
+
+
+<section class="body-content body-content-box padding-1 m-padding-1 margin-b-4 ">
+	
+	<div class="row margin-b-4">
+						
+								<!--
+							<h2 class="color-red subhead-line margin-b-0 margin-t-0">For the CSCU Community</h2>-->
+		
+		<div class="row">
+			<div class="col-12 sub-menu margin-medium">
+				<div class="col-4">
+				<h2 class="bold subhead-line center-text color-red no-margin">Step 1</h2>
+				<h3 class="thin center-text">Select a Major</h3>
+			</div>
+			<div class="col-8">
+				<ul id="sub-menu" class="no-bullet" style=''>
+					<li class="major" id="Accounting">Accounting</li>
+					<li class="major" id="Art">Art</li>
+					<li class="major" id="Biology">Biology</li>
+					<li class="major" id="Business Administration">Business Administration</li>
+					<li class="major" id="Chemistry">Chemistry</li>
+					<li class="major" id="Communication">Communication</li>
+					<li class="major" id="Computer Science">Computer Science</li>
+					<li class="major" id="Criminology">Criminology</li>
+					<li class="major" id="Early Childhood">Early Childhood Teacher Credential</li>
+					<li class="major" id="English">English</li>
+					<li class="major" id="Exercise Science">Exercise Science</li>
+					<li class="major" id="Finance">Finance</li>
+					<li class="major" id="French">French</li>
+					<li class="major" id="German">German</li>
+					<li class="major" id="History">History</li>
+					<li class="major" id="Italian">Italian</li>
+					<li class="major" id="Marketing">Marketing</li>
+					<li class="major" id="Management">Management</li>
+					<li class="major" id="Mathematics">Mathematics</li>
+					<li class="major" id="Physics">Physics</li>
+					<li class="major" id="Political Science">Political Science</li>
+					<li class="major" id="Psychology">Psychology</li>
+					<li class="major" id="Spanish">Spanish</li>
+					<li class="major" id="Social Work">Social Work</li>
+					<li class="major" id="Sociology">Sociology</li>
+					<li class="major" id="Theatre">Theatre</li>
+					<!--
+					<li class="major" id="Elementary Education">Elementary Education</li>
+					<li class="major" id="Foreign Languages">Foreign Languages</li>
+					<li class="major" id="Music">Music</li>
+					<li class="major" id="Physical Education">Physical Education</li>
+					<li class="major" id="Special Education">Special Education</li>
+					<li class="major" id="Visual Arts">Visual Arts</li>
+					-->
+				</ul>
+			</div>
+		</div>
+				</div>
+		
+							<div class="row margin-t-2">
+
+      
+
+
+	<div class="col-12" style="min-height:500px;">
+		
+			<div class="spinner"></div>
+
+				<div class="details">
+					<table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="sorttable1" width="100%"> 
+					</table>
+				</div>
+	</div>
+            
+            
+						</div>
+							
+					
+					
+				
+					
+			
+			
+
+</section>
+
+</section>
+
+{new-footer}
+
+<noscript>For the best experience, please enable javascript.</noscript>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/global_dept.js"></script>
+<script type="text/javascript" src="/scripts/stickyfill.js"></script>
+
+
+<!--Table Scripts-->
+<script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>		
+<script type="text/javascript" charset="utf-8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://img.ctboardofregents.netdna-cdn.com/files/scripts/jquery.dataTables.rowGrouping.js"></script>	
+<script type="text/javascript">
+	$(window).load(function(){
+		// Define spreadsheet URL.
+		var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1ojqE95O6Y5zUBaa8U-bCrctdHEWS8O77ss3SkvjI-Nk/edit#gid=0';
+
+		$('.tablesorter').sheetrock({
+		  url: mySpreadsheet,
+		  query: 'select A,B,C,D,E',
+		  callback: makeSortable
+		});
+		
+		var searchChar = "";
+    var tableElement = $('#sorttable1');
+    var tableElement2 = $('#sorttable2');
+
+		function makeSortable(error, options, response) {
+		  $('.spinner').hide();
+    	cache:false;
+		  var tableElement = $('#sorttable1').DataTable({
+	    	"aoColumnDefs": [{
+         "bVisible": false, "bSearchable": true, "mData": 0, "aTargets": [0]
+      }, {
+         'aTargets': [1],
+         "mData": 1,
+         'mRender': function (data, type, full) {
+               return data + ': <a href="/files/tap/' + full[4]+ '.pdf" target="_blank" onclick="_gaq.push([\'_trackEvent\',\'downloads\',\'click\',$(this).attr(\'href\')]);">Associate Degree Req. (pdf)</a>';
+         }
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 2, "aTargets": [2]
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 3, "aTargets": [3]
+      }, {
+         "bVisible": false, "bSearchable": true, "mData": 4, "aTargets": [4]
+      }], 
+
+      "bDeferRender": true,
+      "sDom": 't',
+
+      "aaSorting": [[0,'asc'],[1,'asc']],
+      "oSearch": {"sSearch": "community college"},
+      "bLengthChange": false, "bPaginate": false
+
+	    	});
+	    	
+		}
+	
+			filter1 = $(this).attr('id');
+			console.log(filter1);
+					$('#sorttable1').tableElement.columns(0).search(filter, true, false).draw();
+	    		//$('#sorttable1').dataTable().fnFilter("0", 0, true, true, true, false);
+	      	$('#sorttable2').dataTable().fnFilter("0", 0, true, true, true, false);
+				
+		$(".major").click(function(){
+			filter1 = $(this).attr('id');
+			console.log(filter1);
+		  $('#keyword-college, #keyword-university, #sort-table, #sort-table2').addClass("not-visible");
+			if (filter1 == '') {
+				
+        setTimeout(function() { 
+        	$('#keyword-college, #keyword-university, #sort-table, #sort-table2').removeClass("not-visible");
+        	$('#keyword-college').html("Select a major to view degree requirements"); 
+	      	$("#keyword-university").html("Select a major to view degree requirements");
+	    		//$('#sorttable1').dataTable().fnFilter("0", 0, true, true, true, false);
+					$('#sorttable1').tableElement.column(1).search(filter1).draw();
+	      	$('#sorttable2').dataTable().fnFilter("0", 0, true, true, true, false);
+        }, 500);
+				//console.log("working");
+				}
+			else {
+				
+        setTimeout(function() { 
+        	$('#keyword-college, #keyword-university, #sort-table, #sort-table2').removeClass("not-visible");
+        	$('#keyword-college').html("Follow the <strong>" + filter1 + "</strong> degree requirements at any campus below"); 
+	      	$("#keyword-university").html("Follow the <strong>" + filter1 + "</strong> degree requirements at any campus below");
+	      	//$('#sorttable1').dataTable().fnFilter(filter1, 0, true, true, true, false);
+					$('#sorttable1').tableElement.column(1).search(filter1).draw();
+	      	$('#sorttable2').dataTable().fnFilter(filter1, 0, true, true, true, false);
+        }, 500);
+		    
+				};
+				
+      $(".dataTables_wrapper").addClass("visible");
+			$(".major.active").removeClass("active");
+      $(this).addClass("active");
+			});
+
+    
+});
+var delay = (function(){
+   var timer = 0;
+   return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+      };
+   })();
+</script>
+	
+
+
+</body>
+</html>

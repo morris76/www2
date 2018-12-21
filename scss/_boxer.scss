@@ -102,26 +102,26 @@
   //width: 80px;
   //height: 40px;
   position: absolute;
-  top: -20px;
-  right: -25px;
+  top: 0px;
+  right: 0px;
   z-index: 105;
   background: #c73e1d;
-  border-radius: 3px;
+  border-radius: 0 3px 0 0;
   cursor: pointer;
   display: block;
   overflow: hidden;
   padding: 0;
   //text-indent: 200%;
   white-space: nowrap;
-  padding: 5px 10px;
+  padding: 5px 15px;
   font-weight: 700;
   text-transform:uppercase;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  border:3px solid #ffffff;
+  border:0;
   color:#fff;
   font-family: adelle-sans, sans-serif;
 }
-#boxer .boxer-close:after {
+#boxer .boxer-close:before {
   //position: absolute;
   top: 0;
   right: 0;
@@ -135,7 +135,7 @@
   margin: auto;
   text-align: center;
   text-indent: 0;
-  padding: 0 0 0 5px;
+  padding: 0 10px 0 0;
   color:rgba(255,255,255,0.6);
   -webkit-transition: color 0.15s linear;
           transition: color 0.15s linear;
@@ -341,7 +341,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 0;
   padding: 30px;
 }
@@ -453,25 +453,26 @@
     margin-bottom: 8em;
 }
 #boxer.mobile .boxer-close, #boxer.mobile .boxer-close:hover {
-    padding: 10px;
+padding: 10px;
     text-indent: 0;
     top: initial;
-    width: auto;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
     text-align: center;
     font-family: adelle-sans, sans-serif;
-    background:#c73e1d;
-    border: 30px solid #fff;
-    color:#fff;
+    background: #fff;
+    border: 0;
+    color: #000;
+    margin: 0 auto;
+    width: 240px;
+
 }
-#boxer.mobile .boxer-close:after {
-  color: rgba(255,255,255,0.7);
+#boxer.mobile .boxer-close:before {
+  color: #c73e1d;
 }
-span.boxer-close:before {
+span.boxer-close:after {
     content: "";
-    border: 1px solid #c73e1d;
     position: absolute;
     top: 0;
     right: 0;
