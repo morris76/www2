@@ -160,135 +160,96 @@ tr:nth-child(even) {background-color: #f7f7f7;}
    <div class="row">
       <div class="col-12 center-text">
          <ul class="tabs">
-      			<li><a href="#nav-button-sub-items" class="button button-red button-block lightbox" data-lightbox-width="600" data-lightbox-height="700">Filter</a></li>
+      			<li><a href="#nav-button-sub-items" class="button button-red button-block lightbox" data-boxer-width="600" data-boxer-height="700">Filter</a></li>
          </ul> 
       </div>
    </div>
 </section>
-<div class=" " id="nav-button-sub-items" style="display:none;">
+
+<!--
+			<div class=" " id="nav-button-sub-items" style="display:none;">
 				
 				 <div class="inline_content">
 				
-					<h3 class="color-red subhead-line-center center-text">Filter Options</h3>
+					<h3 class="color-red subhead-line-center center-text">Departments</h3>
 						
-						<h4 class=" margin-b-0 subhead-ine">System </h4>
 							<ul class="menu-filters padding-0 margin-t-0">
 						      <li>
-						      	<input id="all" name="check_cat" class="vis-hidden institution_filter" value="all" type="radio" data-display="All Connecticut Community Colleges" checked>
-										<label for="all">CSCU</label>
+						      	<input id="a" name="filter-dept" class="vis-hidden institution_filter" value="Academic Affairs" type="radio" data-display="Academic Affairs">
+										<label for="aa">Academic Affairs</label>
 									</li>
 						      <li>
-						      	<input id="ccc" name="check_cat" class="vis-hidden institution_filter" value="ALL" type="radio" data-display="All Connecticut Community Colleges">
-										<label for="ccc">Community Colleges</label>
+						      	<input id="ba" name="filter-dept" class="vis-hidden institution_filter" value="Board Affairs" type="radio" data-display="Board Affairs">
+										<label for="ba">Board Affairs</label>
 									</li>
 						      <li>
-						      	<input id="csu" name="check_cat" class="vis-hidden institution_filter" value="ALL" type="radio" data-display="All Connecticut State Universities">
-										<label for="csu">State Universities</label>
+						      	<input id="Facilities" name="filter-dept" class="vis-hidden institution_filter" value="Facilities" type="radio" data-display="Facilities">
+										<label for="Facilities">Facilities</label>
+									</li>
+						      <li>
+						      	<input id="Finance" name="filter-dept" class="vis-hidden institution_filter" value="Finance" type="radio" data-display="Finance">
+										<label for="Finance">Finance</label>
+									</li>
+						      <li>
+						      	<input id="Financial" name="filter-dept" class="vis-hidden institution_filter" value="Financial Aid" type="radio" data-display="Financial Aid">
+										<label for="Financial">Financial Aid</label>
+									</li>
+						      <li>
+						      	<input id="Government" name="filter-dept" class="vis-hidden institution_filter" value="Government Relations" type="radio" data-display="Government Relations">
+										<label for="Government">Government Relations</label>
+									</li>
+						      <li>
+						      	<input id="hr" name="filter-dept" class="vis-hidden institution_filter" value="Human Resources" type="radio" data-display="Human Resources">
+										<label for="hr">Human Resources</label>
+									</li>
+						      <li>
+						      	<input id="it" name="filter-dept" class="vis-hidden institution_filter" value="Information Technology" type="radio" data-display="Information Technology">
+										<label for="it">Information Technology</label>
+									</li>
+						      <li>
+						      	<input id="Finance" name="filter-dept" class="vis-hidden institution_filter" value="Finance" type="radio" data-display="Finance">
+										<label for="Finance">Finance</label>
+									</li>
+						      <li>
+						      	<input id="Innovation" name="filter-dept" class="vis-hidden institution_filter" value="Innovation & Outreach" type="radio" data-display="Innovation & Outreach">
+										<label for="Innovation">Innovation & Outreach</label>
+									</li>
+						      <li>
+						      	<input id="Legal" name="filter-dept" class="vis-hidden institution_filter" value="Legal Affairs" type="radio" data-display="Legal Affairs">
+										<label for="Legal">Legal Affairs</label>
+									</li>
+						      <li>
+						      	<input id="Nursing" name="filter-dept" class="vis-hidden institution_filter" value="Nursing" type="radio" data-display="Nursing">
+										<label for="Nursing">Nursing</label>
+									</li>
+						      <li>
+						      	<input id="Research" name="filter-dept" class="vis-hidden institution_filter" value="Research & System Effectiveness" type="radio" data-display="Research & System Effectiveness">
+										<label for="Research">Research & System Effectiveness</label>
+									</li>
+						      <li>
+						      	<input id="Affairs" name="filter-dept" class="vis-hidden institution_filter" value="Public Affairs" type="radio" data-display="Public Affairs">
+										<label for="Affairs">Public Affairs</label>
+									</li>
+						      <li>
+						      	<input id="President" name="filter-dept" class="vis-hidden institution_filter" value="President's Office" type="radio" data-display="President's Office">
+										<label for="President">President's Office</label>
+									</li>
+						      <li>
+						      	<input id="Student" name="filter-dept" class="vis-hidden institution_filter" value="Student/Academic IS" type="radio" data-display="Student/Academic IS">
+										<label for="Student">Student/Academic IS</label>
 									</li>
 							</ul>
-							
-						<h4 class=" margin-b-0 subhead-ine">Towns </h4>
-							<ul class="menu-filters padding-0 margin-t-0">
-						      <li>
-						      	<input id="anytown" name="check_cat" class="vis-hidden institution_filter" value="anytown" type="radio" data-display="">
-										<label for="anytown">Select by Town</label>
-									</li>
-							</ul>
-							
-						<h4 class=" margin-b-0 subhead-ine">Campus </h4>
-							<ul class="menu-filters padding-0 margin-t-0">
-									  
-						      <li>
-						      	<input id="Asnuntuck" name="check_cat" class="vis-hidden institution_filter" value="Asnuntuck" type="radio"' data-display="Asnuntuck Community College">
-						      	<label for="Asnuntuck">Asnuntuck</label>
-									</li>
-
-						      <li>
-						      	<input id="Capital" name="check_cat" class="vis-hidden institution_filter" value="Capital" type="radio" data-display="Capital Community College">
-										<label for="Capital">Capital</label>
-									</li>
-						      <li>
-						      	<input id="COSC" name="check_cat" class="vis-hidden institution_filter" value="anytown" type="radio" data-display="Charter Oak State College">
-										<label for="COSC">Charter Oak State College</label>
-									</li>
-
-						      <li>
-						      	<input id="Gateway" name="check_cat" class="vis-hidden institution_filter" value="Gateway" type="radio" data-display="Gateway Community College">
-										<label for="Gateway">Gateway</label>
-									</li>
-
-						      <li>
-						      	<input id="Housatonic" name="check_cat" class="vis-hidden institution_filter" value="Housatonic" type="radio" data-display="Housatonic Community College">
-										<label for="Housatonic">Housatonic</label>
-									</li>
-
-						      <li>
-						      	<input id="MCC" name="check_cat" class="vis-hidden institution_filter" value="Manchester" type="radio" data-display="Manchester Community College">
-										<label for="MCC">Manchester</label>
-									</li>
-
-						      <li>
-						      	<input id="Middlesex" name="check_cat" class="vis-hidden institution_filter" value="Middlesex" type="radio" data-display="Middlesex Community College">
-										<label for="Middlesex">Middlesex</label>
-									</li>
-
-						      <li>
-						      	<input id="NVCC" name="check_cat" class="vis-hidden institution_filter" value="Naugatuck" type="radio" data-display="Naugatuck Valley Community College">
-										<label for="NVCC">Naugatuck Valley</label>
-									</li>
-
-						      <li>
-						      	<input id="Northwestern" name="check_cat" class="vis-hidden institution_filter" value="Northwestern" type="radio" data-display="Northwestern CT Community College">
-										<label for="Northwestern">Northwestern CT</label>
-									</li>
-
-						      <li>
-						      	<input id="NCC" name="check_cat" class="vis-hidden institution_filter" value="Norwalk" type="radio" data-display="Norwalk Community College">
-										<label for="NCC">Norwalk</label>
-									</li>
-
-						      <li>
-						      	<input id="Quinebaug" name="check_cat" class="vis-hidden institution_filter" value="Quinebaug" type="radio" data-display="Quinebaug Valley Community College">
-										<label for="Quinebaug">Quinebaug Valley</label>
-									</li>
-
-						      <li>
-						      	<input id="ThreeRivers" name="check_cat" class="vis-hidden institution_filter" value="Three Rivers" type="radio" data-display="Three Rivers Community College">
-										<label for="ThreeRivers">Three Rivers</label>
-									</li>
-
-						      <li>
-						      	<input id="Tunxis" name="check_cat" class="vis-hidden institution_filter" value="Tunxis" type="radio" data-display="Tunxis Community College">
-										<label for="Tunxis">Tunxis</label>
-									</li>	
-									
-						      <li>
-						      	<input id="CCSU" name="check_cat" class="vis-hidden institution_filter" value="CCSU" type="radio" data-display="Central Connecticut State University">
-										<label for="CCSU">CCSU</label>
-									</li>
-						      <li>
-						      	<input id="ECSU" name="check_cat" class="vis-hidden institution_filter" value="ECSU" type="radio" data-display="Eastern Connecticut State University">
-										<label for="ECSU">ECSU</label>
-									</li>
-						      <li>
-						      	<input id="SCSU" name="check_cat" class="vis-hidden institution_filter" value="SCSU" type="radio" data-display="Southern Connecticut State University">
-										<label for="SCSU">SCSU</label>
-									</li>
-						      <li>
-						      	<input id="WCSU" name="check_cat" class="vis-hidden institution_filter" value="WCSU" type="radio" data-display="Western Connecticut State University">
-										<label for="WCSU">WCSU</label>
-									</li>	
-						   </ul>
-
 		
 				 </div>
 				 
 			</div>
+			
+			
 		<br>
 		
 		<div id="display_info" class="color-light thin sans-serif">
 			<div class="spinner"></div></div>
-
+-->
 
    
                   <table  width="100%" id="hr">
@@ -420,7 +381,7 @@ $(document).ready(function() {
 	});
 	
       var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1lz52l2MkEMteBxgjgzAIt3uPWkaexx8ROjIKWfgu7Ss/edit#gid=0';
-      var HRTemplate = Handlebars.compile($('#hr-template').html());
+      //var HRTemplate = Handlebars.compile($('#hr-template').html());
 
       $('#hr').sheetrock({
             url: mySpreadsheet,
@@ -430,7 +391,8 @@ $(document).ready(function() {
       });
       
       function makeSortable(error, options, response) {
-           $(options.user.target).DataTable ({
+          // $(options.user.target).DataTable ({
+				  tableElement = $('#hr').DataTable({
 
               "aoColumnDefs": [{
                   'aTargets': [0],
@@ -469,6 +431,20 @@ $(document).ready(function() {
    
    
 
+
+		$(':checkbox[name="check_year"]').click(function() {
+			
+			var filter = ''
+			
+			filter = $('[name="' + this.name + '"]:checked').map(function () {
+				return this.value;
+			}).toArray().join('|');
+			tableElement.columns(1).search(filter, true, false).draw();
+      
+		});
+		
+		
+		
   //activate toggles
    var $content = $(".content").hide();
    $(".toggle").on("click", function (e) {

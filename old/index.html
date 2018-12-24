@@ -211,7 +211,7 @@ The Board of Regents (BOR) for Higher Education governs CSCU - four state univer
 <section id="body-wrapper" class="bg-pattern">
 
 <style>
-	.header-image-box {background:#062f54f5;padding:2em;border-top:3px solid #c73e1d;box-shadow:0 0 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);}
+	.header-image-box {background:rgba(6, 47, 84, 0.95);padding:2em;border-top:3px solid #c73e1d;box-shadow:0 0 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);}
 	#header-image {
   background-image: url(http://img.ctboardofregents.netdna-cdn.com/files/images/header-new323.jpg);}
     
@@ -248,24 +248,27 @@ display:inline-block;width:40px;position:relative;top:4px;padding-bottom:10px;
 }
 }
 	.tassel {
-    -webkit-animation-name: tassel;
     animation-name: tassel;
-    animation-duration:6s;    -webkit-animation-iteration-count: infinite;
+    animation-duration:8s;
     animation-iteration-count: infinite;
     animation-delay:1s;
+    animation-timing-function:linear;
 }
 @keyframes tassel {
 0% {    
+	opacity:0;
+	transform: translate(0,0);
+}
+20% {    
 	opacity:1;
 	transform: translate(0,0);
 }
 
-30% {   
+40% {   
 	opacity:1;
 	 transform: translate(25px,6px);
 }
-60%{
-    -webkit-transform: translate3d(0,-100%,0);
+60%, 80%{
     opacity: 1;
     transform: translate(50px,0px);
 }
@@ -319,7 +322,7 @@ aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style data-made-with="vivus-instant">.KvHRraAh_0{stroke-dasharray:101 103;stroke-dashoffset:102;animation:KvHRraAh_draw_0 7200ms linear 0ms infinite,KvHRraAh_fade 7200ms linear 0ms infinite;}.KvHRraAh_1{stroke-dasharray:20 22;stroke-dashoffset:21;animation:KvHRraAh_draw_1 7200ms linear 0ms infinite,KvHRraAh_fade 7200ms linear 0ms infinite;}@keyframes KvHRraAh_draw{100%{stroke-dashoffset:0;}}@keyframes KvHRraAh_fade{0%{stroke-opacity:1;}94.44444444444444%{stroke-opacity:1;}100%{stroke-opacity:0;}}@keyframes KvHRraAh_draw_0{11.11111111111111%{stroke-dashoffset: 102}45.66395663956639%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}@keyframes KvHRraAh_draw_1{45.66395663956639%{stroke-dashoffset: 21}52.77777777777778%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}</style>
 </svg>
   
- tassel           	</div>
+            	</div>
             <a href="/admission">Apply Now</a><p class="m-no t-no">Apply online to any of our 17 institutions around CT</p></li>
          <li class="" style="cursor: pointer;">
             <div class="hero-icon m-no t-no">          
