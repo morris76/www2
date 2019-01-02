@@ -303,9 +303,28 @@ Select from the filters below to view system office directory information. For c
 
     <div id="system">
     <h2 class="margin-small">System Office Directory</h2>
+    
+			<a href='#nav-button-sub-items' class="lightbox" data-lightbox-width="600" data-lightbox-height="400">
+			<div class="nav-button navControl lightbox" id="nav-button-sub">
+				<div class="hamburger" id="hamburger-sub">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</div>
+		 	 	Filter
+			</div>	
+		 	</a>   
+			
+			
+			<div class=" " id="nav-button-sub-items" style="display:none;">
+				<div class="inline_content">
+					
+				</div>
+			</div>
+			
+				
     <ul class="nav-filter">
       <li class="disabled"><a href="#">Filter: </a></li>
-      <li class="active"><a href="javascript:void(0)" class="filter-dept" title='ALL'>All</a></li>
       <li><a href="#" data-dropdown="#dropdown-1" data-vertical-offset="-12">Department <i class="fa fa-caret-down"></i></a></li>
       <li><input type="text" id="text-search" name="filter_text" title="Search"></li>
    </ul>
@@ -521,6 +540,7 @@ Select from the filters below to view system office directory information. For c
 <script type="text/javascript" src="http://img.ctboardofregents.netdna-cdn.com/files/scripts/footable.all.min.js"></script>
 <div id="dropdown-1" class="dropdown dropdown-tip dropdown-scroll">
     <ul class="dropdown-menu">
+      <li><a href="javascript:void(0)" class="filter-dept" title='ALL'>All</a></li>
       <li><a href='javascript:void(0)' class='filter-dept' title='Academic Affairs'>Academic Affairs</a></li>
       <li><a href='javascript:void(0)' class='filter-dept' title='Board'>Board Affairs</a></li>
       <li><a href='javascript:void(0)' class='filter-dept' title='Facilities'>Facilities</a></li>
@@ -549,48 +569,40 @@ Select from the filters below to view system office directory information. For c
 </div>
 -->
 <!-- DataTables -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
-<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-<script type="text/javascript" charset="utf8" src="http://img.ctboardofregents.netdna-cdn.com/files/scripts/dataTables.scroller.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="http://img.ctboardofregents.netdna-cdn.com/files/scripts/datatables.responsive.js"></script>
-
+<script type="text/javascript" src="http://162.247.141.115/js/stickyfill.js"></script>
+<script type="text/javascript" src="http://162.247.141.115/js/core.js"></script>
+<script type="text/javascript" src="http://162.247.141.115/js/touch.js"></script>
+<script type="text/javascript" src="http://162.247.141.115/js/transition.js"></script>
+<script type="text/javascript" src="http://162.247.141.115/js/lightbox.js"></script>
+<script type="text/javascript" src="http://162.247.141.115/js/checkbox.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
 <script type="text/javascript">
 
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-var search_string = getParameterByName('search');
-
-function fnFilterColumn () {
-   $('#example').dataTable().fnFilter($("#text-search").val());
-   console.log($("#text-search").val());
-   }
-
-jQuery(document).ready(function($){
-
-/****************** Date Tables ***************/
-
-
-
-    var responsiveHelper = undefined;
-    var breakpointDefinition = {
-        tablet: 1024,
-        phone : 680
-    };
+$(document).ready(function(){
     
+			
+$(".lightbox").lightbox();
+
+});
+
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+<script type="text/javascript">
+		
+$(window).load(function(){
+	
+	
     var tableElement ='';
     
     
       var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1lz52l2MkEMteBxgjgzAIt3uPWkaexx8ROjIKWfgu7Ss/edit#gid=0';
-      //var HRTemplate = Handlebars.compile($('#hr-template').html());
 
       $('#example').sheetrock({
             url: mySpreadsheet,
             query: "select A,B,C,D,E,F,G order by A asc",
-          // rowTemplate: HRTemplate,
            callback : makeSortable
       });
 
@@ -598,76 +610,53 @@ jQuery(document).ready(function($){
 
       function makeSortable(error, options, response) {
       	
+    			cache:false;
 			    tableElement = $('#example').dataTable({
 
 
-			              "aoColumnDefs": [{
-			                  'aTargets': [0],
-			                  "mData": 0,
-			                  "sTitle": "Data",
-			                  'mRender': function (data, type, full) {
+			              "columnDefs": [{
+			                  'targets': [0],
+			                  "data": 0,
+			                  "title": "Data",
+			                  'render': function (data, type, full) {
 			                        return '<strong>' + data + ', ' + full[1] + '</strong><br><em>' + full[2] + '</em>';
 			                  }
 			               }, {
-			                  "bVisible": false, "bSearchable": true, "mData": 1, "aTargets": [1], "sTitle": "First"
+			                  "visible": false, "searchable": true, "data": 1, "targets": [1], "title": "First"
 			               }, {
-			                  "bVisible": false, "bSearchable": true, "mData": 2, "aTargets": [2], "sTitle": "Title"
+			                  "visible": false, "searchable": true, "data": 2, "targets": [2], "title": "Title"
 			               }, {
-			                  'aTargets': [3],
-			                  "mData": 3,
-			                  "sTitle": "Data",
-			                  'mRender': function (data, type, full) {
+			                  'targets': [3],
+			                  "data": 3,
+			                  "title": "Data",
+			                  'render': function (data, type, full) {
 			                        return '' + data + ',<br><a>' + full[4] + '</a>';
-			                  }, "sTitle": "Contact"
+			                  }, "title": "Contact"
 			               }, {
-			                  "bVisible": false, "bSearchable": true, "mData": 4, "aTargets": [4], "sTitle": "Email"
+			                  "visible": false, "searchable": true, "data": 4, "targets": [4], "title": "Email"
 			               }, {
-			                  "bVisible": true, "bSearchable": true, "mData": 5, "aTargets": [5], "sTitle": "Department"
+			                  "visible": true, "searchable": true, "data": 5, "targets": [5], "title": "Department"
 			               }, {
-			                  "bVisible": false, "bSearchable": true, "mData": 6, "aTargets": [6], "sTitle": "Office"
+			                  "visible": false, "searchable": true, "data": 6, "targets": [6], "title": "Office"
 			               }], 
 
-			               "bDeferRender": true,
-			               "iDisplayLength": 300,
-			               "sDom": '<"top"><"clear">t<"clear"><"bottom">',
-			               "aaSorting": [[0,'asc']]
+			               "deferRender": true,
+			               "displayLength": 300,
+			               "dom": '<"top"><"clear">t<"clear"><"bottom">',
+			               "sorting": [[0,'asc']],
+			               responsive: true
 			    });
-    
 
         } 
     
+      
+	  
 
    $('.filter-dept').click( function () {
-   	
-   		var filter = ''
-  		var filter = $(this).attr('title');    
-   		console.log(filter);
-   
-			//tableElement.columns(5).search(filter, true, false).draw();
-			//tableElement.columns(4).search(filter, true, false).draw();
-			
-			tableElement.fnFilter('',5);tableElement.fnFilter('',5);
-			
-      if (filter === 'ALL') {
-      		tableElement.fnFilter('');
-      } else {
-      		tableElement.fnFilter('' + filter + '', 5);
-      }
-      
+			var filter = ''
+			tableElement.columns(1).search(filter, true, false).draw();
+			   
    });
-			
-			/*
-			var char = $(this).attr('title');  
-			    
-      if (char === 'ALL') {
-      		$('#example').fnFilter('');
-      		
-					$('#example').columns().search(filter, true, false).draw();
-      	} else {
-      		('#example').fnFilter('' + char + '', 4);
-      }
-      */
-      
 
 
    $("ul.nav-filter li").click(function () { 
@@ -678,6 +667,7 @@ jQuery(document).ready(function($){
 
    //reload map & responsive tables if starting from another tab
    $('#tab-container').bind('easytabs:after', function(e) {$('#example').dataTable().fnAdjustColumnSizing(false);});
+   
 });
 </script>
 

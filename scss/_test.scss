@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   transition: all 0.3s ease-in-out 0s;
+  overflow-x:hidden;
 }
  
  
@@ -246,7 +247,7 @@ $font-sans:		"Adelle-sans", arial;
 	#header-image-content {
 		//height:$header-image-height;
 		max-width:77em;
-		margin:0 auto;padding:10% 1em;
+		margin:0 auto;padding:8% 1em;
 
     	@media #{$breakpoint-menu} {
 				height:auto;
@@ -1042,6 +1043,8 @@ $font-sans:		"Adelle-sans", arial;
 			position: absolute;
 			visibility: visible;
 			//z-index:999;
+			overflow:auto;
+			height:90vh;
 			}
 
 		background: #F9F9F9;
@@ -1239,6 +1242,7 @@ nav {
 		box-shadow:none;
 		background:none;
 		width:100%;
+		min-width:auto;
 	}
 }
 #nav-wrap > li > a {
@@ -1363,10 +1367,12 @@ nav {
 		.col-text {
 		display:none;
 		width:100%;
+		min-width:auto;
 		}
 	
 	@media #{$breakpoint-mobile} {
 		flex-flow:column;
+		min-width:auto;
 		}
 	}
 
@@ -1641,6 +1647,7 @@ section#body-wrapper.active:after {
 	padding: 3em 1em;
 	font-size:1.05em;
 	line-height:1.925em;
+	overflow:hidden;
 	
 	@media #{$breakpoint-menu} {
 		padding:1.5em;
@@ -1757,14 +1764,16 @@ section#body-wrapper.active:after {
 	@media #{$breakpoint-mobile} {
 		//margin: 0 -0.8em;
 		//padding: 1em;
-		margin:-3em -0.8em 0;
+		margin:-1em 0 1em 0;
+		flex-direction:column;
+		padding:0;
 	}
 
 	& > li {
     background: #fff;
     border-left: 1px solid #c73e1d;
     display: inline-block;
-    padding: 2em;
+    padding:0 2em;
     flex-grow: 1;
     flex-basis: 0;
     transition:all 0.4s;
@@ -1773,11 +1782,16 @@ section#body-wrapper.active:after {
 		@media #{$breakpoint-columns} {
 			width:47%;margin: 2% 1%;
 			border-top: 0;
-			border-left: 3px solid #c4634b;}
+    	border-left: 1px solid #c73e1d;}
 
 		@media #{$breakpoint-mobile} {
-			width:97%;
-			padding:1em;margin: 0 0 2%;}
+			width:100%;
+			padding:10px;margin: 0;
+			display:block;
+			text-align:left;
+			border:0;
+			
+			}
 			
 		&:hover {
     	transform: translate(0,-10px);
@@ -1788,7 +1802,8 @@ section#body-wrapper.active:after {
 			border:0;
 			
 			@media #{$breakpoint-columns} {
-				margin: 2% 1%;}
+				//margin: 2% 1%;
+				}
 			}
 		
 		> p {
@@ -1802,7 +1817,7 @@ section#body-wrapper.active:after {
 	    font-size: 1.2em;
 	    font-weight: 700;
 				
-			@media #{$breakpoint-mobile} {text-align: left;}
+			@media #{$breakpoint-mobile} {text-align: left;display:inline-block;}
 
 			&:after {
 				background:#c4634b;
@@ -1827,7 +1842,7 @@ section#body-wrapper.active:after {
 					height: auto;
 					margin: 0;
 					position: absolute;
-					right: 2em;
+					right: 1em;
 					text-align: right;
 					top: auto;
 					width: auto;}
@@ -1938,15 +1953,20 @@ section#body-wrapper.active:after {
 		}
 
 	&:after {
-		background-color: rgba(0, 0, 0, 0.1);
-		content: "";
-		display: inline-block;
-		height: 1px;
-		position: relative;
-		vertical-align: middle;
-		width: 50%;
-		left: 1em;
-		margin-right: -50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    content: "";
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+    left: 1em;
+    margin-right: -100%;
+		
+			@media #{$breakpoint-tablet} {
+				//margin-right:0;
+			}
+		
 		}
 	}
 
@@ -2245,43 +2265,23 @@ ul.tabs {
 
 }
 /*tables*/
-table {
-	border: 1px solid #E6E3E3;}
-tr {
-    border-bottom: 1px solid #E6E3E3;
-    padding: 12px;
-}
-td, th {
-    background: none repeat scroll 0 0 #F9F9F9;
-    padding: 5px 10px;
-}
-thead {
-    background: none repeat scroll 0 0 #CCCCCC;
-}
-thead tr th {
-    background: none repeat scroll 0 0 #E7E7E7;
-}
 
-table.dark {
-	border: 0px solid #E6E3E3;}
-table.dark tr {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    padding: 12px;
-    background: rgba(0,0,0,0.45);
+/** tables **/
+th {
+		padding: 15px 5px;
+    border-bottom: 2px solid #3333330d;
+    font-family:$font-sans;
+		}
+tr {
+		border-bottom: 1px solid rgba(238, 238, 238, 0.70);
+		}
+tr:nth-child(even) {
+    background-color: #f7f7f7;
 }
-table.dark td, table.dark th {
-    background: rgba(0,0,0,0.45);
-    padding: 5px 10px;
-    color:#fff;
-}
-table.dark thead {
-    background: rgba(0,0,0,0.50);
-}
-table.dark thead tr th {
-    background: rgba(0,0,0,0.50);
-}
-table.no-link-border a {border:0;}
-.table-sortable th {cursor:pointer;}
+td {
+		padding: 15px 5px;
+		text-align: left;
+		}
 
 .column-small {font-size:90%;line-height: 1.75em;}
 .column-large {font-size: 110%;line-height: 1.9em;}
@@ -2805,7 +2805,7 @@ blockquote cite {
 
 #section-white {
 	position:relative;
-	margin: -5.5em 0 0;
+	margin: -4.5em 0 0;
 	
 	@media #{$breakpoint-menu} {
 		margin: -2.5em 0 -2em;}
