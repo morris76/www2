@@ -207,10 +207,27 @@
 <section id="body-wrapper" class="bg-pattern">
 
 <style>
-.header-image-box {background:rgba(6, 47, 84, 0.95);padding:2em;border-top:3px solid #c73e1d;box-shadow:0 0 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);}
-#header-image {background-image: url("http://img.ctboardofregents.netdna-cdn.com/files/images/header-new417.jpg");}
+.header-image-box {z-index:1;font-size:70%;background:rgba(6, 47, 84, 0.95);background:#fff;padding:2em 4em;border-top:3px solid #c73e1d;box-shadow:0 0 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);}
+#header-image {background:#fff;background-image:none;}
 .hero-icon {display:inline-block;width:40px;position:relative;top:4px;padding-bottom:10px;}
+#header-image #header-image-content {
 
+    max-width: 68em;
+    margin: 0 auto;
+    padding: 10% 1em;
+    position:relative;
+
+}
+.header-image-image {
+
+    height: 80%;
+    background: url(http://www.ct.edu/files/images/header-new353.jpg) no-repeat;
+    position: absolute;
+    right: 1em;
+    top: 10%;
+    background-size: cover;
+
+}
 
 @media (max-width: 990px) {
    .hero-icon {margin-right:15px;top:8px;width:30px;left:5px;}    
@@ -225,7 +242,21 @@
 .homepage-spotlight-news {padding:2em;}
 .homepage-spotlight-news a.header-news{font-size:1.5em;}
 .homepage-spotlight-news a{border:0;color:#0d5aa2;}
-   
+ #header-image::before {
+
+    content: " ";
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23eeeeee' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+}  
 .animated {
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: both;
@@ -315,11 +346,14 @@
 <section id="header-image" class="nobg">
 <section id="header-image-content" class="homepage">
    <div class="row">
-      <div class="col-6 offset-4 center-text header-image-box">
-               <a href="/files/pdfs/Access and Opportunity - Moving Connecticut Forward.pdf">
+      <div class="col-5 offset-0 center-text header-image-box">
+         <a href="/files/pdfs/Access and Opportunity - Moving Connecticut Forward.pdf">
             <h1 class="slide-fade-in">Access &amp; Opportunity</h1>
             <h3 class="thin slide-fade-in">Moving Connecticut Forward</h3>
-            </a><a href="/files/pdfs/Access and Opportunity - Moving Connecticut Forward.pdf" class="button button-red" target="_blank">CSCU White Paper (pdf)</a>
+          </a>
+          <a href="/files/pdfs/Access and Opportunity - Moving Connecticut Forward.pdf" class="button button-red" target="_blank">CSCU White Paper (pdf)</a>
+      </div>
+      <div class="col-8 header-image-image">
       </div>
    </div>
 </section>
