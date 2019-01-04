@@ -2701,6 +2701,23 @@ ul.document {padding-left:0;
 	.m-padding-4 {padding:4em;}
 	.m-padding-5 {padding:5em;}
 	
+	
+@media #{$breakpoint-menu} {
+	.t-padding-1 {padding:1em;}
+	.t-padding-2 {padding:2em;}
+	.t-padding-3 {padding:3em;}
+	.t-padding-4 {padding:4em;}
+	.t-padding-5 {padding:5em;}
+}
+@media #{$breakpoint-columns} {
+	.m-padding-1 {padding:1em;}
+	.m-padding-2 {padding:2em;}
+	.m-padding-3 {padding:3em;}
+	.m-padding-4 {padding:4em;}
+	.m-padding-5 {padding:5em;}
+}
+	
+	
 	.dark .navControl { color:#fff;}
 	.dark .hamburger .line {background:#fff;}
 	.navControl { display:none;}
