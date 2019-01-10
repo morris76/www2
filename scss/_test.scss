@@ -1240,7 +1240,7 @@ nav {
     border-radius: 4px;
     -webkit-transform: translate3d(-50%, 0px, 0px);
     transform: translate3d(-50%, 0px, 0px);
-    visibility: initial;
+    visibility: visible;
 
 	@media #{$breakpoint-menu} {    
 		height: auto;
@@ -1687,7 +1687,7 @@ section#body-wrapper.active:after {
 	background:#fff;
 	padding:3em;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);
-	margin-bottom: 5em;
+	margin-bottom: 1em;
 	
 	ul.tabs {
 		margin-top:0;}
@@ -1924,6 +1924,7 @@ section#body-wrapper.active:after {
     text-transform: uppercase;
     font-weight: 700;
     font-family:$font-sans;
+    overflow:hidden;
 }
 .subhead-headline {
     line-height: 1.41961em;

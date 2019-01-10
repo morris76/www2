@@ -290,6 +290,7 @@ header .nav-main {
 	    font-size: 19px;
 	    letter-spacing: 0.01em;
 	    position:relative;
+	    white-space:nowrap;
 	    
 	    &:not(:last-child)::after {
 						border-right: 1px solid rgba(255, 255, 255, 0.15);
@@ -309,6 +310,7 @@ header .nav-main {
 				    text-align: left;
 						width:100%;
 						border-radius:0;
+	    			white-space:normal;
 						
 						&:last-child {
 									border:0;
@@ -430,7 +432,7 @@ header .nav-main {
 	    min-width:220px;
 	    border-radius: 4px;
 	    transform: translate3d(-50%, 0px, 0px);
-	    visibility: initial;
+	    visibility: visible;
 	    
 			@media #{$breakpoint-menu} {	
 						//display:block;
@@ -970,7 +972,19 @@ section.active {overflow:hidden;}
 		
 	.box-shadow-big {box-shadow:0 0 32px rgba(0, 0, 0, 0.16);}
 	.box-shadow-small {box-shadow:0 0 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);}
-	
+
+.subhead-small {	
+		font-size: 0.9em;
+    line-height: 1.41961em;
+    margin-bottom: 0;
+    margin-top: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $font-sans;
+    overflow: hidden;
+    display: inline-block;
+}
+
 
 .subhead-line {
 		overflow: hidden;
@@ -1215,7 +1229,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child, table.
 	display:inline-block;
 	text-align:center;
 	box-shadow:0 6px 10px rgba(0,0,0,0.2);
-	border-radius:2px;}
+	border-radius:4px;}
 	
 .button:hover {
 	box-shadow:0 8px 10px rgba(0,0,0,0.2);
@@ -1229,6 +1243,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child, table.
 .button-block {display:block;}
 
 .button.bg-white .fa {color: #c73e1d66;}
+.button .fa {opacity: 0.4;}
 
 .button-arrow {
     color: #9e7b44;
@@ -1366,7 +1381,7 @@ ul.hero-button-list {
 .small				{font-size:80%;}
 .x-small				{font-size:65%;}
 .xx-small				{font-size:50%;}
-.large				{font-size:130%;}
+.large				{font-size:130%;line-height: 160%;}
 
 
 .center-text 	{text-align:center;}
