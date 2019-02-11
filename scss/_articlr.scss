@@ -621,7 +621,7 @@
 }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
     
 /*
         Typography for mobile 
@@ -707,7 +707,8 @@ hr {
 	margin: 0 0 1.4285em 0;
 }
     
-
+}
+@media only screen and (max-width: 767px) {
 /*
         ...to here.
 */

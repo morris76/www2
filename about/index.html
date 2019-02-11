@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>CSCU - About</title>
+	<title>CSCU - Town by Town</title>
 	<meta name="description" content="">
 	<meta name="author" content="Connecticut State Colleges & Universities">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -284,7 +284,7 @@ h3 svg {
 				}
 		h3 svg {width:50px;height:50px;padding:10px;}
 		
-.resizeContainer {overflow:auto;}
+.resizeContainer {overflow:auto;width: calc(100vw - 2em);}
 		.map {
     min-width: 700px;
     min-height: 600px;
@@ -486,8 +486,7 @@ input[type=radio]:checked + label,  .fs-checkbox-checked label  {
 }
 </style>
 
-
-<section class="hero-menu white sticky nav-sub mobile-scroll" data-easytabs="true">
+<section class="horizontal-menu white sticky mobile-scroll" >
 	<div class="row">
 		<div class="col-12 center-text">
 			
@@ -497,18 +496,17 @@ input[type=radio]:checked + label,  .fs-checkbox-checked label  {
 					<span class="line"></span>
 					<span class="line"></span>
 				</div>
-		 	 Navigation
+		 	 About CSCU
 			</div>
 			<ul class="tabs">
-				<li><a href="" data-target="#about">Overview</a></li>
-				<li><a href="contact" data-target="#contact">Campuses</a></li>
-				<li><a href="news" data-target="#news">Leadership</a></li>
-				<li class="active"><a href="resources" data-target="#resources" class="active">Town by Town</a></li>
+				<li><a href="" >Overview</a></li>
+				<li><a href="contact" >Campuses</a></li>
+				<li><a href="news" >Leadership</a></li>
+				<li class="active"><a href="resources"  class="active">Town by Town</a></li>
 			</ul>	
 		</div>
 	</div>
 </section>
-
 <section class="hero-no-image ">
 	<div class="row">
 		<div class="col-12 center center-text">
@@ -736,11 +734,11 @@ input[type=radio]:checked + label,  .fs-checkbox-checked label  {
 
 <script type="text/javascript" src="/scripts/scrollReveal.min.js"></script>
 
-<script type="text/javascript" src="http://162.247.141.115/js/core.js"></script>
-<script type="text/javascript" src="http://162.247.141.115/js/touch.js"></script>
-<script type="text/javascript" src="http://162.247.141.115/js/transition.js"></script>
-<script type="text/javascript" src="http://162.247.141.115/js/lightbox.js"></script>
-<script type="text/javascript" src="http://162.247.141.115/js/checkbox.js"></script>
+<script type="text/javascript" src="http://www/ct/edu/files/scripts/core.js"></script>
+<script type="text/javascript" src="http://www/ct/edu/files/scripts/touch.js"></script>
+<script type="text/javascript" src="http://www/ct/edu/files/scripts/transition.js"></script>
+<script type="text/javascript" src="http://www/ct/edu/files/scripts/lightbox.js"></script>
+<script type="text/javascript" src="http://www/ct/edu/files/scripts/checkbox.js"></script>
 
 <style>
 	.fs-lightbox-mobile .fs-lightbox-close:after {content:none;}
@@ -804,6 +802,7 @@ $(".lightbox").lightbox({
 	
 	$(".institution_filter").click(function () {	
 		$("#campus-name").html($(this).data("display"));
+		$.lightbox("close");
 		
 		}); 
 	

@@ -1,0 +1,178 @@
+<p>ES modules are starting to land in browsers! They&#39;re in…</p>
+<ul>
+<li>Safari 10.1.</li>
+<li>Chrome Canary 60 – behind the Experimental Web Platform flag in <code>chrome:flags</code>.</li>
+<li>Firefox 54 – behind the <code>dom.moduleScripts.enabled</code> setting in <code>about:config</code>.</li>
+<li>Edge 15 – behind the Experimental JavaScript Features setting in <code>about:flags</code>.</li>
+</ul>
+<pre><code class="lang-html">&lt;script type=&quot;module&quot;&gt;
+  import {addTextToBody} from &#39;./utils.js&#39;;
+
+  addTextToBody(&#39;Modules are pretty cool.&#39;);
+&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-js">// utils.js
+export function addTextToBody(text) {
+  const div = document.createElement(&#39;div&#39;);
+  div.textContent = text;
+  document.body.appendChild(div);
+}
+</code></pre>
+<p><strong><a href="https://cdn.rawgit.com/jakearchibald/a298d5af601982c338186cd355e624a8/raw/aaa2cbee9a5810d14b01ae965e52ecb9b2965a44/">Live demo</a></strong>.</p>
+<p>All you need is <code>type=module</code> on the script element, and the browser will treat the inline or external script as an ECMAScript module.</p>
+<p>There are already some <a href="https://ponyfoo.com/articles/es6-modules-in-depth">great articles on modules</a>, but I wanted to share a few browser-specific things I&#39;d learned while testing &amp; reading the spec:</p>
+<h1 id="bare-import-specifiers-aren-t-currently-supported">&quot;Bare&quot; import specifiers aren&#39;t currently supported</h1>
+<pre><code class="lang-js">// Supported:
+import {foo} from &#39;https://jakearchibald.com/utils/bar.js&#39;;
+import {foo} from &#39;/utils/bar.js&#39;;
+import {foo} from &#39;./bar.js&#39;;
+import {foo} from &#39;../bar.js&#39;;
+
+// Not supported:
+import {foo} from &#39;bar.js&#39;;
+import {foo} from &#39;utils/bar.js&#39;;
+</code></pre>
+<p>Valid module specifiers must match one of the following:</p>
+<ul>
+<li>A full non-relative URL. As in, it doesn&#39;t throw an error when put through <code>new URL(moduleSpecifier)</code>.</li>
+<li>Starts with <code>/</code>.</li>
+<li>Starts with <code>./</code>.</li>
+<li>Starts with <code>../</code>.</li>
+</ul>
+<p>Other specifiers are reserved for future-use, such as importing built-in modules.</p>
+<h1 id="nomodule-for-backwards-compatibility">nomodule for backwards compatibility</h1>
+<pre><code class="lang-html">&lt;script type=&quot;module&quot; src=&quot;module.js&quot;&gt;&lt;/script&gt;
+&lt;script nomodule src=&quot;fallback.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong><a href="https://cdn.rawgit.com/jakearchibald/6110fb6df717ebca44c2e40814cc12af/raw/7fc79ed89199c2512a4579c9a3ba19f72c219bd8/">Live demo</a></strong>.</p>
+<p>Browsers that understand <code>type=module</code> should ignore scripts with a <code>nomodule</code> attribute. This means you can serve a module tree to module-supporting browsers while providing a fall-back to other browsers.</p>
+<h2 id="browser-issues">Browser issues</h2>
+<ul>
+<li><del>Firefox doesn&#39;t support <code>nomodule</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1330900">issue</a>)</del>. Fixed in Firefox nightly!</li>
+<li>Edge doesn&#39;t support <code>nomodule</code> (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10525830/">issue</a>).</li>
+<li>Safari 10.1 doesn&#39;t support <code>nomodule</code>, but it&#39;s fixed in their latest technical preview. For 10.1, there&#39;s a <a href="https://gist.github.com/samthor/64b114e4a4f539915a95b91ffd340acc">pretty smart workaround</a>.</li>
+</ul>
+<h1 id="defer-by-default">Defer by default</h1>
+<pre><code class="lang-html">&lt;!-- This script will execute after… --&gt;
+&lt;script type=&quot;module&quot; src=&quot;1.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- …this script… --&gt;
+&lt;script src=&quot;2.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- …but before this script. --&gt;
+&lt;script defer src=&quot;3.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong><a href="https://cdn.rawgit.com/jakearchibald/d6808ea2665f8b3994380160dc2c0bc1/raw/c0a194aa70dda1339c960c6f05b2e16988ee66ac/">Live demo</a></strong>. The order should be <code>2.js</code>, <code>1.js</code>, <code>3.js</code>.</p>
+<p>The way scripts block the HTML parser during fetching is baaaad. With regular scripts you can use <code>defer</code> to prevent blocking, which also delays script execution until the document has finished parsing, and maintains execution order with other deferred scripts. Module scripts behave like <code>defer</code> by default – there&#39;s no way to make a module script block the HTML parser while it fetches.</p>
+<p>Module scripts use the same execution queue as regular scripts using <code>defer</code>.</p>
+<h1 id="inline-scripts-are-also-deferred">Inline scripts are also deferred</h1>
+<pre><code class="lang-html">&lt;!-- This script will execute after… --&gt;
+&lt;script type=&quot;module&quot;&gt;
+  addTextToBody(&quot;Inline module executed&quot;);
+&lt;/script&gt;
+
+&lt;!-- …this script… --&gt;
+&lt;script src=&quot;1.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- …and this script… --&gt;
+&lt;script defer&gt;
+  addTextToBody(&quot;Inline script executed&quot;);
+&lt;/script&gt;
+
+&lt;!-- …but before this script. --&gt;
+&lt;script defer src=&quot;2.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong><a href="https://cdn.rawgit.com/jakearchibald/7026f72c0675898196f7669699e3231e/raw/fc7521aabd9485f30dbd5189b407313cd350cf2b/">Live demo</a></strong>. The order should be <code>1.js</code>, inline script, inline module, <code>2.js</code>.</p>
+<p>Regular inline scripts ignore <code>defer</code> whereas inline module scripts are always deferred, whether they import anything or not.</p>
+<h1 id="async-works-on-external-inline-modules">Async works on external &amp; inline modules</h1>
+<pre><code class="lang-html">&lt;!-- This executes as soon as its imports have fetched --&gt;
+&lt;script async type=&quot;module&quot;&gt;
+  import {addTextToBody} from &#39;./utils.js&#39;;
+
+  addTextToBody(&#39;Inline module executed.&#39;);
+&lt;/script&gt;
+
+&lt;!-- This executes as soon as it &amp; its imports have fetched --&gt;
+&lt;script async type=&quot;module&quot; src=&quot;1.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong><a href="https://module-script-tests-rgjnxtrtqq.now.sh/async">Live demo</a></strong>. The fast-downloading scripts should execute before the slow ones.</p>
+<p>As with regular scripts, <code>async</code> causes the script to download without blocking the HTML parser and executes as soon as possible. Unlike regular scripts, <code>async</code> also works on inline modules.</p>
+<p>As always with <code>async</code>, scripts may not execute in the order they appear in the DOM.</p>
+<h2 id="browser-issues">Browser issues</h2>
+<ul>
+<li>Firefox doesn&#39;t support <code>async</code> on inline module scripts (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1361369">issue</a>).</li>
+</ul>
+<h1 id="modules-only-execute-once">Modules only execute once</h1>
+<pre><code class="lang-html">&lt;!-- 1.js only executes once --&gt;
+&lt;script type=&quot;module&quot; src=&quot;1.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;module&quot; src=&quot;1.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;module&quot;&gt;
+  import &quot;./1.js&quot;;
+&lt;/script&gt;
+
+&lt;!-- Whereas normal scripts execute multiple times --&gt;
+&lt;script src=&quot;2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;2.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong><a href="https://cdn.rawgit.com/jakearchibald/f7f6d37ef1b4d8a4f908f3e80d50f4fe/raw/1fcedde007a2b90049a7ea438781aebe69e22762/">Live demo</a></strong>.</p>
+<p>If you understand ES modules, you&#39;ll know you can import them multiple times but they&#39;ll only execute once. Well, the same applies to script modules in HTML – a module script of a particular URL will only execute once per page.</p>
+<h2 id="browser-issues">Browser issues</h2>
+<ul>
+<li>Edge executes modules multiple times (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11865922/">issue</a>).</li>
+</ul>
+<h1 id="always-cors">Always CORS</h1>
+<pre><code class="lang-html">&lt;!-- This will not execute, as it fails a CORS check --&gt;
+&lt;script type=&quot;module&quot; src=&quot;https://….now.sh/no-cors&quot;&gt;&lt;/script&gt;
+
+&lt;!-- This will not execute, as one of its imports fails a CORS check --&gt;
+&lt;script type=&quot;module&quot;&gt;
+  import &#39;https://….now.sh/no-cors&#39;;
+
+  addTextToBody(&quot;This will not execute.&quot;);
+&lt;/script&gt;
+
+&lt;!-- This will execute as it passes CORS checks --&gt;
+&lt;script type=&quot;module&quot; src=&quot;https://….now.sh/cors&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong><a href="https://cdn.rawgit.com/jakearchibald/2b8d4bc7624ca6a2c7f3c35f6e17fe2d/raw/fe04e60b0b7021f261e79b8ef28b0ccd132c1585/">Live demo</a></strong>.</p>
+<p>Unlike regular scripts, module scripts (and their imports) are fetched with CORS. This means cross-origin module scripts must return valid CORS headers such as <code>Access-Control-Allow-Origin: *</code>.</p>
+<h2 id="browser-issues">Browser issues</h2>
+<ul>
+<li>Firefox fails to load the demo page (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1361373">issue</a>).</li>
+<li>Edge loads module scripts without CORS headers (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11865934/">issue</a>).</li>
+</ul>
+<h1 id="no-credentials">No credentials</h1>
+<pre><code class="lang-html">&lt;!-- Fetched with credentials (cookies etc) --&gt;
+&lt;script src=&quot;1.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Fetched without credentials --&gt;
+&lt;script type=&quot;module&quot; src=&quot;1.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Fetched with credentials --&gt;
+&lt;script type=&quot;module&quot; crossorigin src=&quot;1.js?&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Fetched without credentials --&gt;
+&lt;script type=&quot;module&quot; crossorigin src=&quot;https://other-origin/1.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Fetched with credentials--&gt;
+&lt;script type=&quot;module&quot; crossorigin=&quot;use-credentials&quot; src=&quot;https://other-origin/1.js?&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong><a href="https://module-script-tests-zoelmqooyv.now.sh/cookie-page">Live demo</a></strong>.</p>
+<p>Most CORS-based APIs will send credentials (cookies etc) if the request is to the same origin, but <code>fetch()</code> and module scripts are exceptions – they don&#39;t send credentials unless you ask for them.</p>
+<p>You can add credentials to a same-origin module by including the <code>crossorigin</code> attribute (which seems a bit weird to me, and <a href="https://github.com/whatwg/html/issues/2557">I&#39;ve questioned this in the spec</a>). If you want to send credentials to other origins too, use <code>crossorigin=&quot;use-credentials&quot;</code>. Note that the other origin will have to respond with the <code>Access-Control-Allow-Credentials: true</code> header.</p>
+<p>Also, there&#39;s a gotcha related to the &quot;Modules only execute once&quot; rule. Modules are keyed by their URL, so if you request a module without credentials, then request it with credentials, you&#39;ll get the same without-credentials module back. This is why I&#39;ve used a <code>?</code> in the URLs above, to make them unique.</p>
+<h2 id="browser-issues">Browser issues</h2>
+<ul>
+<li>Chrome requests same-origin modules with credentials (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=717525">issue</a>).</li>
+<li>Safari requests same-origin modules without credentials even if you use the <code>crossorigin</code> attribute (<a href="https://bugs.webkit.org/show_bug.cgi?id=171550">issue</a>).</li>
+<li>Edge gets this backwards. It sends credentials to the same origin by default, but then <em>doesn&#39;t</em> send them if you add the <code>crossorigin</code> attribute (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11865956/">issue</a>).</li>
+</ul>
+<p>Firefox is the only one that gets this right – well done folks!</p>
+<h1 id="mime-types">Mime-types</h1>
+<p>Unlike regular scripts, modules scripts must be served with one of the <a href="https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type">valid JavaScript MIME types</a> else they won&#39;t execute.</p>
+<p><strong><a href="https://module-script-tests-zoelmqooyv.now.sh/mime">Live demo</a></strong>.</p>
+<h2 id="browser-issues">Browser issues</h2>
+<ul>
+<li>Edge executes scripts with invalid MIME types (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11865977/">issue</a>).</li>
+</ul>
+<p>And that&#39;s what I&#39;ve learned so far. Needless to say I&#39;m really excited about ES modules landing in browsers!</p>

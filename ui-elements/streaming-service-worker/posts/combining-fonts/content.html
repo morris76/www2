@@ -1,0 +1,108 @@
+<style>
+@font-face {
+  font-family: 'Just Another Hand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Just Another Hand'), local('JustAnotherHand-Regular'), url(https://fonts.gstatic.com/s/justanotherhand/v7/fKV8XYuRNNagXr38eqbRf2bHIGFY9zRy9KAPVD43QdU.woff2) format('woff2'), url(https://fonts.gstatic.com/s/justanotherhand/v7/fKV8XYuRNNagXr38eqbRf8-ortBJrX8dG4H9Ox7zsWc.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Just Another Hand Fixed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Just Another Hand'), local('JustAnotherHand-Regular'), url(https://fonts.gstatic.com/s/justanotherhand/v7/fKV8XYuRNNagXr38eqbRf2bHIGFY9zRy9KAPVD43QdU.woff2) format('woff2'), url(https://fonts.gstatic.com/s/justanotherhand/v7/fKV8XYuRNNagXr38eqbRf8-ortBJrX8dG4H9Ox7zsWc.woff) format('woff');
+}
+
+@font-face {
+  font-family: "Just Another Hand Fixed";
+  src: local('Architects Daughter'), local('ArchitectsDaughter'), url(https://fonts.gstatic.com/l/font?kit=RXTgOOQ9AAtaVOHxx0IUBDrRnkt4rmSI6qS07ibfugwWYsZpeeE_lScv_WSQELyh&skey=d34ee9a1a308e98b&v=v6) format('woff2'), url(https://fonts.gstatic.com/l/font?kit=RXTgOOQ9AAtaVOHxx0IUBAgVrDCMKncvdxTxFP2hhz8WYsZpeeE_lScv_WSQELyh&skey=d34ee9a1a308e98b&v=v6) format('woff');
+  unicode-range: U+2d, U+3d;
+}
+
+.jah-demo,
+.jah-fixed-demo {
+  font: normal 2.5rem/1 "Just Another Hand";
+  margin: 1.3rem 0 0.9rem;
+  text-align: center;
+}
+
+@media (min-width: 435px) {
+  .jah-demo,
+  .jah-fixed-demo {
+    font: normal 3.5rem/1 "Just Another Hand";
+    margin: 1.5rem 0 0.9rem;
+  }
+}
+
+.jah-fixed-demo {
+  font-family: "Just Another Hand Fixed";
+}
+</style>
+
+<p>I love the font <a href="https://fonts.google.com/specimen/Just+Another+Hand">Just Another Hand</a>, I use it a lot in diagrams during my talks:</p>
+<figure class="full-figure" style="background: #eee">
+<div class="jah-demo">Here it is! Yay!</div>
+</figure>
+
+<p>The thing is, I don&#39;t like the positioning of the hyphen &amp; equals glyphs…</p>
+<figure class="full-figure" style="background: #eee">
+<div class="jah-demo">Cache-Control: max-age=3600</div>
+</figure>
+
+<p>They look awkwardly positioned – they sit too high.</p>
+<p>Thankfully CSS lets you merge fonts together, so I can create a single font family that&#39;s like Just Another Hand, except it takes the hyphen &amp; equals glyphs from a different font, <a href="https://fonts.google.com/specimen/Architects+Daughter">Architects Daughter</a>:</p>
+<figure class="full-figure" style="background: #eee">
+<div class="jah-fixed-demo">Cache-Control: max-age=3600</div>
+</figure>
+
+<h1 id="how-it-works">How it works</h1>
+<p>The <code>@font-face</code> is defined as usual:</p>
+<pre><code class="lang-css">@font-face {
+  font-family: &#39;Just Another Hand Fixed&#39;;
+  font-style: normal;
+  font-weight: 400;
+  src: local(&#39;Just Another Hand&#39;), local(&#39;JustAnotherHand-Regular&#39;),
+       url(&#39;https://fonts.gstatic.com/…woff2&#39;) format(&#39;woff2&#39;),
+       url(&#39;https://fonts.gstatic.com/…woff&#39;) format(&#39;woff&#39;);
+}
+</code></pre>
+<p>But I added another <code>@font-face</code> of the same name for the hyphen &amp; equals glyphs:</p>
+<pre><code class="lang-css">@font-face {
+  font-family: &#39;Just Another Hand Fixed&#39;;
+  src: local(&#39;Architects Daughter&#39;), local(&#39;ArchitectsDaughter&#39;),
+       url(&#39;https://fonts.gstatic.com/l/…&#39;) format(&#39;woff2&#39;),
+       url(&#39;https://fonts.gstatic.com/l/…&#39;) format(&#39;woff&#39;);
+  unicode-range: U+2d, U+3d;
+}
+</code></pre>
+<p>The trick is in the <code>unicode-range</code> descriptor. It indicates that the <code>src</code> should only be used for the hyphen (<code>U+2d</code>) and equals (<code>U+3d</code>) code points. You can turn a unicode character into a code point using this snippet:</p>
+<pre><code class="lang-js">&#39;=&#39;.codePointAt(0).toString(16); // &quot;3d&quot;
+</code></pre>
+<p>As an optimisation, I used <a href="https://fonts.googleblog.com/2011/04/streamline-your-web-font-requests.html">Google fonts&#39; text parameter</a> to subset the &quot;Architects Daughter&quot; font, so it only contains the hyphen &amp; equals glyphs. The woff2 version is 500 bytes – not bad!</p>
+<p>And that&#39;s it. Now when I use:</p>
+<pre><code class="lang-css">.whatever {
+  font-family: &#39;Just Another Hand Fixed&#39;;
+}
+</code></pre>
+<p>…it uses a combination of both fonts!</p>
+<h1 id="update-do-you-need-unicode-range-">Update: Do you need unicode-range?</h1>
+<p>A couple of people on Twitter and in the comments have suggested you don&#39;t need <code>unicode-range</code>, and you can just do:</p>
+<pre><code class="lang-css">/* Subsetted font */
+@font-face {
+  font-family: &#39;Just Another Hand Fixed&#39;;
+  src: url(&#39;https://fonts.gstatic.com/l/…&#39;) format(&#39;woff2&#39;) …;
+}
+
+/* Main font */
+@font-face {
+  font-family: &#39;Just Another Hand Fixed&#39;;
+  src: url(&#39;https://fonts.gstatic.com/…woff2&#39;) format(&#39;woff2&#39;) …;
+}
+</code></pre>
+<p>This works visually, but it&#39;s worse in terms of performance.</p>
+<p>In this case the browser downloads the subsetted font first, then it realises it doesn&#39;t have all the glyphs it needs, so it starts downloading the main font. The fonts download one after the other.</p>
+<p><strong><a href="https://output.jsbin.com/sukaceq/quiet">Live demo</a></strong>. <strong><a href="http://www.softwareishard.com/har/viewer/?inputUrl=https://cdn.rawgit.com/jakearchibald/7d5f7526f889aa0855aceaa348f020bc/raw/2c01a336ee3e2f10e68c1f62e77a7690f946f8bc/1.js">Network waterfall</a></strong>.</p>
+<p>Whereas with the unicode-range solution, the browser knows what it needs in advance, so it can download the fonts in parallel.</p>
+<p><strong><a href="https://output.jsbin.com/laramad/quiet">Live demo</a></strong>. <strong><a href="http://www.softwareishard.com/har/viewer/?inputUrl=https://cdn.rawgit.com/jakearchibald/7d5f7526f889aa0855aceaa348f020bc/raw/5c5423286ec969e7194430b0671469a1168072d1/1.js">Network waterfall</a></strong>.</p>
+<p>Also, if you don&#39;t use one of the subsetted characters, the browser knows it doesn&#39;t need to download the font at all!</p>
+<p><strong><a href="https://output.jsbin.com/cunode/quiet">Live demo</a></strong>. <strong><a href="http://www.softwareishard.com/har/viewer/?inputUrl=https://cdn.rawgit.com/jakearchibald/7d5f7526f889aa0855aceaa348f020bc/raw/4030ff99fa0744040ff694bb56ca045dd68592c8/1.js">Network waterfall</a></strong>.</p>

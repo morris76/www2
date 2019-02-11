@@ -1,0 +1,122 @@
+<h1 id="-froala-design-blocks-https-www-froala-com-design-blocks-nbsp-tweet-https-img-shields-io-twitter-url-http-shields-io-svg-style-social-https-twitter-com-intent-tweet-text-get-20over-20170-20free-20design-20blocks-20based-20on-20bootstrap-204-url-https-www-froala-com-design-blocks-via-froala-hashtags-bootstrap-design-templates-blocks-developers-nbsp-slack-https-froala-design-blocks-slack-herokuapp-com-badge-svg-https-froala-design-blocks-slack-herokuapp-com-"><a href="https://www.froala.com/design-blocks">Froala Design Blocks</a> &nbsp; <a href="https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&amp;url=https://www.froala.com/design-blocks&amp;via=froala&amp;hashtags=bootstrap,design,templates,blocks,developers"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="Tweet"></a> &nbsp;<a href="https://froala-design-blocks-slack.herokuapp.com/"><img src="https://froala-design-blocks-slack.herokuapp.com/badge.svg" alt="Slack"></a></h1>
+<p><a href="https://github.com/froala/design-blocks/blob/master/LICENSE"><img src="https://img.shields.io/badge/price-FREE-0098f7.svg" alt="Price"></a>
+<a href="https://www.npmjs.com/package/froala-design-blocks"><img src="https://img.shields.io/npm/v/froala-design-blocks.svg?colorB=brightgreen" alt="npm"></a>
+<a href="https://cdnjs.com/libraries/froala-design-blocks"><img src="https://img.shields.io/cdnjs/v/froala-design-blocks.svg" alt="CDNJS"></a>
+<a href="https://github.com/froala/design-blocks"><img src="https://img.shields.io/github/package-json/v/froala/design-blocks.svg" alt="GitHub package version"></a>
+<a href="https://github.com/froala/design-blocks/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-FOWDL-blue.svg" alt="License: FOWDL v1.0"></a></p>
+<p>Over 170 responsive design blocks ready to be used in your web or mobile apps. All blocks are based on the Bootstrap Library, and they are the building blocks for beautiful websites.</p>
+<p><strong>Discuss it on <a href="https://www.producthunt.com/posts/froala-design-blocks-2">Product Hunt</a> 🦄</strong></p>
+<p><a href="https://www.froala.com/design-blocks#playground">Explore Design Blocks »</a></p>
+<p><a href="https://www.froala.com/wysiwyg-editor">WYSIWYG HTML Editor</a> · <a href="https://www.froala.com/pages">Pages</a> · <a href="https://www.froala.com/blog">Blog</a> · <a href="https://github.com/froala/design-blocks/archive/master.zip">Download</a></p>
+
+<p><img src="https://raw.githubusercontent.com/froala/design-blocks/master/design-blocks.jpg" alt="Design Blocks"></p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#quick-start">Quick start</a></li>
+<li><a href="#whats-included">What&#39;s included?</a></li>
+<li><a href="#bugs-and-feature-requests">Bugs and feature requests</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#categories">Categories</a></li>
+<li><a href="#browser-support">Browser support</a></li>
+<li><a href="#community">Community</a></li>
+<li><a href="#contributors">Contributors</a></li>
+<li><a href="#copyright-and-license">Copyright and license</a></li>
+</ul>
+<h2 id="quick-start">Quick start</h2>
+<p>There are several ways to start using the Froala Design Blocks:</p>
+<ul>
+<li><a href="https://github.com/froala/design-blocks/archive/1.0.2.zip">Download the latest release</a> and then read the <a href="#whats-included">What&#39;s included</a> section below</li>
+<li>Clone the repo: <code>git clone https://github.com/froala/design-blocks.git</code></li>
+<li>Install with <a href="https://www.npmjs.com/">npm</a>: <code>npm install froala-design-blocks</code></li>
+</ul>
+<h3 id="development">Development</h3>
+<p>The project needs to be compiled, therefore the files in the <code>src</code> folder are those we&#39;ll be developing on. Don&#39;t make changes in the <code>dist</code> or <code>demo</code> folders as they will be overwritten when <code>src</code> is compiled.</p>
+<h4 id="get-code">Get code</h4>
+<pre><code class="lang-bash">git clone git@github.com:froala/design-blocks.git
+cd design-blocks
+</code></pre>
+<h4 id="install-dependencies-and-run-project">Install dependencies and run project</h4>
+<pre><code class="lang-bash">npm install
+npm run gulp
+</code></pre>
+<p>With the gulp server running, the project is available at the following address <a href="http://localhost:8001/">localhost:8001</a>. The <code>src</code> files are automatically compiled when changes have been made.</p>
+<h3 id="contributing">Contributing</h3>
+<p>All contributions are more than welcomed. Contributions may close an issue, fix a bug (reported or not reported), add new design blocks, improve the existing code, add new feature, and so on.</p>
+<p>The <code>dev</code> branch is the default and base branch for the project. It is used for development and all Pull Requests should go there. Please make sure not to commit the <code>dist</code> folder in the <code>dev</code> branch.</p>
+<h2 id="what-s-included">What&#39;s included</h2>
+<p>Within the download archive you&#39;ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You&#39;ll see something like this:</p>
+<pre><code>design-blocks/
+├── dist/
+│   ├── css/
+│   │   ├── froala_blocks.css
+│   │   └── froala_blocks.min.css
+│   └── imgs/
+│   │── call_to_action.html
+│   │── contacts.html
+│   │── contents.html
+│   │── features.html
+│   │── footers.html
+│   │── forms.html
+│   │── headers.html
+│   │── index.html
+│   │── pricings.html
+│   │── teams.html
+│   └── testimonials.html
+├── psds/
+├── screenshots/
+└── src/
+</code></pre><p>We provide compiled CSS (<code>froala_blocks.css</code>), as well as compiled and minified CSS (<code>froala_blocks.min.css</code>). Also, in the downloaded archive you will find useful images and PSD files that you can use to create new backgrounds. In the <code>screenshots</code> folder, there are the screenshots of all design blocks.</p>
+<h2 id="bugs-and-feature-requests">Bugs and feature requests</h2>
+<p>Have a bug or a feature request? Please first read the issue guidelines and search for existing and closed issues. If your problem or idea is not addressed yet, <a href="https://github.com/froala/design-blocks/issues/new">please open a new issue</a>.</p>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><p><strong>Bootstrap</strong>. Froala Design Blocks is built on Bootstrap 4 library and fully supports it. It uses the Javascript files only for the header design blocks, so if you don&#39;t need them, we recommend not to include the Bootstrap JS files in order to reduce your bundle size.</p>
+</li>
+<li><p><strong>Font Awesome</strong>. We&#39;re using the amazing Font Awesome library for the social network icons.</p>
+</li>
+<li><p><strong>Google Fonts</strong>. By default, the Design Blocks toolkit is built using the Roboto font, however that can easily be changed to other fonts.</p>
+</li>
+</ul>
+<h2 id="categories">Categories</h2>
+<ul>
+<li>Call to action - <a href="https://github.com/froala/design-blocks/blob/master/dist/call_to_action.html">https://github.com/froala/design-blocks/blob/master/dist/call_to_action.html</a></li>
+<li>Contacts - <a href="https://github.com/froala/design-blocks/blob/master/dist/contacts.html">https://github.com/froala/design-blocks/blob/master/dist/contacts.html</a></li>
+<li>Contents - <a href="https://github.com/froala/design-blocks/blob/master/dist/contents.html">https://github.com/froala/design-blocks/blob/master/dist/contents.html</a></li>
+<li>Features - <a href="https://github.com/froala/design-blocks/blob/master/dist/features.html">https://github.com/froala/design-blocks/blob/master/dist/features.html</a></li>
+<li>Footers - <a href="https://github.com/froala/design-blocks/blob/master/dist/footers.html">https://github.com/froala/design-blocks/blob/master/dist/footers.html</a></li>
+<li>Forms - <a href="https://github.com/froala/design-blocks/blob/master/dist/forms.html">https://github.com/froala/design-blocks/blob/master/dist/forms.html</a></li>
+<li>Headers - <a href="https://github.com/froala/design-blocks/blob/master/dist/headers.html">https://github.com/froala/design-blocks/blob/master/dist/headers.html</a></li>
+<li>Pricings - <a href="https://github.com/froala/design-blocks/blob/master/dist/pricings.html">https://github.com/froala/design-blocks/blob/master/dist/pricings.html</a></li>
+<li>Teams - <a href="https://github.com/froala/design-blocks/blob/master/dist/teams.html">https://github.com/froala/design-blocks/blob/master/dist/teams.html</a></li>
+<li>Testimonials - <a href="https://github.com/froala/design-blocks/blob/master/dist/testimonials.html">https://github.com/froala/design-blocks/blob/master/dist/testimonials.html</a></li>
+</ul>
+<h2 id="browser-support">Browser Support</h2>
+<p>At the moment, we aim to support all major web browsers. Any issue in the browsers listed below should be reported as a bug:</p>
+<ul>
+<li>Internet Explorer 10+</li>
+<li>Microsoft Edge 14+</li>
+<li>Safari 6+</li>
+<li>Firefox (Current - 1) and Current versions</li>
+<li>Chrome (Current - 1) and Current versions</li>
+<li>Opera (Current - 1) and Current versions</li>
+<li>Safari iOS 7.0+</li>
+<li>Android 6.0+</li>
+</ul>
+<p>(Current - 1) and Current means that we support the current stable version of the browser and the version that precedes it.</p>
+<h2 id="community">Community</h2>
+<p>Get updates on Froala Design Blocks&#39; development and chat with the project maintainers and community members:</p>
+<ul>
+<li>Follow <a href="https://twitter.com/froala">@froala on Twitter</a></li>
+<li>Read and subscribe to <a href="https://www.froala.com/blog">The Official Froala Blog</a></li>
+<li>Check the <a href="https://www.froala.com/design-blocks">Official Website</a></li>
+<li>Join us <a href="https://www.facebook.com/froala/">on Facebook</a></li>
+<li><a href="https://plus.google.com/+Froala/">Google+</a></li>
+<li><a href="https://pinterest.com/froala/">Pinterest</a></li>
+</ul>
+<h2 id="contributors">Contributors</h2>
+<p>Special thanks to everyone who contributed to getting the Froala Design Blocks to the current state.</p>
+<ul>
+<li><a href="https://dribbble.com/shourav_chy01"> Shourav Chowdhury</a> - source of inspiration for the images</li>
+</ul>
+<h2 id="copyright-and-license">Copyright and license</h2>
+<p>Code and documentation copyright 2017 <a href="https://www.froala.com/">Froala Labs</a>. Code released under the <a href="https://github.com/froala/design-blocks/blob/master/LICENSE">Froala Open Web Design License</a>.</p>
