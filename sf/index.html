@@ -38,6 +38,17 @@
 		<style>
 			.about {min-height:100vh;}
 			.button-right:after {content:"";color:white;opacity:0.4;font-family:fontawesome;margin-left:5px;}
+			header .nav-main > ul > li.active::after {
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 54px;
+    background: #5799d7;
+    right: 20px;
+    left:20px;
+}
+			header {background: #0a4072;}
 		</style>
 
 
@@ -64,17 +75,30 @@
             
          <nav class="nav-main">
           <ul id="nav-wrap" class="inline">
+          
+             <li><a href="/studentsfirst/about">About</a>
+                   <ul>
+                              <li><a href='/studentsfirst/about#about'>From the President</a></li>
+                              <li><a href='/studentsfirst/about#faqs'>FAQs</a></li>
+                              <li><a href='/studentsfirst/about#strategies'>Stategies</a></li>
+                              <li><a href='/studentsfirst/about#webinars'>Webinars</a></li>
+                              <li><a href='/studentsfirst/about#neasc'>NEASC</a></li>
+                   </ul></li>
              <li><a href="">Consolidation</a>
                    <ul>
-                      <li><a href=''>sublink 1</a></li>
-                      <li><a href=''>sublink 2</a></li>
-                      <li><a href=''>sublink 3</a></li>
+					            <li><a href="/consolidation">About</a></li>
+					            <li><a href="/consolidation#groups">Working Groups</a></li>
+					            <li><a href="/consolidation"#leadership">Leadership</a></li>
+					            <li><a href="/consolidation#meetings">Meetings</a></li>
                    </ul></li>
              <li><a href="">Guided Pathways</a>
                    <ul>
-                      <li><a href=''>sublink 1</a></li>
-                      <li><a href=''>sublink 2</a></li>
-                      <li><a href=''>sublink 3</a></li>
+					            <li><a href="/gp#about">About</a></li>
+					            <li><a href="/gp#resources">Resources </a></li>
+					            <li><a href="/gp#groups">Working Groups</a></li>
+					            <li><a href="/gp#proposals">Proposals</a></li>
+					            <li><a href="/gp#kpi">KPI</a></li>
+					            <li><a href="/gp#leadership">Leadership</a></li>
                    </ul></li>
               <li><a href="">Archives</a></li>
           </ul>
@@ -86,100 +110,55 @@
 <section id="body-wrapper" class="">
  
 
-<section class="hero-menu white sticky nav-sub">
-	<div class="row">
-		<div class="col-12 center-text">
-			
-			<div id="nav-button-sub" class="nav-button navControl">
-				<div id="hamburger-sub" class="hamburger">
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-				</div>
-		 	 Menu
-			</div>
-			<ul class="tabs">
-				<li><a href="" data-target="#about">About</a></li>
-				<li><a href="faq.html" data-target="#faq">Handbook</a></li>
-				<li><a href="policies.html" data-target="#policies">Policies</a></li>
-				<li><a href="groups.html" data-target="#groups">Groups</a></li>
-				<li><a href="gen.html" data-target="#gen">General Ed</a></li>
-				<li><a href="degrees.html" data-target="#degrees">TAP Degrees</a></li>
-			</ul>	
-		</div>
-	</div>
-</section>
 
-
-<div id="tab-content">
-	
-	<div class="about" id="about">
+		
 		<section class="hero-no-image">
 		<div class="row">
-			<div class="col-8 ">
-				<h1 class="">Creating Pathways for Students</h1>
-				<p>Associate degrees provided through the BOR's Transfer and Articulation Policy, offered by Connecticut Community Colleges, and received by the Connecticut State Universities and Charter Oak State College as fulfilling the first 60 credits of a 120-credit Bachelor's degree. </p>
-				<a href='#faq' class="button button-red button-right">TAP Handbook</a> 
-				<a href='#degrees' class="button button-red button-right">TAP Degrees</a>
+			<div class="col-12">
+				<h1 class="">Education Quality, Affordability, Accessibility</h1>
+				<p>Consolidating Connecticut's 12 community colleges into one singly accredited institution to sustain and enhance education quality, affordability, and accessibility.</p>
+         <a href="/files/pdfs/SF-Update.pdf" class="button button-red">View Plan <i class="fa fa-arrow-right fa-fw"></i></a>
 			</div>
-			<div class=" padding-2 col-4 box-shadow-small margin-t-2">
-				<h2 class="subhead-line color-red bold italic section-small margin-t-0 color-red">Contact</h2>
-					<p>For all questions on TAP, please contact Ken Klucznik at <a href='mailto:klucznik@commnet.edu'>klucznik@commnet.edu</a></p>
-      </div>
 		</div>
 		</section>
+		
 		<section class="body-content body-content-box padding-0 padding-t-0 m-margin-2">
          
          <div class="row margin-b-2">
             <div class="col-12">
-            	<h1 class="subhead-line-center center-text color-red bold italic section-small">More from TAP</h1>
+            	<h1 class="subhead-line-center center-text color-red bold italic section-small">Initiatives</h1>
             </div>
          </div>
          
          <div class="row margin-b-4 col-12 center">
             
-            <div class="col-4 padding-2 box-shadow-small margin-b-3 top-orange" style="visibility: visible; ">
-               <h3 class="color-  margin-0">Policies</h3>
-               <p>Pellentesque porttitor in risus non imperdiet. Morbi vestibulum sodales nibh eu rhoncus.  </p>
-               <a href="#policies" class="button button-orange">View Policies</a>
+            <div class="col-6 padding-2 box-shadow-small margin-b-3 top-red" style="visibility: visible; ">
+               <h3 class="color-  margin-0">Consolidation</h3>
+               <p>Providing guidance on the alignment of academic programs (shared and differentiated), assessment, policies, procedures, institutional data, websites, catalogs and other relevant issues to campus constituents. </p>
+               
+                   <ul>
+					            <li><a href="/consolidation">About</a></li>
+					            <li><a href="/consolidation#groups">Working Groups</a></li>
+					            <li><a href="/consolidation"#leadership">Leadership</a></li>
+					            <li><a href="/consolidation#meetings">Meetings</a></li>
+                   </ul>
             </div>
-            <div class="col-4 padding-2 box-shadow-small margin-b-3 top-green" style="visibility: visible; ">
-               <h3 class="color-  margin-0">Groups</h3>
-               <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-               <a href="#groups" class="button button-green">Group Members</a>
-            </div>
-            <div class="col-4 padding-2 box-shadow-small margin-b-3 top-purple" style="visibility: visible; ">
-               <h3 class="color-  margin-0">General Ed</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae feugiat felis.</p>
-               <a href="#gen" class="button button-purple">General Education</a>
+            <div class="col-6 padding-2 box-shadow-small margin-b-3 top-red" style="visibility: visible; ">
+               <h3 class="color-  margin-0">Guided Pathways</h3>
+               <p>Starting with a students end goal in mind, pathway initiatives focus on providing students with clear program maps, improving the student experience, and closing equity gaps. </p>
+                   <ul>
+					            <li><a href="/gp#about">About</a></li>
+					            <li><a href="/gp#resources">Resources </a></li>
+					            <li><a href="/gp#groups">Working Groups</a></li>
+					            <li><a href="/gp#proposals">Proposals</a></li>
+					            <li><a href="/gp#kpi">KPI</a></li>
+					            <li><a href="/gp#leadership">Leadership</a></li>
+                   </ul>
             </div>
             
          </div>
 
 		</section>
-	</div>
-
-	<div class="about" id="faq">
-			<div class="spinner"></div>
-	</div>
-
-	<div class="about" id="policies">
-			<div class="spinner"></div>
-	</div>
-
-	<div class="about" id="groups">
-			<div class="spinner"></div>
-	</div>
-
-	<div class="about" id="gen">
-			<div class="spinner"></div>
-	</div>
-
-	<div class="about" id="degrees">
-			<div class="spinner"></div>
-	</div>
-	
-</div><!-- end tab content-->
 
 </section>
 
@@ -215,11 +194,6 @@ a[href$=".pdf"]:before {
   font-family:fontawesome;
   margin-right:10px;
   color:#c73e1d;
-}
-a[href$=".pdf"]:after {
-  display:inline-block;
-  content:' (pdf)';
-  margin-left:5px;
 }
 </style>
 <script type="text/javascript">
