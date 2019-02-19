@@ -36,18 +36,14 @@
    </script>
 
 		<style>
+			header {background: #0a4072;}
 			.about {min-height:100vh;}
 			.button-right:after {content:"";color:white;opacity:0.4;font-family:fontawesome;margin-left:5px;}
-			header .nav-main > ul > li.active::after {
-    content: "";
-    display: block;
-    height: 3px;
-    position: absolute;
-    top: 54px;
-    background:rgba(255,255,255,0.4);
-    right: 20px;
-    left:20px;}
-			header {background: #0a4072;}
+			
+@media (min-width: 990px) {
+			.hero-menu ul.tabs li a.active::after, .horizontal-menu ul.tabs li a.active::after {background: /*#c7d9ea*/;top: 0px;margin:0;}
+			header .nav-main > ul > li.active > a {border-bottom: 3px solid #c73e1d;border-radius: 0;padding:9px 0; margin:0 20px;}
+		}
 		</style>
 
 
@@ -108,7 +104,7 @@
 
 <section id="body-wrapper" class="">
 	
- <section class="hero-menu white sticky nav-sub">
+ <section class="hero-menu dark sticky nav-sub">
    <div class="row">
       <div class="col-12 center-text">
          
@@ -137,58 +133,42 @@
    
    <div class="about" id="neasc">
    	
-<section class="hero-no-image margin-b--1">
-   <div class="row">
-      <div class="col-10 center ">
-         <h1 class="">NEASC Materials</h1>
-         <p>Over the course of the Students First planning process, CSCU will be in regular communication with NEASC.  This page will share all formal communication with the Commission</p>
-      </div>
-   </div>
-   <!--
-   <svg width="0" height="0">
-  <defs>
-    <clipPath id="clip-shape" clipPathUnits="objectBoundingBox">
-      <polygon points="0 0, 1 0, 1 0.9, 0 1" />
-    </clipPath>
-  </defs>
-   </svg>
-   -->
-</section>
+			<section class="hero-no-image  margin-b-0 padding-b-0">
+			   <div class="row">
+			      <div class="col-12 center padding-4 m-padding-2 padding-t-0 padding-b-0">
+			         <h1 class="">NEASC Materials</h1>
+			         <p class="large italic light">Over the course of the Students First planning process, CSCU will be in regular communication with NEASC.  This page will share all formal communication with the Commission</p>
+			      </div>
+			   </div>
+			</section>
 
+			<section class="body-content body-content-box margin-b-4">
+			               
+			         <div class="row col-12 center">
+			         		<div class="padding-4 m-padding-2 box-shadow-small">
+			         
+			               <h3 class="color-red subhead-line">NEASC Response</h3>
+			               <ul class="no-bullet">
+			                  <li><a href='/files/pdfs/NEASC_Response_4242018.pdf' target="_blank" class="">NEASC Summary Response to Students First (pdf)</a></li>
+			                  <li><a href='/files/pdfs/Connecticut State Community Colleges notification ltr.pdf' target="_blank" class="">NEASC Detailed Response to Students First (pdf)</a></li>
+			               </ul>
+			               <h3 class="color-red subhead-line">Documents</h3>
+			               <ul class="no-bullet">
+			                  <li> <a href='/files/pdfs/Students First Substantive Change March 16, 2018.pdf' class="" target="_blank">FINAL: Students First Substantive Change - March 16, 2018 (10MB - pdf)</a></li>
+			                  <li> <a href='/files/pdfs/NEASC Substantive Change Report Feb 28 2018.pdf' class="" target="_blank"><em>DRAFT:</em> NEASC Substantive Change Request - Feb 28, 2018 (1MB - pdf)</a></li>
+			                  <li><a href='/files/pdfs/NEASC Appendixes A-BB - 2-28-2018.pdf' class="" target="_blank"><em>DRAFT:</em> NEASC Substantive Change Report -  APPENDIXES (4MB - pdf)</a></li>
+			               </ul>
+			         
+			               <h3 class="color-red subhead-line">Communication</h3>
+			               <ul class="no-bullet">
+			                  <li><a href='/files/pdfs/students-first-neasc-1.pdf' target="_blank">CSCU Request for NEASC Advisory Opinion (pdf)</a></li>
+			                  <li><a href='/files/pdfs/students-first-neasc-advisory.pdf' target="_blank">CSCU Advisory (pdf)</a></li>
+			                  <li><a href='/files/pdfs/students-first-neasc-letter.pdf' target="_blank">CSCU President Advisory Response (pdf)</a></li>
+			               </ul>
+			            </div>
+			         </div>
 
-
-
-
-<section class="body-content body-content-box margin-b-4">
-               
-         <div class="row col-10 center">
-         <!--  
-         <h1 class="">NEASC Communications</h1>
-         <p class="margin-b-3">Over the course of the Students First planning process, CSCU will be in regular communication with NEASC.  This page will share all formal communication with the Commission</p>
-         -->
-         <div class="padding-4 m-padding-2 box-shadow-small">
-         
-<p><a href='/files/pdfs/NEASC_Response_4242018.pdf' target="_blank" class="bold">NEASC Summary Response to Students First(pdf)</a></p>
-<p><a href='/files/pdfs/Connecticut State Community Colleges notification ltr.pdf' target="_blank" class="bold">NEASC Detailed Response to Students First(pdf)</a></p>
-               <h3 class="color-red subhead-line">Documents</h3>
-               <ul>
-                  <li> <a href='/files/pdfs/Students First Substantive Change March 16, 2018.pdf' class="bold" target="_blank">FINAL: Students First Substantive Change - March 16, 2018 (10MB - pdf)</a></li>
-                  <li> <a href='/files/pdfs/NEASC Substantive Change Report Feb 28 2018.pdf' class="italic" target="_blank"><em>DRAFT:</em> NEASC Substantive Change Request - Feb 28, 2018 (1MB - pdf)</a></li>
-                  <li><a href='/files/pdfs/NEASC Appendixes A-BB - 2-28-2018.pdf' class="italic" target="_blank"><em>DRAFT:</em> NEASC Substantive Change Report -  APPENDIXES (4MB - pdf)</a></li>
-               </ul>
-         
-               <h3 class="color-red subhead-line">Communication</h3>
-               <ul>
-                  <li><a href='/files/pdfs/students-first-neasc-1.pdf' target="_blank">CSCU Request for NEASC Advisory Opinion (pdf)</a></li>
-                  <li><a href='/files/pdfs/students-first-neasc-advisory.pdf' target="_blank">CSCU Advisory (pdf)</a></li>
-                  <li><a href='/files/pdfs/students-first-neasc-letter.pdf' target="_blank">CSCU President Advisory Response (pdf)</a></li>
-               </ul>
-            </div>
-         </div>
-         
-         
-
-</section>
+			</section>
    	
   </div>
   
@@ -199,8 +179,10 @@
 
       <section class="hero-no-image padding-b-0">
          <div class="row">
-            <div class="col-10 row center">
+			      <div class="col-12 center padding-4 padding-t-0 padding-b-0">
                <h1 class="">FAQs</h1>
+               <a class="" href="/files/pdfs/sf-faqs.pdf" target="_blank">Download FAQ 1 (pdf)</a><br>
+               <a class="" href="/files/pdfs/sf-faq2.pdf" target="_blank">Download FAQ 2 (pdf)</a>
             </div>
          </div>
       </section>
@@ -208,9 +190,7 @@
       <section class="body-content body-content-box ">
          
                      
-         <div class="row col-10 center">
-               <a class="button margin-b-3" href="/files/pdfs/sf-faqs.pdf" target="_blank">Download FAQ 1 (pdf)</a>
-               <a class="button margin-b-3" href="/files/pdfs/sf-faq2.pdf" target="_blank">Download FAQ 2 (pdf)</a>
+         <div class="row col-12 center padding-4 m-padding-2 box-shadow-small">
 
 
                <h3 class="subhead-line color-red">New Leadership Structure &amp; Staffing</h3>
@@ -607,8 +587,8 @@
       
       <section class="hero-no-image padding-b-1">
          <div class="row">
-            <div class="col-12 center center-text">
-               <h1 class="">Messages from President Ojakian</h1>
+            <div class="col-12 padding-4 padding-t-0 padding-b-0 m-padding-2 ">
+               <h1 class="">From President Ojakian</h1>
             </div>
          </div>
       </section>
@@ -637,10 +617,10 @@
                
                <h3 class="color-red">Past Letters</h3>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">May 4, 2018</span>
                </div>
-               <div class="content">  
+               <div class="content2">  
 <p>Dear CSCU Community:</p>
 <p>Today, the Executive Committee of the Board of Regents reviewed progress on Students First and our on-going discussions with NEASC, our accrediting authority. Our goal has been and continues to be to protect and enhance the high quality, affordable education we offer Connecticut students.&nbsp; By necessity, there was no plan labeled &ldquo;do nothing&rdquo;, or &ldquo;wait for things to get better&rdquo;. The plan we settled on, comprising an administrative consolidation of the community colleges and the reorganizing of various college and university functions across the system, remains the right idea: Reduce management cost; protect and improve student services; contain tuition, and preserve locations. </p>
 <p>Our discussions with NEASC this week have been informative and productive.&nbsp; Contrary to some interpretations of NEASC&rsquo;s response last week, our respected accreditors did not reject our vision. The Commission has not said &ldquo;no&rdquo; to our proposal to form a single community college. NEASC, like us, is contending with uncharted territory amid changing conditions that challenge institutions, including accreditors.</p>
@@ -652,10 +632,10 @@
 <p>Matt Fleury,<br />Chairman, Connecticut Board of Regents</p>
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">April 24, 2018</span>
                </div>
-               <div class="content">  
+               <div class="content2">  
                   <p>Dear CSCU Community,</p>
                   <p>First, we want to give our sincerest thank you to everyone who has worked tirelessly over the last year on the development of our <em>Students First</em> Plan. The countless hours and hours spent compiling data, constructing and editing this bold plan of action to protect and preserve our students&rsquo; future is not lost on anyone. It meant time spent away from your daily responsibilities of serving CSCU students.</p>
                   <p><strong><em>Students First</em></strong><strong> was created to avert a major crisis for our institutions and our students.</strong> Today, NEASC has issued a response to our <em>Students First</em> consolidation plan. It is not the decision that is best for our students, nor is it the decision for which we had hoped. <strong>This decision by NEASC is devastating to our ability to hold the line on tuition and keep all campuses open.</strong> In the face of an on-going fiscal emergency, it forces us to consider options that we have strongly fought against because it will harm the 50,000 students who rely on their campuses and their campus communities.</p>
@@ -668,10 +648,10 @@
                   <p><a href='/files/pdfs/NEASC_Response_4242018.pdf' target="_blank">NEASC Response (pdf)</a></p>
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">March 19, 2018 </span>
                </div>
-               <div class="content">  
+               <div class="content2">  
 <p>Good morning,</p>
 <p>On behalf of the Board of Regents, last Friday we submitted a Substantive Change request seeking approval from the Commission on Institutions of Higher Education (CIHE) of the New England Association of Schools and Colleges (NEASC) to consolidate our 12 accredited Connecticut community colleges into a one accredited College with 12 campuses. The document includes details on the consolidated organizational structure and integrated administrative functions and outlines our vision for an academically integrated institution. It preserves our core values which are to provide Connecticut students with an affordable, accessible, high quality education that meets their personal goals and the workforce needs of our communities and state.&nbsp; </p>
 <p>The full document can be found at <a href="http://www.ct.edu/studentsfirst">http://www.ct.edu/studentsfirst</a>. &nbsp; The request will be on the Commission&rsquo;s April agenda. </p>
@@ -679,10 +659,10 @@
 <p>Sincerely,<br />Mark E. Ojakian</p>
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">March 9, 2018 </span>
                </div>
-               <div class="content">  
+               <div class="content2">  
                   <p>Dear All,</p>
                   <p>Today, the Board of Regents unanimously voted to approve our Students First substantive change document that outlines the structural changes needed for the consolidation of our community colleges into one College. The next step is submission to NEASC on March 16, 2018. We did receive lots of good feedback from the Board and the Academic Affairs committee that we will include prior to the deadline.&nbsp; </p>
                   <p>Once the document is submitted to NEASC, we expect a response sometime in April.&nbsp; The current draft along with all the appendices are available for review at any time on our Students First page&nbsp; - <a href="http://www.ct.edu/studentsfirst">http://www.ct.edu/studentsfirst</a>.&nbsp;&nbsp; These materials will be updated after our submission of the final document to NEASC and we will provides updates as we have them on the process.&nbsp; </p>
@@ -690,10 +670,10 @@
                   <p>Sincerely,<br />Mark E. Ojakian</p>
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">March 2, 2018 </span>
                </div>
-               <div class="content"> 
+               <div class="content2"> 
                   <p>Dear CSCU community,</p>
                   <p>Yesterday we provided our Board of Regents with a draft of the substantive change document we are preparing for submission to NEASC to consolidate our 12 community colleges into one College. &nbsp;This bold, unprecedented structural change is outlined in the narrative and appendices you can find on our Students First page <a href="http://www.ct.edu/studentsfirst">http://www.ct.edu/studentsfirst</a>.&nbsp; &nbsp; </p>
                   <p>I truly appreciate everyone who has contributed over the last year to the planning process including those of you who have served or are now serving on committees, those who participated at our many town hall meetings, and those who responded to our surveys and spoke during Board meetings with comments and critiques. </p>
@@ -703,10 +683,10 @@
                   <p>Mark E. Ojakian</p> 
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">Dec 8, 2017</span>
                </div>
-               <div class="content">  
+               <div class="content2">  
                   <p>Dear CSCU Community,</p>
                   <p>I am pleased to announce the formation of the Students First Academic and Student Affairs Consolidation Committee.&nbsp;&nbsp; The next phase of Students First planning requires the development of a plan to bring into alignment twelve campuses into a single accredited community college with clear, consistent practices, policies and procedures that provide a seamless transition for students while maintaining the uniqueness, identity and community connections of each campus. An initial action for the committee is to develop the mission statement for the one community college.</p>
                   <p>I have charged this committee with the responsibility to work out the details associated with the one community college consolidation related to academic and student affairs on the twelve community colleges. Specifically, the committee will provide guidance on the alignment of academic programs (shared and differentiated), assessment, policies, procedures, institutional data, websites, catalogs and other relevant issues to campus constituents.</p>
@@ -747,10 +727,10 @@
                   <p>Mark</p>
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">Dec 4, 2017</span>
                </div>
-               <div class="content">  
+               <div class="content2">  
                   <p>Dear CSCU Community,</p>
                   <p>As you know, Students First includes a strategy endorsed by the Board of Regents to consolidate our 12 community colleges into one centrally managed institution with local campuses.&nbsp; Since early spring, we have been sharing information and collecting input on the consolidation proposal with community college presidents, faculty, staff, students and community leaders.&nbsp; I want to take this opportunity to thank everyone who has engaged in this process and hope you will continue to participate in committees, meetings and discussions as we move forward.&nbsp;</p>
                   <p>In addition to the April town halls on all 12 campuses and the November webinars we held for college faculty, staff, and students, we&rsquo;ve met with: the Faculty and Student Advisory Committees to engage their members in discussions on academic and student affairs; campus registrars and continuing education professionals to hear their feedback on the proposed structure; college foundations to address their questions and concerns about local identity and fundraising; chambers of commerce and other workforce related groups to solicit their support for a regional approach; and legislative leaders to gather their suggestions on the future of the colleges.&nbsp;&nbsp; These discussions have improved the consolidation proposal and will greatly enrich the implementation.&nbsp;&nbsp;</p>
@@ -766,10 +746,10 @@
                   <p>CT State Colleges and Universities (CSCU)</p>
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">Nov 19, 2017</span>
                </div>
-               <div class="content">  
+               <div class="content2">  
                   <p>Dear CSCU community,</p>
                   <p>Thank you to everyone who participated in our Student First webinars.&nbsp; As promised, attached are answers to questions that were submitted but not addressed during the sessions.&nbsp; The FAQ document also will be posted on our website by the end of the day Monday.&nbsp;</p>
                   <p>You can watch the sessions at any time on our Students First page: <a id="LPlnk201252" href="http://www.ct.edu/studentsfirst/about#webinars" target="_blank">http://www.ct.edu/studentsfirst/about#webinars</a>&nbsp; </p>
@@ -777,10 +757,10 @@
                   <p>Mark</p>
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">Nov 6, 2017</span>
                </div>
-               <div class="content">  
+               <div class="content2">  
                   <p>Good morning! </p>
                   <p>We are looking forward to our Students First forum Tuesday from 12-2pm with faculty and staff and on Wednesday from 11:00am-12:30pm with students to discuss the community college consolidation proposal.</p>
                   <p>Thanks to the IT and public information staff serving as leads for each campus, we hope to have as many participants as possible from all 12 campuses. Each college will be live streaming both forums on campus - check with your campus leaders for the exact room. As part of the two-hour session, every college will have an opportunity to submit questions via the chat function on Web Ex.</p>
@@ -790,10 +770,10 @@
                   <p>Thank you for your engagement and support!&nbsp;</p>
                </div>
       
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">Oct 17, 2017</span>
                </div>
-               <div class="content">  
+               <div class="content2">  
                
                   <p>Dear CSCU Community,&nbsp;</p>
                   <p>When we launched Students First back in April, it was with the goal of strengthening our ability to provide students with a high quality, affordable, and accessible post-secondary education that enables them to achieve their life and career goals.&nbsp;We did this in the context of a growing structural deficit, declining state support, and recognition that our system is unsustainable in both the short and long term without real structural change. None of this has changed over the last six months and, in fact, fiscal challenges have become more pressing.</p>
@@ -836,10 +816,10 @@
                   onnecticut State Colleges and Universities (CSCU)</p>
                </div>
                
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">May 17, 2017</span>
                </div>
-               <div class="content">      
+               <div class="content2">      
                   <p>Dear CSCU Community,             
                   <p>The Students First planning process is now underway!  The administrative consolidation planning teams will begin their work immediately and I look forward to engaging in their discussions throughout the summer.  
                   <p>The six administrative teams have been assembled with representatives selected by the collective bargaining units and constituent unit leadership groups as well as faculty and staff volunteers and subject matter experts from the campuses and System Office.  We anticipate additional individuals may be added to the teams as the work progresses to add expertise.  The charge to each team is to identify a sustainable structure for providing these services to the campuses while leveraging and optimizing both human and financial resources. 
@@ -850,10 +830,10 @@
                   <p>Again thank you all for your engagement in this process.  I am confident together we can keep students first.              
                </div>
                
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">May 10, 2017</span>
                </div>
-               <div class="content">
+               <div class="content2">
                   <p>Dear CSCU community,</p>
                   <p>I want to thank all of you who participated in our campus town hall meetings.  It was a great opportunity to hear about your concerns and to continue to learn about the vital role that our institutions play both with our students and in our communities.  I appreciate your questions, candor and offers of assistance.  In the next week you will receive a Frequently Asked Questions (FAQ) document to share responses to your many questions as well as an update on the membership of the planning teams and the timeline for getting the work started.</p> 
                   <p>Again, thank you for welcoming me to your campuses.  I encourage you to continue sending you good ideas to this address.  I am confident that together we can move our system forward. </p>
@@ -861,10 +841,10 @@
             </div>
             
             
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">April 24, 2017</span>
                </div>
-               <div class="content">
+               <div class="content2">
                   <p>Dear CSCU community,</p>
 
                   <p>I am writing today to provide a brief update on the Students First planning process.  We are busy forming teams in six key areas to design and implement the administrative consolidation strategy.  Many of you have reached out to volunteer and the Community College Governance Assembly and labor unions representing the community colleges, SUOAF and the CSU Faculty Leadership Group are identifying representatives to serve in addition to subject matter experts from the campuses and system office.  We will make an announcement on the teams in early May after all the recommendations have been received. </p>
@@ -888,10 +868,10 @@
                   <p>Mark </p>
                </div>
                
-               <div class="toggle">
+               <div class="toggle2">
                   <span class="text">April 13, 2017</span>
                </div>
-               <div class="content">
+               <div class="content2">
                   <p>Dear CSCU Community,</p>
 
                   <p>Last week I recommended to the Board of Regents two management strategies to help address our system's fiscal challenges.  One strategy is consolidation of administrative functions and the other is an organizational consolidation for our community colleges.  The Board approved both strategies along with the savings target for each.  These strategies are intended to deal with our structural deficit which only increases in the next few years and threatens the affordability and accessibility of our institutions. </p>
@@ -940,7 +920,7 @@
       
       <section class="hero-no-image padding-b-0">
          <div class="row">
-            <div class="col-10 row center">
+            <div class="col-12 row center-text">
                <h1 class="">Strategies</h1>
             </div>
          </div>
@@ -950,7 +930,7 @@
          
                      
                      
-         <div class="row col-10 center">
+         <div class="row col-12 center padding-4 m-padding-2 box-shadow-small">
             
             <h3 class="color-red subhead-line">Administrative Consolidation - System Wide </h3>
             <p>Objective: A single administrative infrastructure to eliminate redundant functions system wide and provide shared services to all universities and colleges </p>
@@ -965,7 +945,7 @@
             </div>
             
             
-            <h3 class="color-red subhead-line">Organizational Consolidation - Community Colleges</h3>
+            <h3 class="color-red subhead-line margin-t-2">Organizational Consolidation - Community Colleges</h3>
             <p>Objective: One centrally managed college with campuses statewide</p>
             <ul>
                <li>Phased in consolidation of leadership and management</li>
@@ -989,6 +969,9 @@
 
 <div data-include="footer"></div>
 
+<style>
+	.content2, .content {display:none;}
+</style>
 <noscript>For the best experience, please enable javascript.</noscript>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -1023,13 +1006,22 @@ a[href$=".pdf"]:before {
 </style>
 <script type="text/javascript">
 $(document).ready(function() {
-  //activate toggles
-   var $content = $(".content").hide();
+	
+   //var $content = $(".content").hide();
    $(".toggle").on("click", function (e) {
+         $(this).toggleClass("expanded");
+         //$(this).next().slideToggle();
+   });
+   
+   //var $content2 = $(".content2").hide();
+   $(".toggle2").on("click", function (e) {
          $(this).toggleClass("expanded");
          $(this).next().slideToggle();
    });
-});   $('.hero-menu').easytabs({
+   
+});   
+
+		$('.hero-menu').easytabs({
       panelContext: $("#tab-content"),
       tabs: 'ul.tabs > li',
       cache: true,
