@@ -45,25 +45,38 @@
 </head>
 
 <body class="">
+	Width:<input type="text" id="deptName"><br>
+<button type="button" id="create">Create</button>
 	<a id="download" download="triangle.png">
 <button type="button" onClick="download()">Download</button>
 </a>
     
-<canvas id="myCanvas" width="1200" height="250">Your browser does not support Canvas.</canvas>
+<canvas id="myCanvas" width="1200" height="128">Your browser does not support Canvas.</canvas>
 </body>
 <script>
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext("2d");
+var canText = "Consolidation Committee Member Coalition"
+var $deptName=document.getElementById('deptName');
+var $create=document.getElementById('create');
 
 var imageObj = new Image();
+
 imageObj.onload = function(){
-   context.drawImage(imageObj, 0, 40, 200, 100);
+   context.drawImage(imageObj, 0, 20, 200, 100);
 };
+
 imageObj.src = "/logo-cscu-blue.svg";
-context.drawImage(imageObj, 0, 40, 200, 100);
-context.fillStyle = "black";
-context.font = "bold 50px 'adelle-sans'";
-context.fillText("Consolidation Committee Member Coalition",220, 104);
+
+$create.addEventListener("click", function(){
+    deptName=this.value;
+		context.fillStyle = '#FFFFFF';
+		context.fillText("",220, 86);
+		context.fillStyle = "black";
+		context.font = "bold 50px 'adelle-sans'";
+		context.fillText(deptName,220, 86);
+}, false);
+
 
 function download() {
 	var download = document.getElementById("download");
