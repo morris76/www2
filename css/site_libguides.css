@@ -65,7 +65,7 @@ header #banner-wrap {
   position: relative; }
 
 header h1 {
-  margin: 30px 0;
+  margin: 35px 0;
   display: flex;
   font-size: 30px; }
   @media (max-width: 990px) {
@@ -213,7 +213,8 @@ header .nav-main > ul {
   margin: 0;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   @media (max-width: 990px) {
     header .nav-main > ul {
       margin: 0 auto;
@@ -258,7 +259,7 @@ header .nav-main > ul > li {
 
 header .nav-main > ul > li > a {
   border-radius: 3px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   font-family: "Adelle-sans", arial;
   font-size: 19px;
   padding: 9px 20px;
@@ -334,7 +335,7 @@ header .nav-main > ul > li > ul {
       box-shadow: none; } }
 
 header .nav-main > ul > li:hover > a {
-  color: rgba(255, 255, 255, 0.75); }
+  color: #fff; }
   @media (max-width: 990px) {
     header .nav-main > ul > li:hover > a {
       color: #2D2F32; } }
@@ -1008,7 +1009,7 @@ td {
 
 /* Responsive data Tables */
 table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
-  top: 14px;
+  top: 20px;
   left: 4px;
   height: 16px;
   width: 16px;
@@ -1128,7 +1129,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child, 
   border-radius: 6px; }
 
 .button-arrow {
-  color: #9e7b44;
+  color: #c73e1d;
   padding: 10px 0;
   margin: 0 0;
   text-transform: none;
@@ -1441,6 +1442,9 @@ ul.no-bullet li {
 
 .bg-offwhite {
   background: #f9f8f8; }
+
+.bg-red {
+  background: #c73e1d; }
 
 .bg-orange {
   background: #ec9306; }
